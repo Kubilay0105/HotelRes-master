@@ -88,6 +88,12 @@
     <Compile Include="frmExtraIslemler.Designer.cs">
       <DependentUpon>frmExtraIslemler.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKasaDuzenlemeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKasaDuzenlemeler.Designer.cs">
+      <DependentUpon>frmKasaDuzenlemeler.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmKasaIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="frmPersonel.Designer.cs">
       <DependentUpon>frmPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRaporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRaporlar.Designer.cs">
+      <DependentUpon>frmRaporlar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRezervasyon.cs">
       <SubType>Form</SubType>
@@ -213,6 +225,9 @@
     <EmbeddedResource Include="frmPersonel.resx">
       <DependentUpon>frmPersonel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRaporlar.resx">
+      <DependentUpon>frmRaporlar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRezervasyon.resx">
       <DependentUpon>frmRezervasyon.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +275,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resources\icons8-budget-50.png" />
+    <Content Include="Resources\icons8-home-25.png" />
+    <Content Include="Resources\icons8-money-bag-lira-50.png" />
+    <Content Include="Resources\icons8-party-filled-50.png" />
+    <Content Include="Resources\icons8-people-50.png" />
+    <Content Include="Resources\icons8-reception-50.png" />
+    <Content Include="Resources\icons8-team-25.png" />
     <Content Include="Resources\icons8-turkish-lira-20.png" />
     <Content Include="Resources\icons8-turkish-lira-35.png" />
     <Content Include="Resources\icons8-turkish-lira-filled-35-.png" />

@@ -17,31 +17,42 @@ namespace PL.Hotel
             InitializeComponent();
         }
 
-        private void tsmAnasayfa_Click(object sender, EventArgs e)
+        private void FormAc(Form AF)
         {
-            frmOtelAnasayfa frm = new frmOtelAnasayfa();
-            frm.Show();
+            foreach (Control F in this.pnlContent.Controls)
+            {
+                if (F is Form)
+                {
+                    Form MF = (Form)F;
+                    MF.Close();
+                }
+            }
+            AF.TopLevel = false;
+            this.pnlContent.Controls.Add(AF);
+            AF.Dock = DockStyle.Fill;
+            AF.Show();
         }
-
         private void personelEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnlContext.Controls.Clear();
+            //pnlContent.Controls.Clear();
+            //frmPersonel frm = new frmPersonel();
+            //frm.TopLevel = false;
+            //pnlContent.Controls.Add(frm);
+            //frm.Show();
+            //frm.Dock = DockStyle.Fill;
+            //frm.BringToFront();
+            //frm.tsGuncelle.Enabled = false;
+            //frm.tsSil.Enabled = false;
             frmPersonel frm = new frmPersonel();
-            frm.TopLevel = false;
-            pnlContext.Controls.Add(frm);
-            frm.Show();
-            frm.Dock = DockStyle.Fill;
-            frm.BringToFront();
-            frm.tsGuncelle.Enabled = false;
-            frm.tsSil.Enabled = false;
+            FormAc(frm);
         }
 
         private void personelGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnlContext.Controls.Clear();
+            pnlContent.Controls.Clear();
             frmPersonel frm = new frmPersonel();
             frm.TopLevel = false;
-            pnlContext.Controls.Add(frm);
+            pnlContent.Controls.Add(frm);
             frm.Show();
             frm.Dock = DockStyle.Fill;
             frm.BringToFront();
@@ -51,10 +62,10 @@ namespace PL.Hotel
 
         private void personelSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnlContext.Controls.Clear();
+            pnlContent.Controls.Clear();
             frmPersonel frm = new frmPersonel();
             frm.TopLevel = false;
-            pnlContext.Controls.Add(frm);
+            pnlContent.Controls.Add(frm);
             frm.Show();
             frm.Dock = DockStyle.Fill;
             frm.BringToFront();
@@ -64,10 +75,10 @@ namespace PL.Hotel
 
         private void ekstraEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnlContext.Controls.Clear();
+            pnlContent.Controls.Clear();
             frmExtraa frm = new frmExtraa();
             frm.TopLevel = false;
-            pnlContext.Controls.Add(frm);
+            pnlContent.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
             frm.BringToFront();
             //frm.tsGuncelle.Enabled = false;
@@ -77,10 +88,10 @@ namespace PL.Hotel
 
         private void ekstraGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnlContext.Controls.Clear();
+            pnlContent.Controls.Clear();
             frmExtraa frm = new frmExtraa();
             frm.TopLevel = false;
-            pnlContext.Controls.Add(frm);
+            pnlContent.Controls.Add(frm);
             frm.Show();
             frm.Dock = DockStyle.Fill;
             frm.BringToFront();
@@ -90,15 +101,45 @@ namespace PL.Hotel
 
         private void ekstraSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnlContext.Controls.Clear();
+            pnlContent.Controls.Clear();
             frmExtraa frm = new frmExtraa();
             frm.TopLevel = false;
-            pnlContext.Controls.Add(frm);
+            pnlContent.Controls.Add(frm);
             frm.Show();
             frm.Dock = DockStyle.Fill;
             frm.BringToFront();
             //frm.tsGuncelle.Enabled = false;
             //frm.tsEkle.Enabled = false;
+        }
+
+        private void tsAnasayfa_Click(object sender, EventArgs e)
+        {
+            frmOtelAnasayfa frm = new frmOtelAnasayfa();
+            frm.Show();
+        }
+
+        private void tsPersonelIslemleri_Click(object sender, EventArgs e)
+        {
+            frmPersonel frm = new frmPersonel();
+            FormAc(frm);
+        }
+
+        private void tsExtraTurleri_Click(object sender, EventArgs e)
+        {
+            frmExtraIslemler frm = new frmExtraIslemler();
+            FormAc(frm);
+        }
+
+        private void tsKasaIslemleri_Click(object sender, EventArgs e)
+        {
+            frmKasaDuzenlemeler frm = new frmKasaDuzenlemeler();
+            FormAc(frm);
+        }
+
+        private void tsRaporlar_Click(object sender, EventArgs e)
+        {
+            frmRaporlar frm = new frmRaporlar();
+            frm.Show();
         }
     }
 }
