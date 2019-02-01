@@ -60,5 +60,13 @@ namespace BLL.Hotel.Repositories
             payments.Add(borc - odenen);//kalan borç
             return payments;
         }
+        public List<GuestTransaction> GetGTransById(int gID)
+        {
+            List<GuestTransaction> liste = (from gt in ent.GuestTransactions
+                                            where gt.GuestId == gID
+                                            select gt).ToList();
+
+            return liste;
+        }
     }
 }

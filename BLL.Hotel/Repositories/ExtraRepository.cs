@@ -26,7 +26,7 @@ namespace BLL.Hotel.Repositories
                     g.TransType = "Extra Ücreti";
                     g.Debt = Ex.Sum;
                     g.Credit = 0;
-                    g.GuestId = GId;
+                    g.GuestId = Ex.GuestId;
                     g.Status = true;
                     g.Description = "";
                     ent.GuestTransactions.Add(g);
