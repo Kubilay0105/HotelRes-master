@@ -10,6 +10,8 @@ namespace DAL.Hotel.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
+            ContextKey = "DAL.Hotel.Context.OtelResContext";
         }
 
         protected override void Seed(DAL.Hotel.Context.OtelResContext context)
