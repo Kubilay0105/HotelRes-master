@@ -16,7 +16,7 @@ namespace PL.Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmExtraIslemler());
+            Application.Run(new Form1());
         }
     }
 }

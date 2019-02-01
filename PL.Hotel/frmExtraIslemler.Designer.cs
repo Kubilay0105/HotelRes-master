@@ -34,6 +34,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtOdaNo = new System.Windows.Forms.TextBox();
             this.nudAdet = new System.Windows.Forms.NumericUpDown();
             this.btnAdminn = new System.Windows.Forms.Button();
             this.btnOda = new System.Windows.Forms.Button();
@@ -99,6 +101,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.txtOdaNo);
             this.panel3.Controls.Add(this.nudAdet);
             this.panel3.Controls.Add(this.btnAdminn);
             this.panel3.Controls.Add(this.btnOda);
@@ -117,6 +121,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(288, 446);
             this.panel3.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(30, 284);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "Oda No";
+            // 
+            // txtOdaNo
+            // 
+            this.txtOdaNo.Location = new System.Drawing.Point(107, 284);
+            this.txtOdaNo.Name = "txtOdaNo";
+            this.txtOdaNo.ReadOnly = true;
+            this.txtOdaNo.Size = new System.Drawing.Size(100, 20);
+            this.txtOdaNo.TabIndex = 47;
             // 
             // nudAdet
             // 
@@ -142,12 +164,13 @@
             // 
             // btnOda
             // 
-            this.btnOda.Location = new System.Drawing.Point(183, 296);
+            this.btnOda.Location = new System.Drawing.Point(183, 329);
             this.btnOda.Name = "btnOda";
             this.btnOda.Size = new System.Drawing.Size(75, 23);
             this.btnOda.TabIndex = 43;
             this.btnOda.Text = "Odaya Ekle";
             this.btnOda.UseVisualStyleBackColor = true;
+            this.btnOda.Click += new System.EventHandler(this.btnOda_Click);
             // 
             // label5
             // 
@@ -257,6 +280,8 @@
             this.dgvOdalar.Name = "dgvOdalar";
             this.dgvOdalar.Size = new System.Drawing.Size(240, 225);
             this.dgvOdalar.TabIndex = 0;
+            this.dgvOdalar.Visible = false;
+            this.dgvOdalar.DoubleClick += new System.EventHandler(this.dgvOdalar_DoubleClick);
             // 
             // frmExtraIslemler
             // 
@@ -304,5 +329,7 @@
         private System.Windows.Forms.Button btnAdminn;
         private System.Windows.Forms.DataGridView dgvOdalar;
         private System.Windows.Forms.NumericUpDown nudAdet;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtOdaNo;
     }
 }

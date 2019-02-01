@@ -37,15 +37,18 @@ namespace BLL.Hotel.Repositories
         {
             return ent.Rooms.ToList();
         }
-        public List<Room> GetFullRooms(DateTime Tarih)
+        public List<Room> GetFullRooms(List<Sale> ss)
         {
-            Tarih = Convert.ToDateTime(Tarih.ToShortDateString());
-            List<Room> liste = (from s in ent.Sales
-                                where s.Deleted == false && s.CheckIn < Tarih && s.CheckOut > Tarih
-                                from r in ent.Rooms
-                                where r.Id == s.RoomId
-                                select r).ToList();
-            return ent.Rooms.ToList();
+            List<Room> liste = new List<Room>();
+            foreach (Sale item in ss)
+            {
+                Room fullroom = (from r in ent.Rooms
+                                 where r.Id == item.RoomId
+                                 select r).FirstOrDefault();
+
+                liste.Add(fullroom);
+            }
+            return liste;
         }
         public int FullRoomsCount()
         {

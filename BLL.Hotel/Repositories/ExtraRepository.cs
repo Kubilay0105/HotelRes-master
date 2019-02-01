@@ -11,20 +11,38 @@ namespace BLL.Hotel.Repositories
     {
         OtelResContext ent = new OtelResContext();
         
-        public bool AddExtra(ExtraType Ex)
+        public bool AddExtraAndGTrans(ExtraTransactions Ex,int GId)
         {
-            bool Sonuc = false;
-            ent.ExtraTypes.Add(Ex);
-            try
+            using(var trans = ent.Database.BeginTransaction())
             {
-                ent.SaveChanges();
-                Sonuc = true;
+                bool Sonuc = false;
+                try
+                {
+                    ent.ExtraTransactions.Add(Ex);
+                    ent.SaveChanges();
+
+                    GuestTransaction g = new GuestTransaction();
+                    g.Date = Ex.TransactionDate;
+                    g.TransType = "Extra Ücreti";
+                    g.Debt = Ex.Sum;
+                    g.Credit = 0;
+                    g.GuestId = GId;
+                    g.Status = true;
+                    g.Description = "";
+                    ent.GuestTransactions.Add(g);
+                    ent.SaveChanges();
+
+                    trans.Commit();
+                    Sonuc = true;
+                }
+                catch (Exception ex)
+                {
+                    trans.Rollback();
+                    string hata = ex.Message;
+                }
+                return Sonuc;
             }
-            catch (Exception ex)
-            {
-                string hata = ex.Message;
-            }
-            return Sonuc;
+           
         }
         
         public bool DeleteExtra(int ID)
@@ -116,21 +134,6 @@ namespace BLL.Hotel.Repositories
             if (extra != null)
                 return true;
             return false;
-        }
-
-        public bool AddExtraTrans(ExtraTransactions Ex)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ExtraTransactions> GetExtras(int RoomId)
-        {
-            throw new NotImplementedException();
-        }
-
-        ExtraType IExtraRepository.GetExtraType(int TypeName)
-        {
-            throw new NotImplementedException();
         }
     }
 }

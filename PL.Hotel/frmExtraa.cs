@@ -48,13 +48,13 @@ namespace PL.Hotel
                 else
                 {
                     yeni.Price =Convert.ToDecimal (txtFiyat.Text);
-                    if (ex.AddExtra(yeni))
-                    {
-                        MessageBox.Show("Yeni extra eklendi.", "Kayıt gerçekleşti.");
-                      dgvExtralar.DataSource = ex.GetExtraTypes();
-                        //btnKaydet.Enabled = false;
-                        //Temizle();
-                    }
+                    //if (ex.AddExtra(yeni))
+                    //{
+                    //    MessageBox.Show("Yeni extra eklendi.", "Kayıt gerçekleşti.");
+                    //  dgvExtralar.DataSource = ex.GetExtraTypes();
+                    //    //btnKaydet.Enabled = false;
+                    //    //Temizle();
+                    //}
                 }
             }
             else
