@@ -106,12 +106,6 @@
     <Compile Include="frmMusteriOdemeleri.Designer.cs">
       <DependentUpon>frmMusteriOdemeleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMusteriSorgulama.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMusteriSorgulama.Designer.cs">
-      <DependentUpon>frmMusteriSorgulama.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmOdalar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMusteriOdemeleri.resx">
       <DependentUpon>frmMusteriOdemeleri.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMusteriSorgulama.resx">
-      <DependentUpon>frmMusteriSorgulama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheckOut.resx">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
