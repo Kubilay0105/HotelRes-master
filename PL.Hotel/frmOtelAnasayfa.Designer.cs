@@ -36,6 +36,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnMenuAc = new System.Windows.Forms.Button();
             this.pnlLeftMenu = new System.Windows.Forms.Panel();
+            this.btnKasaIslemleri = new System.Windows.Forms.Button();
             this.btnCheckin = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnOdemeler = new System.Windows.Forms.Button();
@@ -56,24 +57,23 @@
             this.btnOdalar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblBosOda = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblDoluOda = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblTarih = new System.Windows.Forms.Label();
-            this.lblSaat = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.btnKasaIslemleri = new System.Windows.Forms.Button();
+            this.lblSaat = new System.Windows.Forms.Label();
+            this.lblTarih = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDoluOda = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblBosOda = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
             this.pnlLeftMenu.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -81,10 +81,10 @@
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -150,7 +150,7 @@
             // 
             // pnlLeftMenu
             // 
-            this.pnlLeftMenu.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.pnlLeftMenu.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pnlLeftMenu.Controls.Add(this.btnKasaIslemleri);
             this.pnlLeftMenu.Controls.Add(this.btnCheckin);
             this.pnlLeftMenu.Controls.Add(this.button5);
@@ -170,8 +170,29 @@
             this.pnlLeftMenu.Size = new System.Drawing.Size(188, 499);
             this.pnlLeftMenu.TabIndex = 1;
             // 
+            // btnKasaIslemleri
+            // 
+            this.btnKasaIslemleri.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnKasaIslemleri.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnKasaIslemleri.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnKasaIslemleri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
+            this.btnKasaIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKasaIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKasaIslemleri.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnKasaIslemleri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKasaIslemleri.Location = new System.Drawing.Point(46, 343);
+            this.btnKasaIslemleri.Name = "btnKasaIslemleri";
+            this.btnKasaIslemleri.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnKasaIslemleri.Size = new System.Drawing.Size(142, 48);
+            this.btnKasaIslemleri.TabIndex = 10;
+            this.btnKasaIslemleri.Text = "Kasa İşlemleri";
+            this.btnKasaIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKasaIslemleri.UseVisualStyleBackColor = false;
+            this.btnKasaIslemleri.Click += new System.EventHandler(this.btnKasaIslemleri_Click);
+            // 
             // btnCheckin
             // 
+            this.btnCheckin.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnCheckin.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btnCheckin.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCheckin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
@@ -186,7 +207,7 @@
             this.btnCheckin.TabIndex = 9;
             this.btnCheckin.Text = "Check-In";
             this.btnCheckin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheckin.UseVisualStyleBackColor = true;
+            this.btnCheckin.UseVisualStyleBackColor = false;
             this.btnCheckin.Click += new System.EventHandler(this.btnCheckin_Click);
             // 
             // button5
@@ -205,6 +226,7 @@
             // 
             // btnOdemeler
             // 
+            this.btnOdemeler.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnOdemeler.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btnOdemeler.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOdemeler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
@@ -219,12 +241,12 @@
             this.btnOdemeler.TabIndex = 8;
             this.btnOdemeler.Text = "Ödemeler";
             this.btnOdemeler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOdemeler.UseVisualStyleBackColor = true;
+            this.btnOdemeler.UseVisualStyleBackColor = false;
             this.btnOdemeler.Click += new System.EventHandler(this.btnOdemeler_Click);
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button4.FlatAppearance.BorderSize = 0;
@@ -238,6 +260,7 @@
             // 
             // btnYonetim
             // 
+            this.btnYonetim.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnYonetim.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btnYonetim.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnYonetim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
@@ -252,11 +275,12 @@
             this.btnYonetim.TabIndex = 6;
             this.btnYonetim.Text = "Yönetim";
             this.btnYonetim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnYonetim.UseVisualStyleBackColor = true;
+            this.btnYonetim.UseVisualStyleBackColor = false;
+            this.btnYonetim.Click += new System.EventHandler(this.btnYonetim_Click);
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel5.Controls.Add(this.button9);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.button6);
@@ -360,6 +384,7 @@
             // 
             // btnExtra
             // 
+            this.btnExtra.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnExtra.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btnExtra.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnExtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
@@ -375,7 +400,7 @@
             this.btnExtra.Text = "Extra";
             this.btnExtra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExtra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExtra.UseVisualStyleBackColor = true;
+            this.btnExtra.UseVisualStyleBackColor = false;
             this.btnExtra.Click += new System.EventHandler(this.btnExtra_Click);
             // 
             // panel2
@@ -401,7 +426,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(59, 397);
@@ -412,6 +437,7 @@
             // 
             // frmSatisIslemleri
             // 
+            this.frmSatisIslemleri.BackColor = System.Drawing.SystemColors.ControlDark;
             this.frmSatisIslemleri.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.frmSatisIslemleri.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.frmSatisIslemleri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
@@ -428,11 +454,12 @@
             this.frmSatisIslemleri.Text = "Satış İşlemleri";
             this.frmSatisIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.frmSatisIslemleri.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.frmSatisIslemleri.UseVisualStyleBackColor = true;
+            this.frmSatisIslemleri.UseVisualStyleBackColor = false;
             this.frmSatisIslemleri.Click += new System.EventHandler(this.frmSatisIslemleri_Click);
             // 
             // btnOdalar
             // 
+            this.btnOdalar.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnOdalar.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btnOdalar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOdalar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
@@ -449,7 +476,7 @@
             this.btnOdalar.Text = "Odalar";
             this.btnOdalar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOdalar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOdalar.UseVisualStyleBackColor = true;
+            this.btnOdalar.UseVisualStyleBackColor = false;
             this.btnOdalar.Click += new System.EventHandler(this.btnOdalar_Click);
             this.btnOdalar.MouseHover += new System.EventHandler(this.btnOdalar_MouseHover);
             // 
@@ -464,7 +491,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlText;
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.lblTarih);
             this.panel4.Controls.Add(this.lblSaat);
@@ -473,155 +500,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(812, 53);
             this.panel4.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lblBosOda);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.lblDoluOda);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Location = new System.Drawing.Point(352, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 48);
-            this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(374, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(423, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 36);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "50";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.ErrorImage")));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(19, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 41);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(333, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 36);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "50";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblBosOda
-            // 
-            this.lblBosOda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBosOda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBosOda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblBosOda.Location = new System.Drawing.Point(68, 7);
-            this.lblBosOda.Name = "lblBosOda";
-            this.lblBosOda.Size = new System.Drawing.Size(35, 36);
-            this.lblBosOda.TabIndex = 12;
-            this.lblBosOda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(284, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.ErrorImage")));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(109, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(43, 41);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(243, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 36);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "50";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDoluOda
-            // 
-            this.lblDoluOda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoluOda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDoluOda.ForeColor = System.Drawing.Color.Red;
-            this.lblDoluOda.Location = new System.Drawing.Point(158, 7);
-            this.lblDoluOda.Name = "lblDoluOda";
-            this.lblDoluOda.Size = new System.Drawing.Size(35, 36);
-            this.lblDoluOda.TabIndex = 10;
-            this.lblDoluOda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(194, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 41);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // lblTarih
-            // 
-            this.lblTarih.Location = new System.Drawing.Point(4, 8);
-            this.lblTarih.Name = "lblTarih";
-            this.lblTarih.Size = new System.Drawing.Size(142, 23);
-            this.lblTarih.TabIndex = 14;
-            this.lblTarih.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSaat
-            // 
-            this.lblSaat.Location = new System.Drawing.Point(152, 8);
-            this.lblSaat.Name = "lblSaat";
-            this.lblSaat.Size = new System.Drawing.Size(142, 23);
-            this.lblSaat.TabIndex = 15;
-            this.lblSaat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlContent
             // 
@@ -647,24 +525,156 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // btnKasaIslemleri
+            // lblSaat
             // 
-            this.btnKasaIslemleri.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnKasaIslemleri.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnKasaIslemleri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
-            this.btnKasaIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKasaIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKasaIslemleri.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnKasaIslemleri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKasaIslemleri.Location = new System.Drawing.Point(46, 343);
-            this.btnKasaIslemleri.Name = "btnKasaIslemleri";
-            this.btnKasaIslemleri.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnKasaIslemleri.Size = new System.Drawing.Size(142, 48);
-            this.btnKasaIslemleri.TabIndex = 10;
-            this.btnKasaIslemleri.Text = "Kasa İşlemleri";
-            this.btnKasaIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKasaIslemleri.UseVisualStyleBackColor = true;
-            this.btnKasaIslemleri.Click += new System.EventHandler(this.btnKasaIslemleri_Click);
+            this.lblSaat.BackColor = System.Drawing.SystemColors.ControlText;
+            this.lblSaat.Location = new System.Drawing.Point(152, 8);
+            this.lblSaat.Name = "lblSaat";
+            this.lblSaat.Size = new System.Drawing.Size(142, 23);
+            this.lblSaat.TabIndex = 15;
+            this.lblSaat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTarih
+            // 
+            this.lblTarih.BackColor = System.Drawing.SystemColors.ControlText;
+            this.lblTarih.Location = new System.Drawing.Point(4, 8);
+            this.lblTarih.Name = "lblTarih";
+            this.lblTarih.Size = new System.Drawing.Size(142, 23);
+            this.lblTarih.TabIndex = 14;
+            this.lblTarih.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblBosOda);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblDoluOda);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Location = new System.Drawing.Point(352, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(460, 48);
+            this.panel1.TabIndex = 0;
+            // 
+            // lblDoluOda
+            // 
+            this.lblDoluOda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDoluOda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDoluOda.ForeColor = System.Drawing.Color.Red;
+            this.lblDoluOda.Location = new System.Drawing.Point(158, 7);
+            this.lblDoluOda.Name = "lblDoluOda";
+            this.lblDoluOda.Size = new System.Drawing.Size(35, 36);
+            this.lblDoluOda.TabIndex = 10;
+            this.lblDoluOda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(243, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 36);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "50";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBosOda
+            // 
+            this.lblBosOda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBosOda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBosOda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblBosOda.Location = new System.Drawing.Point(68, 7);
+            this.lblBosOda.Name = "lblBosOda";
+            this.lblBosOda.Size = new System.Drawing.Size(35, 36);
+            this.lblBosOda.TabIndex = 12;
+            this.lblBosOda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(333, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 36);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "50";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(423, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 36);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "50";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(374, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(284, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(194, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 41);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.ErrorImage")));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(109, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(43, 41);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.ErrorImage")));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(19, 4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 41);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
             // 
             // frmOtelAnasayfa
             // 
@@ -690,10 +700,10 @@
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -711,24 +721,11 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label lblBosOda;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label lblDoluOda;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button frmSatisIslemleri;
         private System.Windows.Forms.Button btnYonetim;
         private System.Windows.Forms.Button btnExtra;
         private System.Windows.Forms.Button btnOdalar;
-        private System.Windows.Forms.Label lblTarih;
         private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Label lblSaat;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnIcon3;
@@ -744,5 +741,18 @@
         private System.Windows.Forms.Button btnCheckin;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnKasaIslemleri;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblBosOda;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDoluOda;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblTarih;
+        private System.Windows.Forms.Label lblSaat;
     }
 }

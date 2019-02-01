@@ -18,43 +18,44 @@ namespace PL.Hotel
         {
             InitializeComponent();
         }
-        ExtraRepository ex = new ExtraRepository();
+        ExtraTypeRepository ex = new ExtraTypeRepository();
         ExtraType ET = new ExtraType();
         int ID;
         
         private void frmExtraa_Load(object sender, EventArgs e)
         {
-           
             txtDate.Text = DateTime.Now.ToShortDateString();
             dgvExtralar.DataSource = ex.GetExtraTypes();
         }
-
-      
+        private void Temizle()
+        {
+            txtExtraTur.Clear();
+            txtFiyat.Clear();
+            txtDate.Clear();
+        }
 
         private void tsEkle_Click(object sender, EventArgs e)
         {
-           
-            if (!string.IsNullOrEmpty(txtExtraTur.Text ))
+            if (!string.IsNullOrEmpty(txtExtraTur.Text))
             {
                 //Yeni bir nesne oluşturulur.
                 ExtraType yeni = new ExtraType();
                 //Özellikleri girilir.
                 yeni.Type = txtExtraTur.Text;
-            
+
                 if (ex.ExtraControl(yeni))
                 {
                     MessageBox.Show("Bu extra kayıtlı!", "Aynı extra zaten var!");
                 }
                 else
                 {
-                    yeni.Price =Convert.ToDecimal (txtFiyat.Text);
-                    //if (ex.AddExtra(yeni))
-                    //{
-                    //    MessageBox.Show("Yeni extra eklendi.", "Kayıt gerçekleşti.");
-                    //  dgvExtralar.DataSource = ex.GetExtraTypes();
-                    //    //btnKaydet.Enabled = false;
-                    //    //Temizle();
-                    //}
+                    yeni.Price = Convert.ToDecimal(txtFiyat.Text);
+                    if (ex.AddExtra(yeni))
+                    {
+                        MessageBox.Show("Yeni extra eklendi.", "Kayıt gerçekleşti.");
+                        dgvExtralar.DataSource = ex.GetExtraTypes();
+                        Temizle();
+                    }
                 }
             }
             else
@@ -62,6 +63,19 @@ namespace PL.Hotel
                 MessageBox.Show("Extra türü girilmelidir!", "Dikkat! Eksik Bilgi!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             txtExtraTur.Focus();
+        }
+
+        private void tsSil_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Silmek İstiyor musunuz?", "SİLİNSİN Mİ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (ex.DeleteExtra(ID))
+                {
+                    MessageBox.Show("Extra tür bilgileri silindi.", "Silme gerçekleşti.");
+                    dgvExtralar.DataSource = ex.GetExtraTypes();
+                    Temizle();
+                }
+            }
         }
 
         private void tsGuncelle_Click(object sender, EventArgs e)
@@ -82,7 +96,7 @@ namespace PL.Hotel
                     {
                         MessageBox.Show("Extra bilgileri değiştirildi.", "Update gerçekleşti.");
                         dgvExtralar.DataSource = ex.GetExtraTypes();
-                        //Temizle();
+                        Temizle();
                     }
                 }
             }
@@ -98,12 +112,7 @@ namespace PL.Hotel
             ID = Convert.ToInt32(dgvExtralar.SelectedRows[0].Cells[0].Value);
             txtExtraTur.Text = dgvExtralar.SelectedRows[0].Cells[1].Value.ToString();
             txtFiyat.Text = dgvExtralar.SelectedRows[0].Cells[2].Value.ToString();
-            //btnDegistir.Enabled = true;
-            //btnSil.Enabled = true;
-            //btnKaydet.Enabled = false;
             txtExtraTur.Focus();
         }
-
-       
     }
 }

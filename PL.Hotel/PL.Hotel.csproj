@@ -142,6 +142,18 @@
     <Compile Include="frmOtelOdemeleri.Designer.cs">
       <DependentUpon>frmOtelOdemeleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonel.Designer.cs">
+      <DependentUpon>frmPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonelExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonelExtra.Designer.cs">
+      <DependentUpon>frmPersonelExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRezervasyon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +219,12 @@
     <EmbeddedResource Include="frmOtelOdemeleri.resx">
       <DependentUpon>frmOtelOdemeleri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonel.resx">
+      <DependentUpon>frmPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonelExtra.resx">
+      <DependentUpon>frmPersonelExtra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRezervasyon.resx">
       <DependentUpon>frmRezervasyon.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,11 +263,10 @@
       <Name>BLL.Hotel</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL.Hotel\DAL.Hotel.csproj">
-      <Project>{EFAE34C6-BAB7-4BB6-A41C-913EB61A6A2D}</Project>
+      <Project>{efae34c6-bab7-4bb6-a41c-913eb61a6a2d}</Project>
       <Name>DAL.Hotel</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\icons8-turkish-lira-20.png" />
     <Content Include="Resources\icons8-turkish-lira-35.png" />

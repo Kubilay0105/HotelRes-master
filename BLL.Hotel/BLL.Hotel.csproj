@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Repositories\ExtraTypeRepository.cs" />
     <Compile Include="Repositories\frmMusteriOdemeDetaylari.cs">
       <SubType>Form</SubType>
     </Compile>

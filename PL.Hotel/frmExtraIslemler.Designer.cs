@@ -275,6 +275,7 @@
             // 
             // dgvOdalar
             // 
+            this.dgvOdalar.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dgvOdalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOdalar.Location = new System.Drawing.Point(32, 127);
             this.dgvOdalar.Name = "dgvOdalar";

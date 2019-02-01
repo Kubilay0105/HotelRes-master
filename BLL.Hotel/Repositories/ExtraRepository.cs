@@ -72,20 +72,7 @@ namespace BLL.Hotel.Repositories
             return tur;
         }
 
-        public bool UpdateExtra()
-        {
-            bool Sonuc = false;
-            try
-            {
-                ent.SaveChanges(); 
-                Sonuc = true;
-            }
-            catch (Exception ex)
-            {
-                string hata = ex.Message;
-            }
-            return Sonuc;
-        }
+       
         public decimal GetExtraTypePrice(int RoomId)
         {
             decimal sonucPrice = (from r in ent.ExtraTransactions

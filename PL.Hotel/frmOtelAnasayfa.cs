@@ -135,5 +135,16 @@ namespace PL.Hotel
             frmKasaIslemleri frm = new frmKasaIslemleri();
             FormAc(frm);
         }
+
+        private void btnYonetim_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            frmPersonelExtra frm = new frmPersonelExtra();
+            frm.TopLevel = false;
+            pnlContent.Controls.Add(frm);
+            frm.Show();
+            frm.Dock = DockStyle.Fill;
+            frm.BringToFront();
+        }
     }
 }
