@@ -73,6 +73,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.btnKasaIslemleri = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlLeftMenu.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -150,6 +151,7 @@
             // pnlLeftMenu
             // 
             this.pnlLeftMenu.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.pnlLeftMenu.Controls.Add(this.btnKasaIslemleri);
             this.pnlLeftMenu.Controls.Add(this.btnCheckin);
             this.pnlLeftMenu.Controls.Add(this.button5);
             this.pnlLeftMenu.Controls.Add(this.btnOdemeler);
@@ -645,6 +647,25 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // btnKasaIslemleri
+            // 
+            this.btnKasaIslemleri.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnKasaIslemleri.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnKasaIslemleri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
+            this.btnKasaIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKasaIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKasaIslemleri.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnKasaIslemleri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKasaIslemleri.Location = new System.Drawing.Point(46, 343);
+            this.btnKasaIslemleri.Name = "btnKasaIslemleri";
+            this.btnKasaIslemleri.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnKasaIslemleri.Size = new System.Drawing.Size(142, 48);
+            this.btnKasaIslemleri.TabIndex = 10;
+            this.btnKasaIslemleri.Text = "Kasa İşlemleri";
+            this.btnKasaIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKasaIslemleri.UseVisualStyleBackColor = true;
+            this.btnKasaIslemleri.Click += new System.EventHandler(this.btnKasaIslemleri_Click);
+            // 
             // frmOtelAnasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -722,5 +743,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnCheckin;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnKasaIslemleri;
     }
 }

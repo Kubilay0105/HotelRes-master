@@ -198,7 +198,30 @@ namespace BLL.Hotel.Repositories
         //    return sonuc;
 
         //}
-
+        public List<Payment> GetAllPayments()
+        {
+            return ent.Payments.ToList();
+        }
+        public List<PaymentModel> GetAllPaymentsModel()
+        {
+            List<PaymentModel> liste = (from p in ent.Payments
+                                        select new PaymentModel { Id = p.Id, Date = p.Date, Defin = p.TransactionType.Defin, TtName = p.TransactionType.Transtype, Incoming = p.Incoming, Outgoing = p.Outgoing,Description=p.Description }).ToList();
+            return liste;
+        }
+        public List<PaymentModel> GetAllPaymentsModelByDate(DateTime Tarih)
+        {
+            List<PaymentModel> liste = (from p in ent.Payments
+                                        where p.Date.Month == Tarih.Month && p.Date.Day == Tarih.Day
+                                        select new PaymentModel { Id = p.Id, Date = p.Date, Defin = p.TransactionType.Defin, TtName = p.TransactionType.Transtype, Incoming = p.Incoming, Outgoing = p.Outgoing, Description = p.Description }).ToList();
+            return liste;
+        }
+        public List<PaymentModel> GetAllPaymentsModelByDate(DateTime Tarih,string Defin)
+        {
+            List<PaymentModel> liste = (from p in ent.Payments
+                                        where p.Date.Month == Tarih.Month && p.Date.Day == Tarih.Day && p.TransactionType.Defin==Defin
+                                        select new PaymentModel { Id = p.Id, Date = p.Date, Defin = p.TransactionType.Defin, TtName = p.TransactionType.Transtype, Incoming = p.Incoming, Outgoing = p.Outgoing, Description = p.Description }).ToList();
+            return liste;
+        }
         public bool AddPaymentByIncoming(Payment pay, string TransType)
         {
             using (var trans = ent.Database.BeginTransaction())
