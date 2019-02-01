@@ -128,5 +128,10 @@ namespace PL.Hotel
             FormAc(frm);
         }
 
+        private void btnYonetim_Click(object sender, EventArgs e)
+        {
+            frmYönetim frm = new frmYönetim();
+            FormAc(frm);
+        }
     }
 }

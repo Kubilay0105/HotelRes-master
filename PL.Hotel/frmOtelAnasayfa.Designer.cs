@@ -85,7 +85,7 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(789, 63);
+            this.pnlHeader.Size = new System.Drawing.Size(1100, 63);
             this.pnlHeader.TabIndex = 0;
             // 
             // btnMenuAc
@@ -104,7 +104,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(705, 33);
+            this.label1.Location = new System.Drawing.Point(1016, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(663, 22);
+            this.button8.Location = new System.Drawing.Point(974, 22);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(36, 35);
@@ -129,7 +129,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(757, 4);
+            this.button3.Location = new System.Drawing.Point(1068, 4);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(28, 22);
@@ -152,7 +152,7 @@
             this.pnlLeftMenu.Location = new System.Drawing.Point(0, 63);
             this.pnlLeftMenu.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLeftMenu.Name = "pnlLeftMenu";
-            this.pnlLeftMenu.Size = new System.Drawing.Size(188, 403);
+            this.pnlLeftMenu.Size = new System.Drawing.Size(188, 550);
             this.pnlLeftMenu.TabIndex = 1;
             // 
             // btnKasa
@@ -265,6 +265,7 @@
             this.btnYonetim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnYonetim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnYonetim.UseVisualStyleBackColor = true;
+            this.btnYonetim.Click += new System.EventHandler(this.btnYonetim_Click);
             // 
             // frmSatisIslemleri
             // 
@@ -342,10 +343,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 466);
+            this.panel3.Location = new System.Drawing.Point(0, 613);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(789, 37);
+            this.panel3.Size = new System.Drawing.Size(1100, 37);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -356,7 +357,7 @@
             this.panel4.Location = new System.Drawing.Point(188, 63);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(601, 54);
+            this.panel4.Size = new System.Drawing.Size(912, 54);
             this.panel4.TabIndex = 3;
             // 
             // panel1
@@ -372,7 +373,7 @@
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Location = new System.Drawing.Point(187, 1);
+            this.panel1.Location = new System.Drawing.Point(498, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(410, 48);
             this.panel1.TabIndex = 2;
@@ -499,9 +500,8 @@
             this.pnlContent.Location = new System.Drawing.Point(188, 117);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(601, 349);
+            this.pnlContent.Size = new System.Drawing.Size(912, 496);
             this.pnlContent.TabIndex = 4;
-
             // 
             // timer1
             // 
@@ -522,7 +522,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 503);
+            this.ClientSize = new System.Drawing.Size(1100, 650);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlLeftMenu);

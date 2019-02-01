@@ -66,8 +66,6 @@ namespace PL.Hotel
         {
             frmMusteriOdemeleri frm = new frmMusteriOdemeleri();
             FormAc(frm);
-        }
-
-        
+        }     
     }
 }

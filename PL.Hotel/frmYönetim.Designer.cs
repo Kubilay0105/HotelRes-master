@@ -28,151 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlContext = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tsmAnasayfa = new System.Windows.Forms.ToolStripMenuItem();
-            this.msPersonel = new System.Windows.Forms.ToolStripMenuItem();
-            this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personelGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personelSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekstraİşlemlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekstraEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekstraGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekstraSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmYönetim));
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsAnasayfa = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsPersonelIslemleri = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsExtraTurleri = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsKasaIslemleri = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsRaporlar = new System.Windows.Forms.ToolStripButton();
+            this.pnlContent = new System.Windows.Forms.Panel();
+            this.pnlHeader.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlContext
+            // pnlHeader
             // 
-            this.pnlContext.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContext.Location = new System.Drawing.Point(0, 52);
-            this.pnlContext.Name = "pnlContext";
-            this.pnlContext.Size = new System.Drawing.Size(800, 398);
-            this.pnlContext.TabIndex = 5;
+            this.pnlHeader.Controls.Add(this.toolStrip1);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1050, 46);
+            this.pnlHeader.TabIndex = 6;
             // 
-            // menuStrip1
+            // toolStrip1
             // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAnasayfa,
-            this.msPersonel,
-            this.ekstraİşlemlerToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 52);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsAnasayfa,
+            this.toolStripSeparator1,
+            this.tsPersonelIslemleri,
+            this.toolStripSeparator2,
+            this.tsExtraTurleri,
+            this.toolStripSeparator3,
+            this.tsKasaIslemleri,
+            this.toolStripSeparator4,
+            this.tsRaporlar});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1050, 46);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // tsmAnasayfa
+            // tsAnasayfa
             // 
-            this.tsmAnasayfa.AutoSize = false;
-            this.tsmAnasayfa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.tsmAnasayfa.Name = "tsmAnasayfa";
-            this.tsmAnasayfa.Size = new System.Drawing.Size(170, 40);
-            this.tsmAnasayfa.Text = "Anasayfa";
-            this.tsmAnasayfa.Click += new System.EventHandler(this.tsmAnasayfa_Click);
+            this.tsAnasayfa.AutoSize = false;
+            this.tsAnasayfa.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tsAnasayfa.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.tsAnasayfa.Image = ((System.Drawing.Image)(resources.GetObject("tsAnasayfa.Image")));
+            this.tsAnasayfa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAnasayfa.Name = "tsAnasayfa";
+            this.tsAnasayfa.Size = new System.Drawing.Size(100, 43);
+            this.tsAnasayfa.Text = " &Anasayfa";
+            this.tsAnasayfa.Click += new System.EventHandler(this.tsAnasayfa_Click);
             // 
-            // msPersonel
+            // toolStripSeparator1
             // 
-            this.msPersonel.AutoSize = false;
-            this.msPersonel.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.personelEkleToolStripMenuItem,
-            this.personelGüncelleToolStripMenuItem,
-            this.personelSilToolStripMenuItem});
-            this.msPersonel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.msPersonel.Name = "msPersonel";
-            this.msPersonel.Size = new System.Drawing.Size(170, 40);
-            this.msPersonel.Text = "Personel İşlemleri";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 46);
             // 
-            // personelEkleToolStripMenuItem
+            // tsPersonelIslemleri
             // 
-            this.personelEkleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
-            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
-            this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
-            this.personelEkleToolStripMenuItem.Click += new System.EventHandler(this.personelEkleToolStripMenuItem_Click);
+            this.tsPersonelIslemleri.Image = ((System.Drawing.Image)(resources.GetObject("tsPersonelIslemleri.Image")));
+            this.tsPersonelIslemleri.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsPersonelIslemleri.Name = "tsPersonelIslemleri";
+            this.tsPersonelIslemleri.Size = new System.Drawing.Size(122, 43);
+            this.tsPersonelIslemleri.Text = " &Personel İşlemleri";
+            this.tsPersonelIslemleri.Click += new System.EventHandler(this.tsPersonelIslemleri_Click);
             // 
-            // personelGüncelleToolStripMenuItem
+            // toolStripSeparator2
             // 
-            this.personelGüncelleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.personelGüncelleToolStripMenuItem.Name = "personelGüncelleToolStripMenuItem";
-            this.personelGüncelleToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
-            this.personelGüncelleToolStripMenuItem.Text = "Personel Güncelle";
-            this.personelGüncelleToolStripMenuItem.Click += new System.EventHandler(this.personelGüncelleToolStripMenuItem_Click);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 46);
             // 
-            // personelSilToolStripMenuItem
+            // tsExtraTurleri
             // 
-            this.personelSilToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.personelSilToolStripMenuItem.Name = "personelSilToolStripMenuItem";
-            this.personelSilToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
-            this.personelSilToolStripMenuItem.Text = "Personel Sil";
-            this.personelSilToolStripMenuItem.Click += new System.EventHandler(this.personelSilToolStripMenuItem_Click);
+            this.tsExtraTurleri.AutoSize = false;
+            this.tsExtraTurleri.Image = ((System.Drawing.Image)(resources.GetObject("tsExtraTurleri.Image")));
+            this.tsExtraTurleri.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsExtraTurleri.Name = "tsExtraTurleri";
+            this.tsExtraTurleri.Size = new System.Drawing.Size(100, 43);
+            this.tsExtraTurleri.Text = " &Extra Türleri";
+            this.tsExtraTurleri.Click += new System.EventHandler(this.tsExtraTurleri_Click);
             // 
-            // ekstraİşlemlerToolStripMenuItem
+            // toolStripSeparator3
             // 
-            this.ekstraİşlemlerToolStripMenuItem.AutoSize = false;
-            this.ekstraİşlemlerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ekstraEkleToolStripMenuItem,
-            this.ekstraGüncelleToolStripMenuItem,
-            this.ekstraSilToolStripMenuItem});
-            this.ekstraİşlemlerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.ekstraİşlemlerToolStripMenuItem.Name = "ekstraİşlemlerToolStripMenuItem";
-            this.ekstraİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(170, 40);
-            this.ekstraİşlemlerToolStripMenuItem.Text = "Ekstra İşlemler";
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 46);
             // 
-            // ekstraEkleToolStripMenuItem
+            // tsKasaIslemleri
             // 
-            this.ekstraEkleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ekstraEkleToolStripMenuItem.Name = "ekstraEkleToolStripMenuItem";
-            this.ekstraEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.ekstraEkleToolStripMenuItem.Text = "Ekstra Ekle";
-            this.ekstraEkleToolStripMenuItem.Click += new System.EventHandler(this.ekstraEkleToolStripMenuItem_Click);
+            this.tsKasaIslemleri.AutoSize = false;
+            this.tsKasaIslemleri.Image = ((System.Drawing.Image)(resources.GetObject("tsKasaIslemleri.Image")));
+            this.tsKasaIslemleri.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsKasaIslemleri.Name = "tsKasaIslemleri";
+            this.tsKasaIslemleri.Size = new System.Drawing.Size(100, 43);
+            this.tsKasaIslemleri.Text = " &Kasa İşlemleri";
+            this.tsKasaIslemleri.Click += new System.EventHandler(this.tsKasaIslemleri_Click);
             // 
-            // ekstraGüncelleToolStripMenuItem
+            // toolStripSeparator4
             // 
-            this.ekstraGüncelleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ekstraGüncelleToolStripMenuItem.Name = "ekstraGüncelleToolStripMenuItem";
-            this.ekstraGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.ekstraGüncelleToolStripMenuItem.Text = "Ekstra Güncelle";
-            this.ekstraGüncelleToolStripMenuItem.Click += new System.EventHandler(this.ekstraGüncelleToolStripMenuItem_Click);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 46);
             // 
-            // ekstraSilToolStripMenuItem
+            // tsRaporlar
             // 
-            this.ekstraSilToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ekstraSilToolStripMenuItem.Name = "ekstraSilToolStripMenuItem";
-            this.ekstraSilToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.ekstraSilToolStripMenuItem.Text = "Ekstra Sil";
-            this.ekstraSilToolStripMenuItem.Click += new System.EventHandler(this.ekstraSilToolStripMenuItem_Click);
+            this.tsRaporlar.AutoSize = false;
+            this.tsRaporlar.Image = ((System.Drawing.Image)(resources.GetObject("tsRaporlar.Image")));
+            this.tsRaporlar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsRaporlar.Name = "tsRaporlar";
+            this.tsRaporlar.Size = new System.Drawing.Size(114, 43);
+            this.tsRaporlar.Text = "&Raporlar";
+            this.tsRaporlar.Click += new System.EventHandler(this.tsRaporlar_Click);
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(0, 46);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(1050, 554);
+            this.pnlContent.TabIndex = 7;
             // 
             // frmYönetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlContext);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(1050, 600);
+            this.Controls.Add(this.pnlContent);
+            this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmYönetim";
             this.Text = "frmYönetim";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlContext;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tsmAnasayfa;
-        private System.Windows.Forms.ToolStripMenuItem msPersonel;
-        private System.Windows.Forms.ToolStripMenuItem personelEkleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem personelGüncelleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem personelSilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ekstraİşlemlerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ekstraEkleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ekstraGüncelleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ekstraSilToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tsAnasayfa;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton tsPersonelIslemleri;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton tsExtraTurleri;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton tsKasaIslemleri;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton tsRaporlar;
+        private System.Windows.Forms.Panel pnlContent;
     }
 }
