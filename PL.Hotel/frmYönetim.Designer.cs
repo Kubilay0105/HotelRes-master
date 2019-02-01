@@ -1,6 +1,6 @@
 ﻿namespace PL.Hotel
 {
-    partial class frmPersonelExtra
+    partial class frmYönetim
     {
         /// <summary>
         /// Required designer variable.
@@ -48,7 +48,7 @@
             this.pnlContext.Location = new System.Drawing.Point(0, 52);
             this.pnlContext.Name = "pnlContext";
             this.pnlContext.Size = new System.Drawing.Size(800, 398);
-            this.pnlContext.TabIndex = 3;
+            this.pnlContext.TabIndex = 5;
             // 
             // menuStrip1
             // 
@@ -61,7 +61,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 52);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // tsmAnasayfa
@@ -125,7 +125,7 @@
             // 
             this.ekstraEkleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ekstraEkleToolStripMenuItem.Name = "ekstraEkleToolStripMenuItem";
-            this.ekstraEkleToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
+            this.ekstraEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.ekstraEkleToolStripMenuItem.Text = "Ekstra Ekle";
             this.ekstraEkleToolStripMenuItem.Click += new System.EventHandler(this.ekstraEkleToolStripMenuItem_Click);
             // 
@@ -133,7 +133,7 @@
             // 
             this.ekstraGüncelleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ekstraGüncelleToolStripMenuItem.Name = "ekstraGüncelleToolStripMenuItem";
-            this.ekstraGüncelleToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
+            this.ekstraGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.ekstraGüncelleToolStripMenuItem.Text = "Ekstra Güncelle";
             this.ekstraGüncelleToolStripMenuItem.Click += new System.EventHandler(this.ekstraGüncelleToolStripMenuItem_Click);
             // 
@@ -141,11 +141,11 @@
             // 
             this.ekstraSilToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ekstraSilToolStripMenuItem.Name = "ekstraSilToolStripMenuItem";
-            this.ekstraSilToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
+            this.ekstraSilToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.ekstraSilToolStripMenuItem.Text = "Ekstra Sil";
             this.ekstraSilToolStripMenuItem.Click += new System.EventHandler(this.ekstraSilToolStripMenuItem_Click);
             // 
-            // frmPersonelExtra
+            // frmYönetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,8 +153,8 @@
             this.Controls.Add(this.pnlContext);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPersonelExtra";
-            this.Text = "frmPersonelExtra";
+            this.Name = "frmYönetim";
+            this.Text = "frmYönetim";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

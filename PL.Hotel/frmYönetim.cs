@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PL.Hotel
 {
-    public partial class frmPersonelExtra : Form
+    public partial class frmYönetim : Form
     {
-        public frmPersonelExtra()
+        public frmYönetim()
         {
             InitializeComponent();
         }
@@ -77,7 +77,6 @@ namespace PL.Hotel
 
         private void ekstraGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             pnlContext.Controls.Clear();
             frmExtraa frm = new frmExtraa();
             frm.TopLevel = false;

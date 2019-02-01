@@ -148,12 +148,6 @@
     <Compile Include="frmPersonel.Designer.cs">
       <DependentUpon>frmPersonel.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPersonelExtra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPersonelExtra.Designer.cs">
-      <DependentUpon>frmPersonelExtra.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmRezervasyon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +165,12 @@
     </Compile>
     <Compile Include="frmSatisIslemi.Designer.cs">
       <DependentUpon>frmSatisIslemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYönetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYönetim.Designer.cs">
+      <DependentUpon>frmYönetim.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -222,9 +222,6 @@
     <EmbeddedResource Include="frmPersonel.resx">
       <DependentUpon>frmPersonel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPersonelExtra.resx">
-      <DependentUpon>frmPersonelExtra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmRezervasyon.resx">
       <DependentUpon>frmRezervasyon.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSatisIslemi.resx">
       <DependentUpon>frmSatisIslemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYönetim.resx">
+      <DependentUpon>frmYönetim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

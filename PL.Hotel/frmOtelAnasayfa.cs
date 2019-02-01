@@ -139,7 +139,7 @@ namespace PL.Hotel
         private void btnYonetim_Click(object sender, EventArgs e)
         {
             pnlContent.Controls.Clear();
-            frmPersonelExtra frm = new frmPersonelExtra();
+            frmYönetim frm = new frmYönetim();
             frm.TopLevel = false;
             pnlContent.Controls.Add(frm);
             frm.Show();

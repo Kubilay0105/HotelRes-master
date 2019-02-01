@@ -118,7 +118,7 @@ namespace PL.Hotel
             ID = Convert.ToInt32(dgvPersonel.SelectedRows[0].Cells[0].Value);
             txtPersonelAd.Text = dgvPersonel.SelectedRows[0].Cells[1].Value.ToString();
             txtPersonelSoyad.Text = dgvPersonel.SelectedRows[0].Cells[2].Value.ToString();
-            txtTC.Text= dgvPersonel.SelectedRows[0].Cells[4].Value.ToString();
+            txtTC.Text= dgvPersonel.SelectedRows[0].Cells[4].Value == null ? "" : dgvPersonel.SelectedRows[0].Cells[4].Value.ToString();
             txtTel.Text = dgvPersonel.SelectedRows[0].Cells[5].Value.ToString();
             txtAdres.Text = dgvPersonel.SelectedRows[0].Cells[6].Value.ToString();
             txtUsername.Text = dgvPersonel.SelectedRows[0].Cells[7].Value.ToString();
