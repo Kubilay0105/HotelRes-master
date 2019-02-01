@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOdemeEkranı));
             this.label1 = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.pnlContent1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsMusteriOdemeleri = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsOtelOdemeleri = new System.Windows.Forms.ToolStripButton();
-            this.pnlContent1 = new System.Windows.Forms.Panel();
             this.pnlContent.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,14 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(1093, 570);
             this.pnlContent.TabIndex = 2;
+            // 
+            // pnlContent1
+            // 
+            this.pnlContent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent1.Location = new System.Drawing.Point(0, 44);
+            this.pnlContent1.Name = "pnlContent1";
+            this.pnlContent1.Size = new System.Drawing.Size(1093, 526);
+            this.pnlContent1.TabIndex = 101;
             // 
             // toolStrip1
             // 
@@ -99,14 +107,7 @@
             this.tsOtelOdemeleri.Name = "tsOtelOdemeleri";
             this.tsOtelOdemeleri.Size = new System.Drawing.Size(107, 41);
             this.tsOtelOdemeleri.Text = "&Otel Ödemeleri";
-            // 
-            // pnlContent1
-            // 
-            this.pnlContent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent1.Location = new System.Drawing.Point(0, 44);
-            this.pnlContent1.Name = "pnlContent1";
-            this.pnlContent1.Size = new System.Drawing.Size(1093, 526);
-            this.pnlContent1.TabIndex = 101;
+            this.tsOtelOdemeleri.Click += new System.EventHandler(this.tsOtelOdemeleri_Click);
             // 
             // frmOdemeEkranı
             // 

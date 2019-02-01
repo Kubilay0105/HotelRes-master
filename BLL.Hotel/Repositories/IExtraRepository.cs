@@ -9,9 +9,7 @@ namespace BLL.Hotel.Repositories
 {
     public interface IExtraRepository
     {
-        bool AddExtraTrans(ExtraTransactions Ex);
-        List<ExtraTransactions> GetExtras(int RoomId);
-        ExtraType GetExtraType(int TypeName);
+       
 
     }
 }

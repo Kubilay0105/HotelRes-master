@@ -38,12 +38,31 @@ namespace PL.Hotel
                 MessageBox.Show("Zorunlu alanlar girilmedi.", "Dikkat Eksik Bilgi!");
             }
             Guest gue = new Guest();
-            gue.FirstName = txtAdi.Text;
-            gue.LastName = txtSoyadi.Text;
+            try
+            {
+                gue.FirstName = txtAdi.Text;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            try
+            {
+                gue.LastName = txtSoyadi.Text;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
             gue.IdentificationNo = txtTc.Text;
             gue.RoomId = Rp.GetRoomId(OdaNo);
             gue.Adress = txtAdres.Text;
-            gue.Gender = cbCinsiyet.SelectedText;
+            gue.Gender = cbCinsiyet.SelectedItem.ToString();
             gue.Birthday = dtpDogumTarihi.Value;
             gue.ContactNo = txtTelefon.Text;
             gue.Email = txtEmail.Text;
@@ -54,17 +73,17 @@ namespace PL.Hotel
             }
             else MessageBox.Show("Yapılmadı");
             dgvMusteriler.DataSource = Gp.GetAllGuest();
-            Temizle();
+            //Temizle();
         }
         private void Temizle()
         {
-            foreach(Control item in panel2.Controls)
-            {
-                if(item is TextBox)
-                {
-                    item.Text = "";
-                }
-            }
+            //foreach(Control item in panel2.Controls)
+            //{
+            //    if(item is TextBox)
+            //    {
+            //        item.Text = "";
+            //    }
+            //}
             //txtAdi.Clear();
             //txtSoyadi.Clear();
             //txtTc.Clear();
@@ -87,9 +106,6 @@ namespace PL.Hotel
         {
             frmOdaSec frm = new frmOdaSec();
             frm.ShowDialog();
-            //txtOdaNo.Text = OdaNo;
-            //txtGirisTarihi.Text = Giris.ToShortDateString();
-            //txtCikisTarihi.Text = Cikis.ToShortDateString();
             TimeSpan fark = Cikis - Giris;
             int gunsayisi = fark.Days;
             decimal OdaFiyat = Rp.GetRoomPrice(OdaNo);

@@ -37,7 +37,11 @@ namespace BLL.Hotel.Repositories
         {
             throw new NotImplementedException();
         }
+        public List<Sale> GetSaleforFullRoom(DateTime Tarih)
+        {
 
+            return ent.Sales.Where(x=>x.Deleted == false && x.CheckIn < Tarih && x.CheckOut > Tarih).Select(x=>x).ToList();
+        }
         public int GetSaleIdByGuest(int GuestId)
         {
             int SaleId = Convert.ToInt32((from s in ent.Sales

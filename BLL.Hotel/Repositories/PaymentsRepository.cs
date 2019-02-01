@@ -11,7 +11,7 @@ namespace BLL.Hotel.Repositories
     public class PaymentsRepository : IPaymentsRepository
     {
         OtelResContext ent = new OtelResContext();
-      
+
         //public List<Payment> GetPayments()
         //{
         //    return ent.Payments.ToList();
@@ -33,7 +33,7 @@ namespace BLL.Hotel.Repositories
         //    return payments;
 
         //}
-        
+
         //public List<Payment> PaymentsByDate(DateTime Date)
         //{
         //    var payments = (from p in ent.Payments
@@ -61,7 +61,7 @@ namespace BLL.Hotel.Repositories
         //    catch (Exception ex)
         //    {
         //        string hata = ex.Message;
-                
+
         //    }
         //    return sonuc;
         //}
@@ -97,7 +97,7 @@ namespace BLL.Hotel.Repositories
         //        {
         //            liste.Add(paymod);
         //        }
-              
+
 
         //    }
 
@@ -198,10 +198,33 @@ namespace BLL.Hotel.Repositories
         //    return sonuc;
 
         //}
-
-        public bool AddPaymentByIncoming(Payment pay,string TransType)
+        public List<Payment> GetAllPayments()
         {
-            using(var trans = ent.Database.BeginTransaction())
+            return ent.Payments.ToList();
+        }
+        public List<PaymentModel> GetAllPaymentsModel()
+        {
+            List<PaymentModel> liste = (from p in ent.Payments
+                                        select new PaymentModel { Id = p.Id, Date = p.Date, Defin = p.TransactionType.Defin, TtName = p.TransactionType.Transtype, Incoming = p.Incoming, Outgoing = p.Outgoing,Description=p.Description }).ToList();
+            return liste;
+        }
+        public List<PaymentModel> GetAllPaymentsModelByDate(DateTime Tarih)
+        {
+            List<PaymentModel> liste = (from p in ent.Payments
+                                        where p.Date.Month == Tarih.Month && p.Date.Day == Tarih.Day
+                                        select new PaymentModel { Id = p.Id, Date = p.Date, Defin = p.TransactionType.Defin, TtName = p.TransactionType.Transtype, Incoming = p.Incoming, Outgoing = p.Outgoing, Description = p.Description }).ToList();
+            return liste;
+        }
+        public List<PaymentModel> GetAllPaymentsModelByDate(DateTime Tarih,string Defin)
+        {
+            List<PaymentModel> liste = (from p in ent.Payments
+                                        where p.Date.Month == Tarih.Month && p.Date.Day == Tarih.Day && p.TransactionType.Defin==Defin
+                                        select new PaymentModel { Id = p.Id, Date = p.Date, Defin = p.TransactionType.Defin, TtName = p.TransactionType.Transtype, Incoming = p.Incoming, Outgoing = p.Outgoing, Description = p.Description }).ToList();
+            return liste;
+        }
+        public bool AddPaymentByIncoming(Payment pay, string TransType)
+        {
+            using (var trans = ent.Database.BeginTransaction())
             {
                 bool sonuc = false;
                 try
@@ -217,6 +240,7 @@ namespace BLL.Hotel.Repositories
                     gt.GuestId = pay.GuestId;
                     gt.Status = true;
                     gt.Description = pay.Description;
+                    ent.GuestTransactions.Add(gt);
                     ent.SaveChanges();
 
                     trans.Commit();
@@ -231,8 +255,23 @@ namespace BLL.Hotel.Repositories
 
             }
         }
+
+        public bool AddPaymentByOutgoing(Payment pay)
+        {
+            bool Sonuc = false;
+            ent.Payments.Add(pay);
+            try
+            {
+                ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
+
     }
-
-
 }
 

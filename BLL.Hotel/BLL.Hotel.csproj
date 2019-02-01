@@ -71,6 +71,7 @@
     <Compile Include="Repositories\ISaleRepository.cs" />
     <Compile Include="Repositories\ITransTypeRepository.cs" />
     <Compile Include="Repositories\PaymentsRepository.cs" />
+    <Compile Include="Repositories\PersonnelRepository.cs" />
     <Compile Include="Repositories\Reservations.cs" />
     <Compile Include="Repositories\RoomRepository.cs" />
     <Compile Include="Repositories\SaleRepository.cs" />

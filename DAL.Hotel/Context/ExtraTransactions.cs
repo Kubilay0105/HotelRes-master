@@ -27,6 +27,8 @@ namespace DAL.Hotel.Context
         public bool Status { get; set; }
         [DefaultValue(false)]
         public bool Deleted { get; set; }
+        public int GuestId { get; set; }
+
 
         //Relations
         [ForeignKey("TypeId")]

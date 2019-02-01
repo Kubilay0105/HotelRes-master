@@ -76,10 +76,10 @@ namespace PL.Hotel
         private void frmOtelAnasayfa_Load(object sender, EventArgs e)
         {
             //timer3.Start();
-            //lblTarih.Text = DateTime.Now.Date.ToShortDateString() + DateTime.Today.DayOfWeek.ToString();
+            ////lblTarih.Text = DateTime.Now.Date.ToShortDateString() + DateTime.Today.DayOfWeek.ToString();
             
-            lblDoluOda.Text = Rp.FullRoomsCount().ToString();
-            lblBosOda.Text = (30 - Rp.FullRoomsCount()).ToString();
+            //lblDoluOda.Text = Rp.FullRoomsCount().ToString();
+            //lblBosOda.Text = (30 - Rp.FullRoomsCount()).ToString();
         }
 
         private void frmOtelAnasayfa_Shown(object sender, EventArgs e)
@@ -102,15 +102,7 @@ namespace PL.Hotel
             FormAc(frm);
         }
 
-        private void btnOdalar_MouseHover(object sender, EventArgs e)
-        {
-            btnIcon1.FlatAppearance.MouseOverBackColor = Color.Red;
-        }
-
-        private void BtnIcon1_MouseHover(object sender, EventArgs e)
-        {
-            btnIcon1.FlatAppearance.MouseOverBackColor = Color.Red;
-        }
+      
 
         private void btnOdemeler_Click(object sender, EventArgs e)
         {
@@ -130,6 +122,11 @@ namespace PL.Hotel
             FormAc(frm);
         }
 
-      
+        private void btnKasa_Click(object sender, EventArgs e)
+        {
+            frmKasaIslemleri frm = new frmKasaIslemleri();
+            FormAc(frm);
+        }
+
     }
 }

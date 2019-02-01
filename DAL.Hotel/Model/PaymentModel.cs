@@ -8,15 +8,12 @@ namespace DAL.Hotel
 {
     public class PaymentModel
     {
-        public int PaymentId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string IdentificationNo { get; set; }
-        public string TransType { get; set; }
-        public decimal Debt { get; set; }
-        public decimal Credit { get; set; }
-        public bool Status { get; set; }
-
-
+        public int Id { get; set; }
+        public DateTime Date { get; set; }
+        public string Defin { get; set; }
+        public string TtName { get; set; }
+        public decimal Incoming { get; set; }
+        public decimal Outgoing { get; set; }
+        public string Description { get; set; }
     }
 }

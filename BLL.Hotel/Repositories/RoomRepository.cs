@@ -37,6 +37,19 @@ namespace BLL.Hotel.Repositories
         {
             return ent.Rooms.ToList();
         }
+        public List<Room> GetFullRooms(List<Sale> ss)
+        {
+            List<Room> liste = new List<Room>();
+            foreach (Sale item in ss)
+            {
+                Room fullroom = (from r in ent.Rooms
+                                 where r.Id == item.RoomId
+                                 select r).FirstOrDefault();
+
+                liste.Add(fullroom);
+            }
+            return liste;
+        }
         public int FullRoomsCount()
         {
             int DoluSayi=(from s in ent.Sales
