@@ -79,5 +79,10 @@ namespace PL.Hotel
             txtKazanc.Clear();
             txtBorc.Clear();
         }
+
+        private void pnlContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
