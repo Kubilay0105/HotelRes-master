@@ -68,11 +68,11 @@ namespace PL.Hotel
             frmExtraa frm = new frmExtraa();
             frm.TopLevel = false;
             pnlContext.Controls.Add(frm);
-            frm.Show();
             frm.Dock = DockStyle.Fill;
             frm.BringToFront();
-            frm.tsGuncelle.Enabled = false;
-            frm.tsSil.Enabled = false;
+            //frm.tsGuncelle.Enabled = false;
+            //frm.tsSil.Enabled = false;
+
         }
 
         private void ekstraGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,8 +84,8 @@ namespace PL.Hotel
             frm.Show();
             frm.Dock = DockStyle.Fill;
             frm.BringToFront();
-            frm.tsEkle.Enabled = false;
-            frm.tsSil.Enabled = false;
+            //frm.tsEkle.Enabled = false;
+            //frm.tsSil.Enabled = false;
         }
 
         private void ekstraSilToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,8 +97,8 @@ namespace PL.Hotel
             frm.Show();
             frm.Dock = DockStyle.Fill;
             frm.BringToFront();
-            frm.tsGuncelle.Enabled = false;
-            frm.tsEkle.Enabled = false;
+            //frm.tsGuncelle.Enabled = false;
+            //frm.tsEkle.Enabled = false;
         }
     }
 }
