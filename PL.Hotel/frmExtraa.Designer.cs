@@ -111,7 +111,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(193, 327);
+            this.label6.Location = new System.Drawing.Point(308, 327);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 42;
@@ -119,15 +119,15 @@
             // 
             // txtExtraTur
             // 
-            this.txtExtraTur.Location = new System.Drawing.Point(252, 327);
+            this.txtExtraTur.Location = new System.Drawing.Point(353, 327);
             this.txtExtraTur.Name = "txtExtraTur";
-            this.txtExtraTur.Size = new System.Drawing.Size(78, 20);
+            this.txtExtraTur.Size = new System.Drawing.Size(113, 20);
             this.txtExtraTur.TabIndex = 41;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(193, 353);
+            this.label9.Location = new System.Drawing.Point(308, 353);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 40;
@@ -135,9 +135,9 @@
             // 
             // txtFiyat
             // 
-            this.txtFiyat.Location = new System.Drawing.Point(252, 353);
+            this.txtFiyat.Location = new System.Drawing.Point(353, 353);
             this.txtFiyat.Name = "txtFiyat";
-            this.txtFiyat.Size = new System.Drawing.Size(78, 20);
+            this.txtFiyat.Size = new System.Drawing.Size(70, 20);
             this.txtFiyat.TabIndex = 39;
             // 
             // dgvExtralar
@@ -148,7 +148,7 @@
             this.dgvExtralar.Location = new System.Drawing.Point(12, 171);
             this.dgvExtralar.Name = "dgvExtralar";
             this.dgvExtralar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExtralar.Size = new System.Drawing.Size(400, 150);
+            this.dgvExtralar.Size = new System.Drawing.Size(454, 150);
             this.dgvExtralar.TabIndex = 38;
             this.dgvExtralar.DoubleClick += new System.EventHandler(this.dgvExtralar_DoubleClick);
             // 
