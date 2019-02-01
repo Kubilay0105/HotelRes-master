@@ -36,10 +36,10 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pnlLeftMenu = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnKasa = new System.Windows.Forms.Button();
             this.btnExtra = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnMisafirler = new System.Windows.Forms.Button();
+            this.btnOdemeler = new System.Windows.Forms.Button();
             this.btnYonetim = new System.Windows.Forms.Button();
             this.frmSatisIslemleri = new System.Windows.Forms.Button();
             this.btnOdalar = new System.Windows.Forms.Button();
@@ -140,10 +140,10 @@
             // pnlLeftMenu
             // 
             this.pnlLeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.pnlLeftMenu.Controls.Add(this.button4);
+            this.pnlLeftMenu.Controls.Add(this.btnKasa);
             this.pnlLeftMenu.Controls.Add(this.btnExtra);
-            this.pnlLeftMenu.Controls.Add(this.button2);
-            this.pnlLeftMenu.Controls.Add(this.button6);
+            this.pnlLeftMenu.Controls.Add(this.btnMisafirler);
+            this.pnlLeftMenu.Controls.Add(this.btnOdemeler);
             this.pnlLeftMenu.Controls.Add(this.btnYonetim);
             this.pnlLeftMenu.Controls.Add(this.frmSatisIslemleri);
             this.pnlLeftMenu.Controls.Add(this.btnOdalar);
@@ -155,26 +155,27 @@
             this.pnlLeftMenu.Size = new System.Drawing.Size(188, 403);
             this.pnlLeftMenu.TabIndex = 1;
             // 
-            // button4
+            // btnKasa
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 330);
-            this.button4.Name = "button4";
-            this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(188, 48);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "   Kasa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnKasa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKasa.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnKasa.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnKasa.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnKasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKasa.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnKasa.Image = ((System.Drawing.Image)(resources.GetObject("btnKasa.Image")));
+            this.btnKasa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKasa.Location = new System.Drawing.Point(0, 330);
+            this.btnKasa.Name = "btnKasa";
+            this.btnKasa.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnKasa.Size = new System.Drawing.Size(188, 48);
+            this.btnKasa.TabIndex = 28;
+            this.btnKasa.Text = "   Kasa";
+            this.btnKasa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKasa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKasa.UseVisualStyleBackColor = true;
+            this.btnKasa.Click += new System.EventHandler(this.btnKasa_Click);
             // 
             // btnExtra
             // 
@@ -198,50 +199,50 @@
             this.btnExtra.UseVisualStyleBackColor = true;
             this.btnExtra.Click += new System.EventHandler(this.btnExtra_Click);
             // 
-            // button2
+            // btnMisafirler
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 237);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(188, 45);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "   Misafirler";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMisafirler.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMisafirler.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnMisafirler.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMisafirler.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnMisafirler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMisafirler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMisafirler.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMisafirler.Image = ((System.Drawing.Image)(resources.GetObject("btnMisafirler.Image")));
+            this.btnMisafirler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMisafirler.Location = new System.Drawing.Point(0, 237);
+            this.btnMisafirler.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMisafirler.Name = "btnMisafirler";
+            this.btnMisafirler.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnMisafirler.Size = new System.Drawing.Size(188, 45);
+            this.btnMisafirler.TabIndex = 26;
+            this.btnMisafirler.Text = "   Misafirler";
+            this.btnMisafirler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMisafirler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMisafirler.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnOdemeler
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 192);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button6.Size = new System.Drawing.Size(188, 45);
-            this.button6.TabIndex = 25;
-            this.button6.Text = "   Ödemeler";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.btnOdemeler_Click);
+            this.btnOdemeler.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOdemeler.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnOdemeler.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOdemeler.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnOdemeler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOdemeler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOdemeler.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnOdemeler.Image = ((System.Drawing.Image)(resources.GetObject("btnOdemeler.Image")));
+            this.btnOdemeler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOdemeler.Location = new System.Drawing.Point(0, 192);
+            this.btnOdemeler.Margin = new System.Windows.Forms.Padding(0);
+            this.btnOdemeler.Name = "btnOdemeler";
+            this.btnOdemeler.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnOdemeler.Size = new System.Drawing.Size(188, 45);
+            this.btnOdemeler.TabIndex = 25;
+            this.btnOdemeler.Text = "   Ödemeler";
+            this.btnOdemeler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOdemeler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOdemeler.UseVisualStyleBackColor = true;
+            this.btnOdemeler.Click += new System.EventHandler(this.btnOdemeler_Click);
             // 
             // btnYonetim
             // 
@@ -264,7 +265,6 @@
             this.btnYonetim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnYonetim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnYonetim.UseVisualStyleBackColor = true;
-            this.btnYonetim.Click += new System.EventHandler(this.btnYonetim_Click);
             // 
             // frmSatisIslemleri
             // 
@@ -327,7 +327,7 @@
             // 
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Algerian", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -501,7 +501,7 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(601, 349);
             this.pnlContent.TabIndex = 4;
-            this.pnlContent.Click += new System.EventHandler(this.btnKasaIslemleri_Click);
+
             // 
             // timer1
             // 
@@ -566,13 +566,13 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnExtra;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnMisafirler;
+        private System.Windows.Forms.Button btnOdemeler;
         private System.Windows.Forms.Button btnYonetim;
         private System.Windows.Forms.Button frmSatisIslemleri;
         private System.Windows.Forms.Button btnOdalar;
         private System.Windows.Forms.Button btnMenuAc;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnKasa;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;

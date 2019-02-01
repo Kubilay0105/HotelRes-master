@@ -11,6 +11,7 @@ namespace DAL.Hotel.Context
 {
     public class  OtelResContext: DbContext
     {
+
         public OtelResContext() : base("OtelResContext")
         {
             //Migration işlemleri için DbContext (PIContext) ile Migration eşleştirilmelidir.

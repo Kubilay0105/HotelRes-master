@@ -26,7 +26,7 @@ namespace BLL.Hotel.Repositories
                     g.TransType = "Extra Ücreti";
                     g.Debt = Ex.Sum;
                     g.Credit = 0;
-                    g.GuestId = GId;
+                    g.GuestId = Ex.GuestId;
                     g.Status = true;
                     g.Description = "";
                     ent.GuestTransactions.Add(g);
@@ -72,7 +72,20 @@ namespace BLL.Hotel.Repositories
             return tur;
         }
 
-       
+        public bool UpdateExtra()
+        {
+            bool Sonuc = false;
+            try
+            {
+                ent.SaveChanges(); 
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
         public decimal GetExtraTypePrice(int RoomId)
         {
             decimal sonucPrice = (from r in ent.ExtraTransactions

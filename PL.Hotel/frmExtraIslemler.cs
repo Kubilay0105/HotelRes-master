@@ -85,6 +85,7 @@ namespace PL.Hotel
                 ExtraTransactions ex = new ExtraTransactions();
                 ex.TypeId = ExtraTypeId;
                 ex.RoomId = RId;
+                ex.GuestId = GId;
                 try
                 {
                     ex.Unit = Convert.ToInt32(txtUnit.Text);

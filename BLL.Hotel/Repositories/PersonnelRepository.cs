@@ -61,6 +61,7 @@ namespace BLL.Hotel.Repositories
             return ent.Personnel.ToList();
         }
 
+        
         public bool UpdatePersonnel(Personnel p)
         {
             bool Sonuc = false;

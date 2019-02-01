@@ -254,10 +254,11 @@
       <Name>BLL.Hotel</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL.Hotel\DAL.Hotel.csproj">
-      <Project>{efae34c6-bab7-4bb6-a41c-913eb61a6a2d}</Project>
+      <Project>{EFAE34C6-BAB7-4BB6-A41C-913EB61A6A2D}</Project>
       <Name>DAL.Hotel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\icons8-turkish-lira-20.png" />
     <Content Include="Resources\icons8-turkish-lira-35.png" />

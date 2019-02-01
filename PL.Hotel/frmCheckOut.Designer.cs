@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCheckOut));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnYazdır = new System.Windows.Forms.Button();
             this.btnIptal = new System.Windows.Forms.Button();
             this.btnOdemeYap = new System.Windows.Forms.Button();
             this.btnCikisOnayla = new System.Windows.Forms.Button();
@@ -56,6 +58,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.ppdiaFatura = new System.Windows.Forms.PrintPreviewDialog();
+            this.pdocFatura = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbMüsteriBilgileri.SuspendLayout();
@@ -77,6 +81,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.btnYazdır);
             this.panel1.Controls.Add(this.btnIptal);
             this.panel1.Controls.Add(this.btnOdemeYap);
             this.panel1.Controls.Add(this.btnCikisOnayla);
@@ -86,17 +91,28 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 65);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 301);
             this.panel1.TabIndex = 3;
             // 
+            // btnYazdır
+            // 
+            this.btnYazdır.Location = new System.Drawing.Point(442, 254);
+            this.btnYazdır.Margin = new System.Windows.Forms.Padding(2);
+            this.btnYazdır.Name = "btnYazdır";
+            this.btnYazdır.Size = new System.Drawing.Size(102, 36);
+            this.btnYazdır.TabIndex = 107;
+            this.btnYazdır.Text = "Yazdır";
+            this.btnYazdır.UseVisualStyleBackColor = true;
+            this.btnYazdır.Click += new System.EventHandler(this.btnYazdır_Click);
+            // 
             // btnIptal
             // 
-            this.btnIptal.Location = new System.Drawing.Point(389, 255);
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIptal.Location = new System.Drawing.Point(344, 254);
+            this.btnIptal.Margin = new System.Windows.Forms.Padding(2);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(102, 36);
+            this.btnIptal.Size = new System.Drawing.Size(94, 36);
             this.btnIptal.TabIndex = 103;
             this.btnIptal.Text = "İptal";
             this.btnIptal.UseVisualStyleBackColor = true;
@@ -104,7 +120,7 @@
             // btnOdemeYap
             // 
             this.btnOdemeYap.Location = new System.Drawing.Point(442, 214);
-            this.btnOdemeYap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOdemeYap.Margin = new System.Windows.Forms.Padding(2);
             this.btnOdemeYap.Name = "btnOdemeYap";
             this.btnOdemeYap.Size = new System.Drawing.Size(102, 36);
             this.btnOdemeYap.TabIndex = 106;
@@ -115,7 +131,7 @@
             // btnCikisOnayla
             // 
             this.btnCikisOnayla.Location = new System.Drawing.Point(344, 214);
-            this.btnCikisOnayla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCikisOnayla.Margin = new System.Windows.Forms.Padding(2);
             this.btnCikisOnayla.Name = "btnCikisOnayla";
             this.btnCikisOnayla.Size = new System.Drawing.Size(94, 36);
             this.btnCikisOnayla.TabIndex = 105;
@@ -217,7 +233,7 @@
             // btnBorcSorgula
             // 
             this.btnBorcSorgula.Location = new System.Drawing.Point(96, 195);
-            this.btnBorcSorgula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBorcSorgula.Margin = new System.Windows.Forms.Padding(2);
             this.btnBorcSorgula.Name = "btnBorcSorgula";
             this.btnBorcSorgula.Size = new System.Drawing.Size(102, 36);
             this.btnBorcSorgula.TabIndex = 102;
@@ -228,7 +244,7 @@
             // txtTKCNO
             // 
             this.txtTKCNO.Location = new System.Drawing.Point(96, 108);
-            this.txtTKCNO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTKCNO.Margin = new System.Windows.Forms.Padding(2);
             this.txtTKCNO.Name = "txtTKCNO";
             this.txtTKCNO.Size = new System.Drawing.Size(140, 20);
             this.txtTKCNO.TabIndex = 104;
@@ -243,7 +259,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(96, 161);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(140, 20);
             this.textBox2.TabIndex = 101;
@@ -281,7 +297,7 @@
             // txtOdaNo
             // 
             this.txtOdaNo.Location = new System.Drawing.Point(96, 83);
-            this.txtOdaNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOdaNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtOdaNo.Name = "txtOdaNo";
             this.txtOdaNo.Size = new System.Drawing.Size(140, 20);
             this.txtOdaNo.TabIndex = 97;
@@ -309,7 +325,7 @@
             // txtAdi
             // 
             this.txtAdi.Location = new System.Drawing.Point(96, 27);
-            this.txtAdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAdi.Margin = new System.Windows.Forms.Padding(2);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(140, 20);
             this.txtAdi.TabIndex = 93;
@@ -317,7 +333,7 @@
             // txtSoyadi
             // 
             this.txtSoyadi.Location = new System.Drawing.Point(96, 55);
-            this.txtSoyadi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoyadi.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(140, 20);
             this.txtSoyadi.TabIndex = 95;
@@ -348,6 +364,21 @@
             this.label2.TabIndex = 66;
             this.label2.Text = "Tarih";
             // 
+            // ppdiaFatura
+            // 
+            this.ppdiaFatura.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.ppdiaFatura.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.ppdiaFatura.ClientSize = new System.Drawing.Size(400, 300);
+            this.ppdiaFatura.Document = this.pdocFatura;
+            this.ppdiaFatura.Enabled = true;
+            this.ppdiaFatura.Icon = ((System.Drawing.Icon)(resources.GetObject("ppdiaFatura.Icon")));
+            this.ppdiaFatura.Name = "ppdiaFatura";
+            this.ppdiaFatura.Visible = false;
+            // 
+            // pdocFatura
+            // 
+            this.pdocFatura.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdocFatura_PrintPage);
+            // 
             // frmCheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,7 +387,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCheckOut";
             this.Text = "frmCheckOut";
             this.Load += new System.EventHandler(this.frmCheckOut_Load);
@@ -400,5 +431,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnYazdır;
+        private System.Windows.Forms.PrintPreviewDialog ppdiaFatura;
+        private System.Drawing.Printing.PrintDocument pdocFatura;
     }
 }
