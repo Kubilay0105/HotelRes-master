@@ -37,6 +37,16 @@ namespace BLL.Hotel.Repositories
         {
             return ent.Rooms.ToList();
         }
+        public List<Room> GetFullRooms(DateTime Tarih)
+        {
+            Tarih = Convert.ToDateTime(Tarih.ToShortDateString());
+            List<Room> liste = (from s in ent.Sales
+                                where s.Deleted == false && s.CheckIn < Tarih && s.CheckOut > Tarih
+                                from r in ent.Rooms
+                                where r.Id == s.RoomId
+                                select r).ToList();
+            return ent.Rooms.ToList();
+        }
         public int FullRoomsCount()
         {
             int DoluSayi=(from s in ent.Sales

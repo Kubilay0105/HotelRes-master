@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExtraIslemler));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.nudAdet = new System.Windows.Forms.NumericUpDown();
+            this.btnAdminn = new System.Windows.Forms.Button();
             this.btnOda = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,10 +48,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbEkstra = new System.Windows.Forms.ComboBox();
             this.pnlExtraa = new System.Windows.Forms.Panel();
-            this.btnAdminn = new System.Windows.Forms.Button();
+            this.dgvOdalar = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).BeginInit();
+            this.pnlExtraa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOdalar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,6 +67,16 @@
             this.panel1.Size = new System.Drawing.Size(92, 446);
             this.panel1.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 96);
+            this.button2.TabIndex = 35;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -72,8 +87,19 @@
             this.panel2.Size = new System.Drawing.Size(92, 446);
             this.panel2.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 96);
+            this.button1.TabIndex = 35;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.nudAdet);
             this.panel3.Controls.Add(this.btnAdminn);
             this.panel3.Controls.Add(this.btnOda);
             this.panel3.Controls.Add(this.label5);
@@ -92,25 +118,27 @@
             this.panel3.Size = new System.Drawing.Size(288, 446);
             this.panel3.TabIndex = 33;
             // 
-            // button2
+            // nudAdet
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 96);
-            this.button2.TabIndex = 35;
-            this.button2.UseVisualStyleBackColor = true;
+            this.nudAdet.Location = new System.Drawing.Point(143, 194);
+            this.nudAdet.Name = "nudAdet";
+            this.nudAdet.Size = new System.Drawing.Size(17, 20);
+            this.nudAdet.TabIndex = 46;
+            this.nudAdet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudAdet.ValueChanged += new System.EventHandler(this.nudAdet_ValueChanged);
             // 
-            // button1
+            // btnAdminn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 96);
-            this.button1.TabIndex = 35;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdminn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdminn.FlatAppearance.BorderSize = 0;
+            this.btnAdminn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminn.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminn.Image")));
+            this.btnAdminn.Location = new System.Drawing.Point(222, 12);
+            this.btnAdminn.Name = "btnAdminn";
+            this.btnAdminn.Size = new System.Drawing.Size(36, 35);
+            this.btnAdminn.TabIndex = 44;
+            this.btnAdminn.UseVisualStyleBackColor = true;
+            this.btnAdminn.Click += new System.EventHandler(this.btnAdminn_Click);
             // 
             // btnOda
             // 
@@ -127,9 +155,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(30, 258);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 42;
-            this.label5.Text = "Date";
+            this.label5.Text = "Tarih";
             // 
             // label4
             // 
@@ -137,9 +165,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(30, 226);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 41;
-            this.label4.Text = "Sum";
+            this.label4.Text = "Tutar";
             // 
             // label3
             // 
@@ -147,9 +175,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(30, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 40;
-            this.label3.Text = "Unit";
+            this.label3.Text = "Adet";
             // 
             // label2
             // 
@@ -157,14 +185,15 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(30, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 39;
-            this.label2.Text = "Price";
+            this.label2.Text = "Fiyat";
             // 
             // txtDate
             // 
             this.txtDate.Location = new System.Drawing.Point(107, 258);
             this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
             this.txtDate.Size = new System.Drawing.Size(151, 20);
             this.txtDate.TabIndex = 38;
             // 
@@ -172,6 +201,7 @@
             // 
             this.txtSum.Location = new System.Drawing.Point(107, 226);
             this.txtSum.Name = "txtSum";
+            this.txtSum.ReadOnly = true;
             this.txtSum.Size = new System.Drawing.Size(100, 20);
             this.txtSum.TabIndex = 37;
             // 
@@ -181,11 +211,13 @@
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(30, 20);
             this.txtUnit.TabIndex = 36;
+            this.txtUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(107, 162);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(100, 20);
             this.txtPrice.TabIndex = 35;
             // 
@@ -207,27 +239,24 @@
             this.cbEkstra.Name = "cbEkstra";
             this.cbEkstra.Size = new System.Drawing.Size(151, 21);
             this.cbEkstra.TabIndex = 33;
+            this.cbEkstra.SelectedIndexChanged += new System.EventHandler(this.cbEkstra_SelectedIndexChanged);
             // 
             // pnlExtraa
             // 
+            this.pnlExtraa.Controls.Add(this.dgvOdalar);
             this.pnlExtraa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlExtraa.Location = new System.Drawing.Point(380, 0);
             this.pnlExtraa.Name = "pnlExtraa";
             this.pnlExtraa.Size = new System.Drawing.Size(348, 446);
             this.pnlExtraa.TabIndex = 34;
             // 
-            // btnAdminn
+            // dgvOdalar
             // 
-            this.btnAdminn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdminn.FlatAppearance.BorderSize = 0;
-            this.btnAdminn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdminn.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminn.Image")));
-            this.btnAdminn.Location = new System.Drawing.Point(222, 12);
-            this.btnAdminn.Name = "btnAdminn";
-            this.btnAdminn.Size = new System.Drawing.Size(36, 35);
-            this.btnAdminn.TabIndex = 44;
-            this.btnAdminn.UseVisualStyleBackColor = true;
-            this.btnAdminn.Click += new System.EventHandler(this.btnAdminn_Click);
+            this.dgvOdalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOdalar.Location = new System.Drawing.Point(32, 127);
+            this.dgvOdalar.Name = "dgvOdalar";
+            this.dgvOdalar.Size = new System.Drawing.Size(240, 225);
+            this.dgvOdalar.TabIndex = 0;
             // 
             // frmExtraIslemler
             // 
@@ -246,6 +275,9 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).EndInit();
+            this.pnlExtraa.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOdalar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +302,7 @@
         private System.Windows.Forms.ComboBox cbEkstra;
         private System.Windows.Forms.Panel pnlExtraa;
         private System.Windows.Forms.Button btnAdminn;
+        private System.Windows.Forms.DataGridView dgvOdalar;
+        private System.Windows.Forms.NumericUpDown nudAdet;
     }
 }

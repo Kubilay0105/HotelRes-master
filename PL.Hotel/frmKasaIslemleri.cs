@@ -30,14 +30,22 @@ namespace PL.Hotel
         {
             if (cbSorgulamaTuru.SelectedItem.ToString() == "Kasaya Giren Para")
             {
-                dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByDate(dtpTarih.Value,"Giren");
+                dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByDate(dtpTarih.Value, "Giren");
+                GunlukToplamlariGoster();
 
             }
             else if (cbSorgulamaTuru.SelectedItem.ToString() == "Kasadan Çıkan Para")
             {
-                dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByDate(dtpTarih.Value,"Çıkan");
+                dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByDate(dtpTarih.Value, "Çıkan");
+                GunlukToplamlariGoster();
 
             }
+            else
+            {
+                dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByDate(dtpTarih.Value);
+                GunlukToplamlariGoster();
+            }
+
         }
         private void GunlukToplamlariGoster()
         {
@@ -53,6 +61,11 @@ namespace PL.Hotel
             txtBakiye.Text = string.Format("{0:#,##0}", GirenToplam - CikanToplam);
             if (GirenToplam - CikanToplam > 0) txtBakiye.ForeColor = Color.Green;
             else if (GirenToplam - CikanToplam < 0) txtBakiye.ForeColor = Color.Red;
+        }
+
+        private void dtpTarih_ValueChanged(object sender, EventArgs e)
+        {
+            cbSorgulamaTuru.SelectedIndex = 0;
         }
     }
 }

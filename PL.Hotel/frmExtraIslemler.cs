@@ -18,14 +18,14 @@ namespace PL.Hotel
         {
             InitializeComponent();
         }
+        RoomRepository Rr = new RoomRepository();
         ExtraRepository ex = new ExtraRepository();
         ExtraType ET = new ExtraType();
         int ID;
         private void frmExtraIslemler_Load(object sender, EventArgs e)
         {
             cbEkstra.DataSource = ex.GetExtraTypes();
-            txtDate.Text = DateTime.Now.ToShortDateString();
-           
+            txtDate.Text = DateTime.Now.ToShortDateString();         
         }
 
         private void txtUnit_TextChanged(object sender, EventArgs e)
@@ -50,12 +50,19 @@ namespace PL.Hotel
 
         private void btnAdminn_Click(object sender, EventArgs e)
         {
-            pnlExtraa.Controls.Clear();
-            frmExtraa frm = new frmExtraa();
-            frm.TopLevel = false;
-            pnlExtraa.Controls.Add(frm);
-            frm.Show();
-            frm.Dock = DockStyle.Fill;
+            dgvOdalar.DataSource = Rr.GetFullRooms(DateTime.Now);
+            //pnlExtraa.Controls.Clear();
+            //frmExtraa frm = new frmExtraa();
+            //frm.TopLevel = false;
+            //pnlExtraa.Controls.Add(frm);
+            //frm.Show();
+            //frm.Dock = DockStyle.Fill;
+        }
+
+        private void nudAdet_ValueChanged(object sender, EventArgs e)
+        {
+            txtUnit.Text = nudAdet.Value.ToString();
+            txtSum.Text = (Convert.ToDecimal(txtPrice.Text) * Convert.ToDecimal(txtUnit.Text)).ToString();
         }
     }
 }
