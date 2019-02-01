@@ -122,20 +122,11 @@ namespace PL.Hotel
             FormAc(frm);
         }
 
-        private void btnKasaIslemleri_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pnlContent_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnKasa_Click(object sender, EventArgs e)
         {
             frmKasaIslemleri frm = new frmKasaIslemleri();
             FormAc(frm);
         }
+
     }
 }
