@@ -11,7 +11,7 @@ namespace BLL.Hotel.Repositories
     public class PaymentsRepository : IPaymentsRepository
     {
         OtelResContext ent = new OtelResContext();
-      
+
         //public List<Payment> GetPayments()
         //{
         //    return ent.Payments.ToList();
@@ -33,7 +33,7 @@ namespace BLL.Hotel.Repositories
         //    return payments;
 
         //}
-        
+
         //public List<Payment> PaymentsByDate(DateTime Date)
         //{
         //    var payments = (from p in ent.Payments
@@ -61,7 +61,7 @@ namespace BLL.Hotel.Repositories
         //    catch (Exception ex)
         //    {
         //        string hata = ex.Message;
-                
+
         //    }
         //    return sonuc;
         //}
@@ -97,7 +97,7 @@ namespace BLL.Hotel.Repositories
         //        {
         //            liste.Add(paymod);
         //        }
-              
+
 
         //    }
 
@@ -199,9 +199,9 @@ namespace BLL.Hotel.Repositories
 
         //}
 
-        public bool AddPaymentByIncoming(Payment pay,string TransType)
+        public bool AddPaymentByIncoming(Payment pay, string TransType)
         {
-            using(var trans = ent.Database.BeginTransaction())
+            using (var trans = ent.Database.BeginTransaction())
             {
                 bool sonuc = false;
                 try
@@ -217,6 +217,7 @@ namespace BLL.Hotel.Repositories
                     gt.GuestId = pay.GuestId;
                     gt.Status = true;
                     gt.Description = pay.Description;
+                    ent.GuestTransactions.Add(gt);
                     ent.SaveChanges();
 
                     trans.Commit();
@@ -231,8 +232,23 @@ namespace BLL.Hotel.Repositories
 
             }
         }
+
+        public bool AddPaymentByOutgoing(Payment pay)
+        {
+            bool Sonuc = false;
+            ent.Payments.Add(pay);
+            try
+            {
+                ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
+
     }
-
-
 }
 

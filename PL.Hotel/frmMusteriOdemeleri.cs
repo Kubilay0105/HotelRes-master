@@ -27,6 +27,7 @@ namespace PL.Hotel
         private void frmMusteriOdemeleri_Load(object sender, EventArgs e)
         {
             dgvMusteriler.DataSource = Gr.GetAllGuest();
+            cbGelirTurleri.DataSource = Tr.GetTransTypeByDefin("Gelir");
         }
 
         private void dgvMusteriler_MouseDoubleClick(object sender, MouseEventArgs e)

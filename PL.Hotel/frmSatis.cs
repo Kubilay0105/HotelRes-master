@@ -54,17 +54,17 @@ namespace PL.Hotel
             }
             else MessageBox.Show("Yapılmadı");
             dgvMusteriler.DataSource = Gp.GetAllGuest();
-            Temizle();
+            //Temizle();
         }
         private void Temizle()
         {
-            foreach(Control item in panel2.Controls)
-            {
-                if(item is TextBox)
-                {
-                    item.Text = "";
-                }
-            }
+            //foreach(Control item in panel2.Controls)
+            //{
+            //    if(item is TextBox)
+            //    {
+            //        item.Text = "";
+            //    }
+            //}
             //txtAdi.Clear();
             //txtSoyadi.Clear();
             //txtTc.Clear();

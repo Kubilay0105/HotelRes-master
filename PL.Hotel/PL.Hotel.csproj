@@ -130,6 +130,12 @@
     <Compile Include="frmOtelAnasayfa.Designer.cs">
       <DependentUpon>frmOtelAnasayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOtelOdemeleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtelOdemeleri.Designer.cs">
+      <DependentUpon>frmOtelOdemeleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRezervasyon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOtelAnasayfa.resx">
       <DependentUpon>frmOtelAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtelOdemeleri.resx">
+      <DependentUpon>frmOtelOdemeleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRezervasyon.resx">
       <DependentUpon>frmRezervasyon.cs</DependentUpon>

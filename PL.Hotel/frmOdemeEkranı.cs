@@ -22,6 +22,7 @@ namespace PL.Hotel
         GuestRepository gr = new GuestRepository();
         RoomRepository Rp = new RoomRepository();
         SaleRepository sr = new SaleRepository();
+        PersonnelRepository Pp = new PersonnelRepository();
         int SId, GId;
 
         private void frmOdemeEkranı_Load(object sender, EventArgs e)
@@ -113,6 +114,17 @@ namespace PL.Hotel
             AF.Dock = DockStyle.Fill;
             AF.Show();
         }
+
+        private void tsOtelOdemeleri_Click(object sender, EventArgs e)
+        {
+            if (Pp.AdminControl(General.PersonelId))
+            {
+                frmOtelOdemeleri frm = new frmOtelOdemeleri();
+                FormAc(frm);
+            }
+            else MessageBox.Show("Buraya Giriş Yetkiniz Bulunmamaktadır.");
+        }
+
         private void tsMusteriOdemeleri_Click(object sender, EventArgs e)
         {
             frmMusteriOdemeleri frm = new frmMusteriOdemeleri();
