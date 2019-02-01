@@ -31,24 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOtelAnasayfa));
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnMenuAc = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pnlLeftMenu = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pnlContent = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.btnKasa = new System.Windows.Forms.Button();
             this.btnExtra = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.frmSatisIslemleri = new System.Windows.Forms.Button();
             this.btnOdalar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,8 +58,10 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnMenuAc = new System.Windows.Forms.Button();
+            this.pnlContent = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.pnlHeader.SuspendLayout();
             this.pnlLeftMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -87,6 +87,17 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(789, 63);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // btnMenuAc
+            // 
+            this.btnMenuAc.FlatAppearance.BorderSize = 0;
+            this.btnMenuAc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAc.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuAc.Image")));
+            this.btnMenuAc.Location = new System.Drawing.Point(3, 2);
+            this.btnMenuAc.Name = "btnMenuAc";
+            this.btnMenuAc.Size = new System.Drawing.Size(53, 61);
+            this.btnMenuAc.TabIndex = 4;
+            this.btnMenuAc.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -129,7 +140,7 @@
             // pnlLeftMenu
             // 
             this.pnlLeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.pnlLeftMenu.Controls.Add(this.button4);
+            this.pnlLeftMenu.Controls.Add(this.btnKasa);
             this.pnlLeftMenu.Controls.Add(this.btnExtra);
             this.pnlLeftMenu.Controls.Add(this.button2);
             this.pnlLeftMenu.Controls.Add(this.button6);
@@ -144,64 +155,27 @@
             this.pnlLeftMenu.Size = new System.Drawing.Size(188, 403);
             this.pnlLeftMenu.TabIndex = 1;
             // 
-            // panel2
+            // btnKasa
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.MenuText;
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(188, 54);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 466);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(789, 37);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(188, 63);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(601, 54);
-            this.panel4.TabIndex = 3;
-            // 
-            // pnlContent
-            // 
-            this.pnlContent.BackColor = System.Drawing.Color.White;
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(188, 117);
-            this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(601, 349);
-            this.pnlContent.TabIndex = 4;
-            this.pnlContent.Click += new System.EventHandler(this.btnKasaIslemleri_Click);
-            this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 1000;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            this.btnKasa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKasa.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnKasa.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnKasa.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnKasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKasa.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnKasa.Image = ((System.Drawing.Image)(resources.GetObject("btnKasa.Image")));
+            this.btnKasa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKasa.Location = new System.Drawing.Point(0, 330);
+            this.btnKasa.Name = "btnKasa";
+            this.btnKasa.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnKasa.Size = new System.Drawing.Size(188, 48);
+            this.btnKasa.TabIndex = 28;
+            this.btnKasa.Text = "   Kasa";
+            this.btnKasa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKasa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKasa.UseVisualStyleBackColor = true;
+            this.btnKasa.Click += new System.EventHandler(this.btnKasa_Click);
             // 
             // btnExtra
             // 
@@ -338,26 +312,52 @@
             this.btnOdalar.UseVisualStyleBackColor = true;
             this.btnOdalar.Click += new System.EventHandler(this.btnOdalar_Click);
             // 
-            // button4
+            // panel2
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 330);
-            this.button4.Name = "button4";
-            this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(188, 48);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "   Kasa";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuText;
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(188, 54);
+            this.panel2.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(188, 54);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "OTEL";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 466);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(789, 37);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(188, 63);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(601, 54);
+            this.panel4.TabIndex = 3;
             // 
             // panel1
             // 
@@ -492,31 +492,32 @@
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
-            // label7
+            // pnlContent
             // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Algerian", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 54);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "OTEL";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlContent.BackColor = System.Drawing.Color.White;
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(188, 117);
+            this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(601, 349);
+            this.pnlContent.TabIndex = 4;
+            this.pnlContent.Click += new System.EventHandler(this.btnKasaIslemleri_Click);
+            this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
             // 
-            // btnMenuAc
+            // timer1
             // 
-            this.btnMenuAc.FlatAppearance.BorderSize = 0;
-            this.btnMenuAc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuAc.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuAc.Image")));
-            this.btnMenuAc.Location = new System.Drawing.Point(3, 2);
-            this.btnMenuAc.Name = "btnMenuAc";
-            this.btnMenuAc.Size = new System.Drawing.Size(53, 61);
-            this.btnMenuAc.TabIndex = 4;
-            this.btnMenuAc.UseVisualStyleBackColor = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 1000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // frmOtelAnasayfa
             // 
@@ -572,7 +573,7 @@
         private System.Windows.Forms.Button frmSatisIslemleri;
         private System.Windows.Forms.Button btnOdalar;
         private System.Windows.Forms.Button btnMenuAc;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnKasa;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;

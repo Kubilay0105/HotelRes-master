@@ -30,13 +30,13 @@ namespace PL.Hotel
         {
             if (cbSorgulamaTuru.SelectedItem.ToString() == "Kasaya Giren Para")
             {
-                dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByDate(dtpTarih.Value, "Giren");
+                dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByDate(dtpTarih.Value, "Gelir");
                 GunlukToplamlariGoster();
 
             }
             else if (cbSorgulamaTuru.SelectedItem.ToString() == "Kasadan Çıkan Para")
             {
-                dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByDate(dtpTarih.Value, "Çıkan");
+                dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByDate(dtpTarih.Value, "Gider");
                 GunlukToplamlariGoster();
 
             }
@@ -65,6 +65,8 @@ namespace PL.Hotel
 
         private void dtpTarih_ValueChanged(object sender, EventArgs e)
         {
+            cbSorgulamaTuru.SelectedIndex =1;
+
             cbSorgulamaTuru.SelectedIndex = 0;
         }
     }
