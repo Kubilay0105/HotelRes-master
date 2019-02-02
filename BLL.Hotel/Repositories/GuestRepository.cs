@@ -31,7 +31,10 @@ namespace BLL.Hotel.Repositories
         {
             return ent.Guests.OrderByDescending(x=>x.Id).ToList();
         }
-        
+        public Guest GetGuest()
+        {
+            return ent.Guests.OrderByDescending(x => x.Id).FirstOrDefault();
+        }
         public List<Guest> GetGuest(int roomId, bool stat)
         {
             throw new NotImplementedException();

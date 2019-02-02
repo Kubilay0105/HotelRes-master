@@ -21,17 +21,66 @@ namespace PL.Hotel
         RoomRepository Rp = new RoomRepository();
         SaleRepository Sp = new SaleRepository();
         GuestRepository Gp = new GuestRepository();
+        GuestTransRepository GTrans = new GuestTransRepository();
         public static DateTime Giris { get; set; }
         public static DateTime Cikis { get; set; }
         public static string OdaNo { get; set; }
-        decimal ToplamTutar;
+        public decimal ToplamTutar { get; set; }
+         
         int Gid;
         private void frmSatis_Load(object sender, EventArgs e)
         {
-            dgvMusteriler.DataSource = Gp.GetAllGuest();
+            //dgvMusteriler.DataSource = Gp.GetAllGuest();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
+        {
+            
+            //dgvMusteriler.DataSource = Gp.GetAllGuest();
+            //Temizle();
+        }
+        private void Temizle()
+        {
+            //foreach(Control item in panel2.Controls)
+            //{
+            //    if(item is TextBox)
+            //    {
+            //        item.Text = "";
+            //    }
+            //}
+            //txtAdi.Clear();
+            //txtSoyadi.Clear();
+            //txtTc.Clear();
+            //txtAdres.te
+        }
+
+        private void dgvMusteriler_DoubleClick(object sender, EventArgs e)
+        {
+            //Gid = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
+            frmSatisIslemi frm = new frmSatisIslemi();
+            frm.Gid = Gid;
+            frm.Giris = Giris;
+            frm.Cikis = Cikis;
+            frm.OdaNo = OdaNo;
+            frm.ToplamTutar = ToplamTutar;
+            frm.Show();
+        }
+
+        private void btnOdaSec_Click(object sender, EventArgs e)
+        {
+            frmOdaSec frm = new frmOdaSec();
+            frm.ShowDialog();
+            TimeSpan fark = Cikis - Giris;
+            int gunsayisi = fark.Days;
+            decimal OdaFiyat = Rp.GetRoomPrice(OdaNo);
+            ToplamTutar = ((gunsayisi+1) * OdaFiyat);
+            txtToplamTutar.Text = ToplamTutar.ToString();
+            txtOdaNo.Text = OdaNo;
+            txtGirisTarihi.Text = Giris.ToShortDateString();
+            txtCikisTarihi.Text = Cikis.ToShortDateString();
+        }
+
+        private void btnOnayla_Click(object sender, EventArgs e)
         {
             if (txtAdi.Text.Trim() == "" || txtSoyadi.Text == "" || txtTc.Text == "")
             {
@@ -66,51 +115,41 @@ namespace PL.Hotel
             gue.Birthday = dtpDogumTarihi.Value;
             gue.ContactNo = txtTelefon.Text;
             gue.Email = txtEmail.Text;
-            gue.Status = true; 
+            gue.Status = true;
             if (Gp.AddGuest(gue))
             {
-                MessageBox.Show("Kayıt Yapıldı");
+                Guest gst = Gp.GetGuest();
+                Sale sa = new Sale();
+                sa.RoomId = gst.RoomId;
+                sa.CheckIn = Giris;
+                sa.CheckOut = Cikis;
+                sa.NoOfGuests = Convert.ToInt32(cbMisafirSayisi.SelectedItem.ToString());
+                sa.TotalPrice = ToplamTutar;
+                sa.Status = true;
+                sa.PersonnelId = General.PersonelId;
+                sa.GuestId = gst.Id;
+                if (Sp.AddSales(sa))
+                {
+                    GuestTransaction Gtr = new GuestTransaction();
+                    Gtr.Date = Giris;
+                    /*if (Giris.Date == DateTime.Now.Date)*/
+                    Gtr.TransType = "Konaklama Ücreti";
+                    //else { gtrans.TransType = "Rezervasyon Ücreti"; }
+
+                    Gtr.Debt = ToplamTutar;
+                    Gtr.Credit = 0;
+                    Gtr.GuestId = gst.Id;
+                    Gtr.Status = true;
+                    if (Giris.Date == DateTime.Now.Date) Gtr.Description = "Konaklama Açılış";
+                    else { Gtr.Description = "Rezervasyon"; }
+                    if (GTrans.AddGTrans(Gtr))
+                    { MessageBox.Show("Kayıt yapıldı"); }
+                    else MessageBox.Show("Misafir harekeleri oluşturulamadı");
+
+                }
+                else MessageBox.Show("Satış Yapılamadı");
             }
             else MessageBox.Show("Yapılmadı");
-            dgvMusteriler.DataSource = Gp.GetAllGuest();
-            //Temizle();
-        }
-        private void Temizle()
-        {
-            //foreach(Control item in panel2.Controls)
-            //{
-            //    if(item is TextBox)
-            //    {
-            //        item.Text = "";
-            //    }
-            //}
-            //txtAdi.Clear();
-            //txtSoyadi.Clear();
-            //txtTc.Clear();
-            //txtAdres.te
-        }
-
-        private void dgvMusteriler_DoubleClick(object sender, EventArgs e)
-        {
-            Gid = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
-            frmSatisIslemi frm = new frmSatisIslemi();
-            frm.Gid = Gid;
-            frm.Giris = Giris;
-            frm.Cikis = Cikis;
-            frm.OdaNo = OdaNo;
-            frm.ToplamTutar = ToplamTutar;
-            frm.Show();
-        }
-
-        private void btnOdaSec_Click(object sender, EventArgs e)
-        {
-            frmOdaSec frm = new frmOdaSec();
-            frm.ShowDialog();
-            TimeSpan fark = Cikis - Giris;
-            int gunsayisi = fark.Days;
-            decimal OdaFiyat = Rp.GetRoomPrice(OdaNo);
-            ToplamTutar = ((gunsayisi + 1) * OdaFiyat);
-            textBox1.Text = OdaNo;
         }
     }
 }
