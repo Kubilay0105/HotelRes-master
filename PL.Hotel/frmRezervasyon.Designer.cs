@@ -32,7 +32,7 @@
             this.dgvRezervasyon = new System.Windows.Forms.DataGridView();
             this.dtpGiris = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTc = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRezervasyon)).BeginInit();
             this.SuspendLayout();
@@ -75,12 +75,13 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Giriş Tarihi";
             // 
-            // textBox1
+            // txtTc
             // 
-            this.textBox1.Location = new System.Drawing.Point(300, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtTc.Location = new System.Drawing.Point(335, 102);
+            this.txtTc.Name = "txtTc";
+            this.txtTc.Size = new System.Drawing.Size(156, 20);
+            this.txtTc.TabIndex = 9;
+            this.txtTc.TextChanged += new System.EventHandler(this.txtTc_TextChanged);
             // 
             // button1
             // 
@@ -90,7 +91,6 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmRezervasyon
             // 
@@ -98,7 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpGiris);
             this.Controls.Add(this.dgvRezervasyon);
@@ -119,7 +119,7 @@
         private System.Windows.Forms.DataGridView dgvRezervasyon;
         private System.Windows.Forms.DateTimePicker dtpGiris;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTc;
         private System.Windows.Forms.Button button1;
     }
 }

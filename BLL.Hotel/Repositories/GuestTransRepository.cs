@@ -27,11 +27,11 @@ namespace BLL.Hotel.Repositories
             return Sonuc;
         }
 
-        public List<GuestTransaction> CariHareketlerListele()
+        public List<GuestTransaction> GetGTransByGuestId(int GId)
         {
-            throw new NotImplementedException();
+            return ent.GuestTransactions.Where(x => x.GuestId == GId).ToList();
         }
-
+        
         public bool DeleteGTrans(GuestTransaction gt)
         {
             throw new NotImplementedException();

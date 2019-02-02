@@ -1,4 +1,5 @@
 ﻿using BLL.Hotel.Repositories;
+using DAL.Hotel.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,25 +20,23 @@ namespace PL.Hotel
         }
         SaleRepository sr = new SaleRepository();
         Reservations Res = new Reservations();
+        List<ReservationsModel> Rezlist;
         private void dtpGiris_ValueChanged(object sender, EventArgs e)
         {
-            dgvRezervasyon.DataSource = sr.GetSales(dtpGiris.Value);
+            Rezlist = sr.GetSales(dtpGiris.Value);
+            dgvRezervasyon.DataSource = Rezlist;
 
         }
 
         private void frmRezervasyon_Load(object sender, EventArgs e)
         {
-            dgvRezervasyon.DataSource =Res.GetReservations(Convert.ToDateTime(DateTime.Now.ToShortDateString())) ;
+            Rezlist= sr.GetSales(Convert.ToDateTime(DateTime.Now.ToShortDateString()));
+            dgvRezervasyon.DataSource = Rezlist;
         }
 
-        private void dtpCikis_ValueChanged(object sender, EventArgs e)
+        private void txtTc_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            dgvRezervasyon.DataSource=Rezlist.Where(x => x.GuestIdtf.StartsWith(txtTc.Text)).ToList();
         }
     }
 }

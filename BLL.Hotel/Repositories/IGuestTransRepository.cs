@@ -13,6 +13,6 @@ namespace BLL.Hotel.Repositories
         bool UpdateGTrans();
         bool DeleteGTrans(GuestTransaction gt);
         bool DeleteGTrans(int ID);
-        List<GuestTransaction> CariHareketlerListele();
+        List<GuestTransaction> GetGTransByGuestId(int GId);
     }
 }
