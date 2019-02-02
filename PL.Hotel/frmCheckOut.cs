@@ -70,9 +70,7 @@ namespace PL.Hotel
             //    FormAcikmi(frm);
 
         }
-        #region FaturaYazdır
-        int x = 0;
-        
+        #region FaturaYazdır        
 
         private void pdocFatura_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -101,7 +99,6 @@ namespace PL.Hotel
         private void btnYazdır_Click(object sender, EventArgs e)
         {
             ppdiaFatura.ShowDialog();
-            x = 0;
         }
         #endregion
 
