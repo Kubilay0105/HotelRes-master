@@ -87,26 +87,9 @@ namespace PL.Hotel
                 MessageBox.Show("Zorunlu alanlar girilmedi.", "Dikkat Eksik Bilgi!");
             }
             Guest gue = new Guest();
-            try
-            {
+           
                 gue.FirstName = txtAdi.Text;
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            try
-            {
                 gue.LastName = txtSoyadi.Text;
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
 
             gue.IdentificationNo = txtTc.Text;
             gue.RoomId = Rp.GetRoomId(OdaNo);
@@ -124,8 +107,16 @@ namespace PL.Hotel
                 sa.CheckIn = Giris;
                 sa.CheckOut = Cikis;
                 sa.NoOfGuests = Convert.ToInt32(cbMisafirSayisi.SelectedItem.ToString());
-                sa.TotalPrice = ToplamTutar;
-                sa.Status = true;
+                try
+                {
+                    sa.TotalPrice = ToplamTutar;
+                }
+                catch (FormatException)
+                {
+                    throw;
+                }
+                if (Giris.Date == DateTime.Now.Date) sa.Status = true;
+                else { sa.Status = false; }
                 sa.PersonnelId = General.PersonelId;
                 sa.GuestId = gst.Id;
                 if (Sp.AddSales(sa))
@@ -135,8 +126,14 @@ namespace PL.Hotel
                     /*if (Giris.Date == DateTime.Now.Date)*/
                     Gtr.TransType = "Konaklama Ücreti";
                     //else { gtrans.TransType = "Rezervasyon Ücreti"; }
-
-                    Gtr.Debt = ToplamTutar;
+                    try
+                    {
+                        Gtr.Debt = ToplamTutar;
+                    }
+                    catch (FormatException)
+                    {
+                        throw;
+                    }
                     Gtr.Credit = 0;
                     Gtr.GuestId = gst.Id;
                     Gtr.Status = true;

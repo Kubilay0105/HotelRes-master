@@ -31,9 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvRezervasyon = new System.Windows.Forms.DataGridView();
             this.dtpGiris = new System.Windows.Forms.DateTimePicker();
-            this.dtpCikis = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRezervasyon)).BeginInit();
@@ -55,9 +53,9 @@
             // dgvRezervasyon
             // 
             this.dgvRezervasyon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRezervasyon.Location = new System.Drawing.Point(57, 183);
+            this.dgvRezervasyon.Location = new System.Drawing.Point(44, 131);
             this.dgvRezervasyon.Name = "dgvRezervasyon";
-            this.dgvRezervasyon.Size = new System.Drawing.Size(567, 138);
+            this.dgvRezervasyon.Size = new System.Drawing.Size(580, 190);
             this.dgvRezervasyon.TabIndex = 4;
             // 
             // dtpGiris
@@ -68,14 +66,6 @@
             this.dtpGiris.TabIndex = 5;
             this.dtpGiris.ValueChanged += new System.EventHandler(this.dtpGiris_ValueChanged);
             // 
-            // dtpCikis
-            // 
-            this.dtpCikis.Location = new System.Drawing.Point(402, 99);
-            this.dtpCikis.Name = "dtpCikis";
-            this.dtpCikis.Size = new System.Drawing.Size(200, 20);
-            this.dtpCikis.TabIndex = 6;
-            this.dtpCikis.ValueChanged += new System.EventHandler(this.dtpCikis_ValueChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -85,18 +75,9 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Giriş Tarihi";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(330, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Giriş Tarihi";
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 143);
+            this.textBox1.Location = new System.Drawing.Point(300, 105);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(156, 20);
             this.textBox1.TabIndex = 9;
@@ -109,6 +90,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmRezervasyon
             // 
@@ -117,9 +99,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtpCikis);
             this.Controls.Add(this.dtpGiris);
             this.Controls.Add(this.dgvRezervasyon);
             this.Controls.Add(this.label1);
@@ -138,9 +118,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvRezervasyon;
         private System.Windows.Forms.DateTimePicker dtpGiris;
-        private System.Windows.Forms.DateTimePicker dtpCikis;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
     }

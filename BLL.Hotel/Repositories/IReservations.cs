@@ -10,7 +10,7 @@ namespace BLL.Hotel.Repositories
 {
    public interface IReservations
     {
-        List<Reservations> GetReservations(List<Sale> SaleList);
+        List<Guest> GetReservations(DateTime dt);
         bool UpdateReServations(Reservations rzrv);
         bool CancelReservations(int ID);
     }

@@ -18,6 +18,7 @@ namespace PL.Hotel
             InitializeComponent();
         }
         SaleRepository sr = new SaleRepository();
+        Reservations Res = new Reservations();
         private void dtpGiris_ValueChanged(object sender, EventArgs e)
         {
             dgvRezervasyon.DataSource = sr.GetSales(dtpGiris.Value);
@@ -26,10 +27,15 @@ namespace PL.Hotel
 
         private void frmRezervasyon_Load(object sender, EventArgs e)
         {
-            dgvRezervasyon.DataSource = sr.GetSales(dtpGiris.Value);
+            dgvRezervasyon.DataSource =Res.GetReservations(Convert.ToDateTime(DateTime.Now.ToShortDateString())) ;
         }
 
         private void dtpCikis_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

@@ -15,11 +15,15 @@ namespace BLL.Hotel.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Reservations> GetReservations(List<Sale> SaleList)
+        public List<Guest> GetReservations(DateTime dt)
         {
-            throw new NotImplementedException();
-
-                                            
+            dt = Convert.ToDateTime(dt.ToShortDateString());
+            List<Guest> RG = (from s in ent.Sales
+                              where dt <= s.CheckIn
+                              from g in ent.Guests
+                              where s.GuestId == g.Id && g.Status == false
+                              select g).ToList();
+            return RG;
         }
 
         public bool UpdateReServations(Reservations rzrv)
