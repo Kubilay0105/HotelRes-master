@@ -16,7 +16,7 @@ namespace PL.Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmOtelAnasayfa());
+            Application.Run(new frmCheckOut());
         }
     }
 }

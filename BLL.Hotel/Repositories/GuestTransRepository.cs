@@ -38,7 +38,10 @@ namespace BLL.Hotel.Repositories
                                             select gl).ToList();
             return glist;
         }
-
+        public List<GuestTransaction> GetGTrans()
+        {
+            return ent.GuestTransactions.ToList();
+        }
         public bool DeleteGTrans(GuestTransaction gt)
         {
             throw new NotImplementedException();
@@ -52,6 +55,13 @@ namespace BLL.Hotel.Repositories
         public bool UpdateGTrans()
         {
             throw new NotImplementedException();
+        }
+        public List<GuestTransaction> GetGTransByGuestId(int Id)
+        {
+            List<GuestTransaction> lst = (from gl in ent.GuestTransactions
+                                          where gl.GuestId == Id
+                                          select gl).ToList();
+            return lst;
         }
         public List<decimal> PaymentsByGuest(int GuestId)
         {

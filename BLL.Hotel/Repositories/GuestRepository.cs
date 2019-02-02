@@ -74,6 +74,13 @@ namespace BLL.Hotel.Repositories
                          select g).FirstOrDefault();
             return gst;
         }
+        //public Guest GetGuestId(string TC)
+        //{
+        //    Guest gst = (from g in ent.Guests
+        //                 where g.IdentificationNo == TC
+        //                 select g).FirstOrDefault();
+        //    return gst;
+        //}
 
         public int GetGuestIdByTC(string IdentificationNo)
         {
@@ -138,6 +145,29 @@ namespace BLL.Hotel.Repositories
                 sonuc = true;
                 ent.SaveChanges();
             }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+
+            }
+            return sonuc;
+        }
+        public bool UpdateGuestStatusForCheckOutByRoomId(int RoomId)
+        {
+            bool sonuc = false;
+            List<Guest> lg = (from list in ent.Guests
+                              where list.RoomId == RoomId
+                              select list).ToList();
+            try
+            {
+               foreach (Guest item in lg)
+            {
+                item.Status = false;
+            }
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            
             catch (Exception ex)
             {
                 string hata = ex.Message;

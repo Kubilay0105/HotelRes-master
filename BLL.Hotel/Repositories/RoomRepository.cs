@@ -62,11 +62,11 @@ namespace BLL.Hotel.Repositories
         {
             return ent.Rooms.Where(x => x.Id == Rid).Select(x => x).FirstOrDefault();
         }
-        public bool UpdateRoomByRoomNo(string RoomNum)
+        public bool UpdateRoomByRoomId(int RoomId)
         {
             bool sonuc = false;
             bool sondeger = (from s in ent.Rooms
-                             where s.RoomNumber == RoomNum
+                             where s.Id == RoomId
                              select s.State).FirstOrDefault();
             sondeger = false;
             try

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.vw_SonBirYılBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.HotelResDataSet = new PL.Hotel.HotelResDataSet();
             this.PaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,6 +48,7 @@
             this.vw_AylıkOrtalamaTableAdapter = new PL.Hotel.HotelResDataSetTableAdapters.vw_AylıkOrtalamaTableAdapter();
             this.sp_YıllıkOrtalamaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sp_YıllıkOrtalamaTableAdapter = new PL.Hotel.HotelResDataSetTableAdapters.sp_YıllıkOrtalamaTableAdapter();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.vw_SonBirYılBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HotelResDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PaymentsBindingSource)).BeginInit();
@@ -88,9 +89,9 @@
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.sp_YıllıkOrtalamaBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource7.Name = "DataSet1";
+            reportDataSource7.Value = this.sp_YıllıkOrtalamaBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource7);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "PL.Hotel.rprAylıkGelir.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
@@ -112,9 +113,9 @@
             // reportViewer2
             // 
             this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.vw_SonBirYılBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource8.Name = "DataSet1";
+            reportDataSource8.Value = this.vw_SonBirYılBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource8);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "PL.Hotel.rprOdaSatis.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(3, 3);
             this.reportViewer2.Name = "reportViewer2";
@@ -136,9 +137,9 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource6.Name = "DataSet1";
-            reportDataSource6.Value = this.PaymentsBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource9.Name = "DataSet1";
+            reportDataSource9.Value = this.PaymentsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource9);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PL.Hotel.rpr.OtelKasaHareket.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
@@ -151,6 +152,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -183,6 +185,15 @@
             // sp_YıllıkOrtalamaTableAdapter
             // 
             this.sp_YıllıkOrtalamaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1308, 687);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Personel Sorgu";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // frmRaporlar
             // 
@@ -225,5 +236,6 @@
         private HotelResDataSetTableAdapters.vw_AylıkOrtalamaTableAdapter vw_AylıkOrtalamaTableAdapter;
         private System.Windows.Forms.BindingSource sp_YıllıkOrtalamaBindingSource;
         private HotelResDataSetTableAdapters.sp_YıllıkOrtalamaTableAdapter sp_YıllıkOrtalamaTableAdapter;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
