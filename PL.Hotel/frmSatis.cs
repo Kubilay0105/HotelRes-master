@@ -122,7 +122,7 @@ namespace PL.Hotel
                 if (Sp.AddSales(sa))
                 {
                     GuestTransaction Gtr = new GuestTransaction();
-                    Gtr.Date = Giris;
+                    Gtr.Date = DateTime.Now;
                     /*if (Giris.Date == DateTime.Now.Date)*/
                     Gtr.TransType = "Konaklama Ücreti";
                     //else { gtrans.TransType = "Rezervasyon Ücreti"; }

@@ -136,5 +136,11 @@ namespace PL.Hotel
             frmYönetim frm = new frmYönetim();
             FormAc(frm);
         }
+
+        private void btnMisafirler_Click(object sender, EventArgs e)
+        {
+            frmMisafirler frm = new frmMisafirler();
+            FormAc(frm);
+        }
     }
 }

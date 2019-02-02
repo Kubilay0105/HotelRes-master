@@ -40,10 +40,11 @@ namespace BLL.Hotel.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Guest> GetGuest(int RoomId)
+        public List<Guest> GetGuestsInRoom(int RoomId)
         {
-            throw new NotImplementedException();
+            return ent.Guests.Where(x => x.Status == true && x.RoomId == RoomId).ToList();
         }
+
 
         public Guest GetGuestByTC(string TC)
         {

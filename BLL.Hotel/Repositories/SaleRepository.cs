@@ -66,7 +66,7 @@ namespace BLL.Hotel.Repositories
         
         public Sale GetSaleById(int SaleId)
         {
-            return ent.Sales.Where(x=>x.Id==SaleId).Select(x=>x).FirstOrDefault();
+            return ent.Sales.Where(x=>x.Id==SaleId && x.Status==true).Select(x=>x).FirstOrDefault();
         }
 
         public List<ReservationsModel> GetSales(DateTime today)
