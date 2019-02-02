@@ -12,9 +12,7 @@ namespace BLL.Hotel.Repositories
     {
         List<Sale> GetSales();
         bool AddSales(Sale s);
-        bool UpdatePersonnel(Personnel p);
-        bool DeletePersonnel(Personnel p);
-        bool DeletePersonnel(int ID);
+        bool DeleteSales(int GId);
         int GetSaleIdByGuest(int GuestId);
         List<ReservationsModel> GetSales(DateTime today);
     }

@@ -26,19 +26,19 @@ namespace PL.Hotel
         int SId,GId,RId;
         private void btnCheckin_Click(object sender, EventArgs e)
         {
-            if (Gr.UpdateGuestStatusForCheckin(GId))
-            {
-                if (Sr.UpdateSaleStatusForCheckin(SId))
-                {
-                    //if (Pr.UpdatePaymentStatusForCheckin(SId))
-                    //{
-                    //    MessageBox.Show("Checkin işlemi tamamlandı.");
-                    //}
-                    //else MessageBox.Show("Payment update olmadı");
-                }
-                else MessageBox.Show("Sale update olmadı");
-            }
-            else MessageBox.Show("Guest update olmadı");
+            //if (Gr.UpdateGuestStatusForCheckin(GId))
+            //{
+            //    if (Sr.UpdateSaleStatusForCheckin(SId))
+            //    {
+            //        //if (Pr.UpdatePaymentStatusForCheckin(SId))
+            //        //{
+            //        //    MessageBox.Show("Checkin işlemi tamamlandı.");
+            //        //}
+            //        //else MessageBox.Show("Payment update olmadı");
+            //    }
+            //    else MessageBox.Show("Sale update olmadı");
+            //}
+            //else MessageBox.Show("Guest update olmadı");
 
         }
 

@@ -62,19 +62,23 @@ namespace BLL.Hotel.Repositories
             return GuestId;
         }
 
-        public bool UpdateGuest(Guest g)
+        public bool UpdateGuest(Guest sondeger)
         {
-            bool Sonuc = false;
+            bool sonuc = false;
+            Guest degisen = (from s in ent.Guests
+                              where s.Id == sondeger.Id
+                              select s).FirstOrDefault();
+            degisen = sondeger;
             try
             {
                 ent.SaveChanges();
-                Sonuc = true;
+                sonuc = true;
             }
             catch (Exception ex)
             {
                 string hata = ex.Message;
             }
-            return Sonuc;
+            return sonuc;
         }
         public bool UpdateGuestByTC(string TC)
         {
@@ -102,6 +106,23 @@ namespace BLL.Hotel.Repositories
                         where g.Status == true && g.IdentificationNo == gs.IdentificationNo && g.Id != gs.Id
                         select g).Count();
             if (Ctrl > 0) Sonuc = true;
+            return Sonuc;
+        }
+        public bool Delete(int Id)
+        {
+            bool Sonuc = false;
+            try
+            {
+                Guest guest = ent.Guests.Where(x => x.Id == Id).FirstOrDefault();
+                guest.Deleted = true;
+                guest.Status = false;
+                ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
             return Sonuc;
         }
         public bool UpdateGuestStatusForCheckin(int Id)

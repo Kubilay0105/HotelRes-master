@@ -98,7 +98,8 @@ namespace PL.Hotel
             gue.Birthday = dtpDogumTarihi.Value;
             gue.ContactNo = txtTelefon.Text;
             gue.Email = txtEmail.Text;
-            gue.Status = true;
+            if (Giris.Date == DateTime.Now.Date) { gue.Status = true; }
+            else { gue.Status = false; }
             if (Gp.AddGuest(gue))
             {
                 Guest gst = Gp.GetGuest();

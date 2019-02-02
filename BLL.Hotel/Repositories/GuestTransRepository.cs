@@ -29,7 +29,7 @@ namespace BLL.Hotel.Repositories
 
         public List<GuestTransaction> GetGTransByGuestId(int GId)
         {
-            return ent.GuestTransactions.Where(x => x.GuestId == GId).ToList();
+            return ent.GuestTransactions.Where(x => x.GuestId == GId && x.Status==true).ToList();
         }
         
         public bool DeleteGTrans(GuestTransaction gt)
@@ -63,7 +63,7 @@ namespace BLL.Hotel.Repositories
         public List<GuestTransaction> GetGTransById(int gID)
         {
             List<GuestTransaction> liste = (from gt in ent.GuestTransactions
-                                            where gt.GuestId == gID
+                                            where gt.GuestId == gID && gt.Status==true
                                             select gt).ToList();
 
             return liste;

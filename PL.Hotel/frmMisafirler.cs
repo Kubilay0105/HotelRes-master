@@ -88,6 +88,19 @@ namespace PL.Hotel
             txtMisafirAdi.Focus();
         }
 
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Silmek İstiyor musunuz?", "SİLİNSİN Mİ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (Gr.Delete(GId))
+                {
+                    MessageBox.Show("Ziyaretçi bilgileri silindi.", "Silme gerçekleşti.");
+                    dgvMisafirListesi.DataSource = Gr.GetGuestsInRoom(OdaId);
+                    Temizle();
+                }
+            }
+        }
+
         private void btnDuzenle_Click(object sender, EventArgs e)
         {
             if (txtMisafirAdi.Text.Trim() != "" && txtMisafirSoyadi.Text.Trim() != "" && txtMisafirTC.Text.Trim() != "")
