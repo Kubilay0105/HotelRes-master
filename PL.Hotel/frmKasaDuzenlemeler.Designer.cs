@@ -30,12 +30,9 @@
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.cbIslemTurleri = new System.Windows.Forms.ComboBox();
-            this.rbGuest = new System.Windows.Forms.RadioButton();
-            this.dgvKasaHareketler = new System.Windows.Forms.DataGridView();
-            this.rbPersonel = new System.Windows.Forms.RadioButton();
-            this.rbTumu = new System.Windows.Forms.RadioButton();
             this.dtpTarih = new System.Windows.Forms.DateTimePicker();
+            this.dgvKasaHareketler = new System.Windows.Forms.DataGridView();
+            this.cbIslemTurleri = new System.Windows.Forms.ComboBox();
             this.pnlContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKasaHareketler)).BeginInit();
             this.SuspendLayout();
@@ -52,38 +49,21 @@
             // 
             this.pnlContent.AutoSize = true;
             this.pnlContent.Controls.Add(this.dtpTarih);
-            this.pnlContent.Controls.Add(this.rbTumu);
-            this.pnlContent.Controls.Add(this.rbPersonel);
             this.pnlContent.Controls.Add(this.dgvKasaHareketler);
             this.pnlContent.Controls.Add(this.cbIslemTurleri);
-            this.pnlContent.Controls.Add(this.rbGuest);
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 64);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(1000, 486);
             this.pnlContent.TabIndex = 1;
             // 
-            // cbIslemTurleri
+            // dtpTarih
             // 
-            this.cbIslemTurleri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbIslemTurleri.FormattingEnabled = true;
-            this.cbIslemTurleri.Location = new System.Drawing.Point(24, 18);
-            this.cbIslemTurleri.Name = "cbIslemTurleri";
-            this.cbIslemTurleri.Size = new System.Drawing.Size(121, 21);
-            this.cbIslemTurleri.TabIndex = 2;
-            this.cbIslemTurleri.SelectedIndexChanged += new System.EventHandler(this.cbIslemTurleri_SelectedIndexChanged);
-            // 
-            // rbGuest
-            // 
-            this.rbGuest.AutoSize = true;
-            this.rbGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbGuest.Location = new System.Drawing.Point(505, 17);
-            this.rbGuest.Name = "rbGuest";
-            this.rbGuest.Size = new System.Drawing.Size(69, 19);
-            this.rbGuest.TabIndex = 0;
-            this.rbGuest.TabStop = true;
-            this.rbGuest.Text = "Misafir";
-            this.rbGuest.UseVisualStyleBackColor = true;
+            this.dtpTarih.Location = new System.Drawing.Point(447, 15);
+            this.dtpTarih.Name = "dtpTarih";
+            this.dtpTarih.Size = new System.Drawing.Size(226, 20);
+            this.dtpTarih.TabIndex = 9;
+            this.dtpTarih.ValueChanged += new System.EventHandler(this.dtpTarih_ValueChanged);
             // 
             // dgvKasaHareketler
             // 
@@ -94,37 +74,15 @@
             this.dgvKasaHareketler.Size = new System.Drawing.Size(649, 243);
             this.dgvKasaHareketler.TabIndex = 3;
             // 
-            // rbPersonel
+            // cbIslemTurleri
             // 
-            this.rbPersonel.AutoSize = true;
-            this.rbPersonel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbPersonel.Location = new System.Drawing.Point(591, 17);
-            this.rbPersonel.Name = "rbPersonel";
-            this.rbPersonel.Size = new System.Drawing.Size(82, 19);
-            this.rbPersonel.TabIndex = 4;
-            this.rbPersonel.TabStop = true;
-            this.rbPersonel.Text = "Personel";
-            this.rbPersonel.UseVisualStyleBackColor = true;
-            // 
-            // rbTumu
-            // 
-            this.rbTumu.AutoSize = true;
-            this.rbTumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbTumu.Location = new System.Drawing.Point(421, 17);
-            this.rbTumu.Name = "rbTumu";
-            this.rbTumu.Size = new System.Drawing.Size(61, 19);
-            this.rbTumu.TabIndex = 8;
-            this.rbTumu.TabStop = true;
-            this.rbTumu.Text = "Tümü";
-            this.rbTumu.UseVisualStyleBackColor = true;
-            // 
-            // dtpTarih
-            // 
-            this.dtpTarih.Location = new System.Drawing.Point(151, 19);
-            this.dtpTarih.Name = "dtpTarih";
-            this.dtpTarih.Size = new System.Drawing.Size(102, 20);
-            this.dtpTarih.TabIndex = 9;
-            this.dtpTarih.ValueChanged += new System.EventHandler(this.dtpTarih_ValueChanged);
+            this.cbIslemTurleri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbIslemTurleri.FormattingEnabled = true;
+            this.cbIslemTurleri.Location = new System.Drawing.Point(24, 18);
+            this.cbIslemTurleri.Name = "cbIslemTurleri";
+            this.cbIslemTurleri.Size = new System.Drawing.Size(121, 21);
+            this.cbIslemTurleri.TabIndex = 2;
+            this.cbIslemTurleri.SelectedIndexChanged += new System.EventHandler(this.cbIslemTurleri_SelectedIndexChanged);
             // 
             // frmKasaDuzenlemeler
             // 
@@ -138,7 +96,6 @@
             this.Text = "frmKasaDuzenlemeler";
             this.Load += new System.EventHandler(this.frmKasaDuzenlemeler_Load);
             this.pnlContent.ResumeLayout(false);
-            this.pnlContent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKasaHareketler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -149,11 +106,8 @@
 
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel pnlContent;
-        private System.Windows.Forms.RadioButton rbPersonel;
         private System.Windows.Forms.DataGridView dgvKasaHareketler;
         private System.Windows.Forms.ComboBox cbIslemTurleri;
-        private System.Windows.Forms.RadioButton rbGuest;
         private System.Windows.Forms.DateTimePicker dtpTarih;
-        private System.Windows.Forms.RadioButton rbTumu;
     }
 }

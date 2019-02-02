@@ -18,78 +18,105 @@ namespace PL.Hotel
         {
             InitializeComponent();
         }
-        SaleRepository ss = new SaleRepository();
-        RoomRepository rr = new RoomRepository();
-        DateTime Gara=DateTime.Now;
-        DateTime Cara=DateTime.Now.AddDays(1);
+        //SaleRepository ss = new SaleRepository();
+        //RoomRepository rr = new RoomRepository();
+        //DateTime Gara=DateTime.Now;
+        //DateTime Cara=DateTime.Now.AddDays(1);
+        //private void frmOdalar_Load(object sender, EventArgs e)
+        //{
+            
+        //    Gara = dtpGirisAra.Value;
+        //    Cara = dtpCikisAra.Value;
+        //    OdalarıGetir(Gara, Cara.AddDays(1));
+        //}
+        //private void dtpGirisAra_ValueChanged(object sender, EventArgs e)
+        //{
+        //    Gara = dtpGirisAra.Value;
+        //    Cara = dtpCikisAra.Value;
+        //    OdalarıGetir(Gara, Cara);
+        //}
+
+        //private void dtpCikisAra_ValueChanged(object sender, EventArgs e)
+        //{
+        //    Gara = dtpGirisAra.Value;
+        //    Cara = dtpCikisAra.Value;
+        //    OdalarıGetir(Gara, Cara);
+        //}
+        //private void OdalarıGetir(DateTime g, DateTime c)
+        //{
+        //    List<DateTime> Gunler = new List<DateTime>();
+        //    DateTime q = g.Date;
+        //    for (int j = 0; j <= (c.Date - g.Date).TotalDays; j++)
+        //    {
+        //        Gunler.Add(q);
+        //        q = q.Date.AddDays(1);
+        //    }
+
+        //    foreach (Room item in rr.GetRooms())
+        //    {
+        //        item.State = false;
+        //    }
+        //    //List<int> Dolular = new List<int>();
+        //    foreach (Sale S in ss.GetSales())
+        //    {
+        //        foreach (DateTime dt in Gunler)
+        //        {
+        //            if (dt.Date >= S.CheckIn.Date && dt.Date <= S.CheckOut.Date)
+        //            {
+        //                foreach (Room item in rr.GetRooms())
+        //                {
+        //                    if (S.RoomId == item.Id) { item.State = true; }
+        //                }
+        //                //Dolular.Add(S.RoomId);
+        //            }
+        //        }
+        //    }
+        //    foreach (Control item in pnlContent.Controls)
+        //    {
+        //        if (item is Label)
+        //        {
+        //            foreach (Room rm in rr.GetRooms())
+        //            {
+        //                if (rm.RoomNumber == item.Name.Substring(1))
+        //                {
+        //                    if (rm.State) item.BackColor = Color.Red;
+        //                    else item.BackColor = Color.GreenYellow;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+        //private void pnlContent_Paint(object sender, PaintEventArgs e)
+        //{
+
+        //}
+
+        private void tsKat1_Click(object sender, EventArgs e)
+        {
+            frmKat1 frm = new frmKat1();
+            FormAc(frm);
+        }
+
         private void frmOdalar_Load(object sender, EventArgs e)
         {
-            
-            Gara = dtpGirisAra.Value;
-            Cara = dtpCikisAra.Value;
-            OdalarıGetir(Gara, Cara.AddDays(1));
+            frmKat1 frm = new frmKat1();
+            FormAc(frm);
         }
-        private void dtpGirisAra_ValueChanged(object sender, EventArgs e)
+        private void FormAc(Form AF)
         {
-            Gara = dtpGirisAra.Value;
-            Cara = dtpCikisAra.Value;
-            OdalarıGetir(Gara, Cara);
-        }
-
-        private void dtpCikisAra_ValueChanged(object sender, EventArgs e)
-        {
-            Gara = dtpGirisAra.Value;
-            Cara = dtpCikisAra.Value;
-            OdalarıGetir(Gara, Cara);
-        }
-        private void OdalarıGetir(DateTime g, DateTime c)
-        {
-            List<DateTime> Gunler = new List<DateTime>();
-            DateTime q = g.Date;
-            for (int j = 0; j <= (c.Date - g.Date).TotalDays; j++)
+            foreach (Control F in this.pnlContent.Controls)
             {
-                Gunler.Add(q);
-                q = q.Date.AddDays(1);
-            }
-
-            foreach (Room item in rr.GetRooms())
-            {
-                item.State = false;
-            }
-            //List<int> Dolular = new List<int>();
-            foreach (Sale S in ss.GetSales())
-            {
-                foreach (DateTime dt in Gunler)
+                if (F is Form)
                 {
-                    if (dt.Date >= S.CheckIn.Date && dt.Date <= S.CheckOut.Date)
-                    {
-                        foreach (Room item in rr.GetRooms())
-                        {
-                            if (S.RoomId == item.Id) { item.State = true; }
-                        }
-                        //Dolular.Add(S.RoomId);
-                    }
+                    Form MF = (Form)F;
+                    MF.Close();
                 }
             }
-            foreach (Control item in pnlContent.Controls)
-            {
-                if (item is Label)
-                {
-                    foreach (Room rm in rr.GetRooms())
-                    {
-                        if (rm.RoomNumber == item.Name.Substring(1))
-                        {
-                            if (rm.State) item.BackColor = Color.Red;
-                            else item.BackColor = Color.GreenYellow;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void pnlContent_Paint(object sender, PaintEventArgs e)
-        {
-
+            AF.TopLevel = false;
+            this.pnlContent.Controls.Add(AF);
+            AF.Dock = DockStyle.Fill;
+            AF.Show();
         }
     }
 }
