@@ -30,9 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnOdaSec = new System.Windows.Forms.Button();
             this.dgvMusteriler = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnOdaSec = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.txtAdi = new System.Windows.Forms.TextBox();
@@ -50,6 +50,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -66,6 +68,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.dgvMusteriler);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.btnEkle);
@@ -74,16 +77,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(984, 503);
             this.panel2.TabIndex = 1;
-            // 
-            // btnOdaSec
-            // 
-            this.btnOdaSec.Location = new System.Drawing.Point(56, 316);
-            this.btnOdaSec.Name = "btnOdaSec";
-            this.btnOdaSec.Size = new System.Drawing.Size(161, 30);
-            this.btnOdaSec.TabIndex = 29;
-            this.btnOdaSec.Text = "Oda Seç";
-            this.btnOdaSec.UseVisualStyleBackColor = true;
-            this.btnOdaSec.Click += new System.EventHandler(this.btnOdaSec_Click);
             // 
             // dgvMusteriler
             // 
@@ -120,6 +113,16 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Misafir Bilgileri";
+            // 
+            // btnOdaSec
+            // 
+            this.btnOdaSec.Location = new System.Drawing.Point(56, 316);
+            this.btnOdaSec.Name = "btnOdaSec";
+            this.btnOdaSec.Size = new System.Drawing.Size(161, 30);
+            this.btnOdaSec.TabIndex = 29;
+            this.btnOdaSec.Text = "Oda Seç";
+            this.btnOdaSec.UseVisualStyleBackColor = true;
+            this.btnOdaSec.Click += new System.EventHandler(this.btnOdaSec_Click);
             // 
             // label1
             // 
@@ -277,6 +280,13 @@
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(363, 349);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 29;
+            // 
             // frmSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,6 +300,7 @@
             this.Text = "frmSatis";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -321,5 +332,6 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.DataGridView dgvMusteriler;
         private System.Windows.Forms.Button btnOdaSec;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

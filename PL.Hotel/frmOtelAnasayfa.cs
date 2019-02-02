@@ -75,7 +75,9 @@ namespace PL.Hotel
 
         private void frmOtelAnasayfa_Load(object sender, EventArgs e)
         {
-
+            Screen screen = Screen.FromPoint(this.Location);
+            this.Size = screen.WorkingArea.Size;
+            this.Location = Point.Empty;
             timer3.Start();
             lblTarih.Text = DateTime.Now.Date.ToShortDateString() + DateTime.Today.DayOfWeek.ToString();
 

@@ -118,5 +118,17 @@ namespace PL.Hotel
             AF.Dock = DockStyle.Fill;
             AF.Show();
         }
+
+        private void tsKat2_Click(object sender, EventArgs e)
+        {
+            frmKat2 frm = new frmKat2();
+            FormAc(frm);
+        }
+
+        private void tsKat3_Click(object sender, EventArgs e)
+        {
+            frmKat3 frm = new frmKat3();
+            FormAc(frm);
+        }
     }
 }

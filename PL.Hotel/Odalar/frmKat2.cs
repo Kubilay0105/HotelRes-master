@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace PL.Hotel
 {
-    public partial class frmOdaSec : Form
+    public partial class frmKat2 : Form
     {
-        public frmOdaSec()
+        public frmKat2()
         {
             InitializeComponent();
         }
@@ -22,9 +22,20 @@ namespace PL.Hotel
         RoomRepository rr = new RoomRepository();
         DateTime Gara;
         DateTime Cara;
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btn201_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string odano = (sender as Button).Name.Substring(3);
+            frmOdaOzellikleri frm = new frmOdaOzellikleri();
+            frm.Odano = odano;
+
+            frm.ShowDialog();
+        }
+
+        private void frmKat2_Load(object sender, EventArgs e)
+        {
+            Gara = dtpGirisAra.Value;
+            Cara = dtpCikisAra.Value;
+            OdalarıGetir(Gara, Cara.AddDays(1));
         }
 
         private void dtpGirisAra_ValueChanged(object sender, EventArgs e)
@@ -61,7 +72,7 @@ namespace PL.Hotel
                 {
                     if (dt.Date >= S.CheckIn.Date && dt.Date <= S.CheckOut.Date)
                     {
-                        foreach (Room item in rr.GetRooms())
+                        foreach (Room item in rr.GetRoomsByFloor(2))
                         {
                             if (S.RoomId == item.Id) { item.State = true; }
                         }
@@ -69,13 +80,13 @@ namespace PL.Hotel
                     }
                 }
             }
-            foreach (Control item in pnlContent.Controls)
+            foreach (Control item in pnlKat2.Controls)
             {
-                if (item is Button)
+                if (item is Label)
                 {
-                    foreach (Room rm in rr.GetRooms())
+                    foreach (Room rm in rr.GetRoomsByFloor(2))
                     {
-                        if (rm.RoomNumber == item.Text)
+                        if (rm.RoomNumber == item.Name.Substring(1))
                         {
                             if (rm.State) item.BackColor = Color.Red;
                             else item.BackColor = Color.GreenYellow;
@@ -84,55 +95,5 @@ namespace PL.Hotel
                 }
             }
         }
-
-        private void btn101_Click(object sender, EventArgs e)
-        {
-            string odano = (sender as Button).Text;
-            frmSatis frmSatis = new frmSatis();
-            frmSatis.OdaNo = odano;
-            frmSatis.Giris = Gara;
-            frmSatis.Cikis = Cara;
-            this.Close();
-        }
-
-        //private void btn102_Click(object sender, EventArgs e)
-        //{
-        //    string odano = (sender as Button).Text;
-        //    frmSatis frmSatis = new frmSatis();
-        //    frmSatis.OdaNo = odano;
-        //    frmSatis.Giris = Gara;
-        //    frmSatis.Cikis = Cara;
-        //    this.Close();
-        //}
-
-        //private void btn103_Click(object sender, EventArgs e)
-        //{
-        //    string odano = (sender as Button).Text;
-        //    frmSatis frmSatis = new frmSatis();
-        //    frmSatis.OdaNo = odano;
-        //    frmSatis.Giris = Gara;
-        //    frmSatis.Cikis = Cara;
-        //    this.Close();
-        //}
-
-        //private void btn104_Click(object sender, EventArgs e)
-        //{
-        //    string odano = (sender as Button).Text;
-        //    frmSatis frmSatis = new frmSatis();
-        //    frmSatis.OdaNo = odano;
-        //    frmSatis.Giris = Gara;
-        //    frmSatis.Cikis = Cara;
-        //    this.Close();
-        //}
-
-        //private void btn105_Click(object sender, EventArgs e)
-        //{
-        //    string odano = (sender as Button).Text;
-        //    frmSatis frmSatis = new frmSatis();
-        //    frmSatis.OdaNo = odano;
-        //    frmSatis.Giris = Gara;
-        //    frmSatis.Cikis = Cara;
-        //    this.Close();
-        //}
     }
 }

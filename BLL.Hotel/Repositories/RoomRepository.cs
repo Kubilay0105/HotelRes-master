@@ -37,6 +37,17 @@ namespace BLL.Hotel.Repositories
         {
             return ent.Rooms.ToList();
         }
+        public List<Room> GetRoomsByFloor(int FloorNo)
+        {
+            return ent.Rooms.Where(x=>x.FloorNumber==FloorNo).ToList();
+        }
+        public RoomType GetType(int TypeId)
+        {
+            RoomType rt = (from r in ent.RoomType
+                           where r.Id == TypeId
+                           select r).FirstOrDefault();
+            return rt;
+        }
         public List<Room> GetFullRooms(List<Sale> ss)
         {
             List<Room> liste = new List<Room>();

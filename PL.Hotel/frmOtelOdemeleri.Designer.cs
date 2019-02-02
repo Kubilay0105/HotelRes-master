@@ -34,6 +34,10 @@
             this.pnlContent = new System.Windows.Forms.Panel();
             this.btnOdemeYap = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPrim = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAciklama = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,10 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbGiderTurleri = new System.Windows.Forms.ComboBox();
             this.dgvPersoneller = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtPrim = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -55,6 +55,7 @@
             // 
             // pnlHeader
             // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -114,6 +115,41 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ödeme İşlemleri";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
+            this.label8.Location = new System.Drawing.Point(237, 242);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 23);
+            this.label8.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(237, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 23);
+            this.label2.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(21, 246);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 17);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Prim";
+            // 
+            // txtPrim
+            // 
+            this.txtPrim.Location = new System.Drawing.Point(113, 245);
+            this.txtPrim.Name = "txtPrim";
+            this.txtPrim.Size = new System.Drawing.Size(124, 20);
+            this.txtPrim.TabIndex = 12;
             // 
             // label6
             // 
@@ -196,41 +232,6 @@
             this.dgvPersoneller.Size = new System.Drawing.Size(680, 295);
             this.dgvPersoneller.TabIndex = 2;
             this.dgvPersoneller.DoubleClick += new System.EventHandler(this.dgvPersoneller_DoubleClick);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(21, 246);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 17);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Prim";
-            // 
-            // txtPrim
-            // 
-            this.txtPrim.Location = new System.Drawing.Point(113, 245);
-            this.txtPrim.Name = "txtPrim";
-            this.txtPrim.Size = new System.Drawing.Size(124, 20);
-            this.txtPrim.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(237, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 23);
-            this.label2.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
-            this.label8.Location = new System.Drawing.Point(237, 242);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 23);
-            this.label8.TabIndex = 15;
             // 
             // frmOtelOdemeleri
             // 

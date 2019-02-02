@@ -110,6 +110,7 @@ namespace PL.Hotel
             int gunsayisi = fark.Days;
             decimal OdaFiyat = Rp.GetRoomPrice(OdaNo);
             ToplamTutar = ((gunsayisi + 1) * OdaFiyat);
+            textBox1.Text = OdaNo;
         }
     }
 }

@@ -100,11 +100,35 @@
     <Compile Include="frmKasaIslemleri.Designer.cs">
       <DependentUpon>frmKasaIslemleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKat1.cs">
+    <Compile Include="Odalar\frmKat1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKat1.Designer.cs">
+    <Compile Include="Odalar\frmKat1.Designer.cs">
       <DependentUpon>frmKat1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odalar\frmKat1Sec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odalar\frmKat1Sec.Designer.cs">
+      <DependentUpon>frmKat1Sec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odalar\frmKat2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odalar\frmKat2.Designer.cs">
+      <DependentUpon>frmKat2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odalar\frmKat2Sec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odalar\frmKat2Sec.Designer.cs">
+      <DependentUpon>frmKat2Sec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odalar\frmKat3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odalar\frmKat3.Designer.cs">
+      <DependentUpon>frmKat3.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMusteriOdeme.cs">
       <SubType>Form</SubType>
@@ -124,16 +148,28 @@
     <Compile Include="frmOdalar.Designer.cs">
       <DependentUpon>frmOdalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOdaOzellikleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOdaOzellikleri.Designer.cs">
+      <DependentUpon>frmOdaOzellikleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOdemeEkranı.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmOdemeEkranı.Designer.cs">
       <DependentUpon>frmOdemeEkranı.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOdaSec.cs">
+    <Compile Include="Odalar\frmKat3Sec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOdaSec.Designer.cs">
+    <Compile Include="Odalar\frmKat3Sec.Designer.cs">
+      <DependentUpon>frmKat3Sec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odalar\frmOdaSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odalar\frmOdaSec.Designer.cs">
       <DependentUpon>frmOdaSec.cs</DependentUpon>
     </Compile>
     <Compile Include="frmOtelAnasayfa.cs">
@@ -201,8 +237,20 @@
     <EmbeddedResource Include="frmKasaIslemleri.resx">
       <DependentUpon>frmKasaIslemleri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKat1.resx">
+    <EmbeddedResource Include="Odalar\frmKat1.resx">
       <DependentUpon>frmKat1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odalar\frmKat1Sec.resx">
+      <DependentUpon>frmKat1Sec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odalar\frmKat2.resx">
+      <DependentUpon>frmKat2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odalar\frmKat2Sec.resx">
+      <DependentUpon>frmKat2Sec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odalar\frmKat3.resx">
+      <DependentUpon>frmKat3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMusteriOdeme.resx">
       <DependentUpon>frmMusteriOdeme.cs</DependentUpon>
@@ -222,10 +270,16 @@
     <EmbeddedResource Include="frmOdalar.resx">
       <DependentUpon>frmOdalar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOdaOzellikleri.resx">
+      <DependentUpon>frmOdaOzellikleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOdemeEkranı.resx">
       <DependentUpon>frmOdemeEkranı.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOdaSec.resx">
+    <EmbeddedResource Include="Odalar\frmKat3Sec.resx">
+      <DependentUpon>frmKat3Sec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odalar\frmOdaSec.resx">
       <DependentUpon>frmOdaSec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOtelAnasayfa.resx">

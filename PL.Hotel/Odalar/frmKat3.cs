@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace PL.Hotel
 {
-    public partial class frmKat1 : Form
+    public partial class frmKat3 : Form
     {
-        public frmKat1()
+        public frmKat3()
         {
             InitializeComponent();
         }
         SaleRepository ss = new SaleRepository();
         RoomRepository rr = new RoomRepository();
-        DateTime Gara = DateTime.Now;
-        DateTime Cara = DateTime.Now.AddDays(1);
-        private void frmKat1_Load(object sender, EventArgs e)
+        DateTime Gara;
+        DateTime Cara;
+        private void frmKat3_Load(object sender, EventArgs e)
         {
             Gara = dtpGirisAra.Value;
             Cara = dtpCikisAra.Value;
@@ -63,7 +63,7 @@ namespace PL.Hotel
                 {
                     if (dt.Date >= S.CheckIn.Date && dt.Date <= S.CheckOut.Date)
                     {
-                        foreach (Room item in rr.GetRooms())
+                        foreach (Room item in rr.GetRoomsByFloor(3))
                         {
                             if (S.RoomId == item.Id) { item.State = true; }
                         }
@@ -71,11 +71,11 @@ namespace PL.Hotel
                     }
                 }
             }
-            foreach (Control item in pnlKat1.Controls)
+            foreach (Control item in pnlKat3.Controls)
             {
                 if (item is Label)
                 {
-                    foreach (Room rm in rr.GetRooms())
+                    foreach (Room rm in rr.GetRoomsByFloor(3))
                     {
                         if (rm.RoomNumber == item.Name.Substring(1))
                         {
@@ -85,6 +85,15 @@ namespace PL.Hotel
                     }
                 }
             }
+        }
+
+        private void btn301_Click(object sender, EventArgs e)
+        {
+            string odano = (sender as Button).Name.Substring(3);
+            frmOdaOzellikleri frm = new frmOdaOzellikleri();
+            frm.Odano = odano;
+
+            frm.ShowDialog();
         }
     }
 }
