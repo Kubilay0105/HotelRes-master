@@ -21,7 +21,7 @@ namespace PL.Hotel
         RoomRepository Rr = new RoomRepository();
         GuestRepository Gr = new GuestRepository();
         SaleRepository Sr = new SaleRepository();
-        int OdaId;
+        int OdaId,GId;
         private void frmMisafirler_Load(object sender, EventArgs e)
         {
 
@@ -39,8 +39,15 @@ namespace PL.Hotel
 
         private void dgvMisafirListesi_DoubleClick(object sender, EventArgs e)
         {
-            int SId = Convert.ToInt32(dgvMisafirListesi.SelectedRows[0].Cells[0].Value);
-            Sale sa = Sr.GetSaleById(SId);
+            GId = Convert.ToInt32(dgvMisafirListesi.SelectedRows[0].Cells[0].Value);
+            txtMisafirAdi.Text=dgvMisafirListesi.SelectedRows[0].Cells[1].Value.ToString();
+            dtpMisafirDogumTarihi.Value= Convert.ToDateTime(dgvMisafirListesi.SelectedRows[0].Cells[8].Value);
+            txtMisafirSoyadi.Text = dgvMisafirListesi.SelectedRows[0].Cells[2].Value.ToString();
+            txtMisafirTC.Text = dgvMisafirListesi.SelectedRows[0].Cells[3].Value.ToString();
+            txtTelefon.Text = dgvMisafirListesi.SelectedRows[0].Cells[9].Value.ToString();
+            txtMail.Text = dgvMisafirListesi.SelectedRows[0].Cells[10].Value.ToString();
+            txtAdres.Text = dgvMisafirListesi.SelectedRows[0].Cells[7].Value.ToString();
+            cbMisafirCinsiyet.SelectedIndex = 0;
 
         }
 
@@ -59,6 +66,7 @@ namespace PL.Hotel
                 gst.Status = true;
                 gst.Adress = txtAdres.Text;
                 gst.Birthday = dtpMisafirDogumTarihi.Value;
+                gst.Deleted = false;
 
                 if (Gr.AddGuest(gst))
                 {
@@ -78,6 +86,38 @@ namespace PL.Hotel
             txtMail.Clear();
             txtAdres.Clear();
             txtMisafirAdi.Focus();
+        }
+
+        private void btnDuzenle_Click(object sender, EventArgs e)
+        {
+            if (txtMisafirAdi.Text.Trim() != "" && txtMisafirSoyadi.Text.Trim() != "" && txtMisafirTC.Text.Trim() != "")
+            {
+                Guest gt = new Guest();
+                gt.IdentificationNo = txtMisafirTC.Text;
+                gt.Id = GId;
+                if (Gr.UpdateControl(gt)) { MessageBox.Show("Başka kişiye ait Tc Kimlik No girdiniz,"); Temizle(); }
+                else
+                {
+                    gt.FirstName = txtMisafirAdi.Text;
+                    gt.LastName = txtMisafirSoyadi.Text;
+                    gt.RoomId = OdaId;
+                    gt.ContactNo = txtTelefon.Text;
+                    gt.Email = txtMail.Text;
+
+                    gt.Gender = cbMisafirCinsiyet.SelectedItem.ToString();
+                    gt.Status = true;
+                    gt.Adress = txtAdres.Text;
+                    gt.Birthday = dtpMisafirDogumTarihi.Value;
+
+                    if (Gr.UpdateGuest(gt))
+                    {
+                        dgvMisafirListesi.DataSource = Gr.GetGuestsInRoom(OdaId);
+                        Temizle();
+                    }
+                }
+                
+            }
+            else MessageBox.Show("Eksik bilgi girdiniz.");
         }
     }
 }

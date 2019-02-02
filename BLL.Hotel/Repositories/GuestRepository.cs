@@ -95,6 +95,15 @@ namespace BLL.Hotel.Repositories
             return sonuc;
 
         }
+        public bool UpdateControl(Guest gs)
+        {
+            bool Sonuc = false;
+            int Ctrl = (from g in ent.Guests
+                        where g.Status == true && g.IdentificationNo == gs.IdentificationNo && g.Id != gs.Id
+                        select g).Count();
+            if (Ctrl > 0) Sonuc = true;
+            return Sonuc;
+        }
         public bool UpdateGuestStatusForCheckin(int Id)
         {
             bool sonuc = false;

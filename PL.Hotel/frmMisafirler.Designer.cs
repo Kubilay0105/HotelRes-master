@@ -58,7 +58,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.btnOnay = new System.Windows.Forms.Button();
+            this.btnDuzenle = new System.Windows.Forms.Button();
             this.btnIptal = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -80,7 +80,7 @@
             // pnlContent
             // 
             this.pnlContent.Controls.Add(this.btnEkle);
-            this.pnlContent.Controls.Add(this.btnOnay);
+            this.pnlContent.Controls.Add(this.btnDuzenle);
             this.pnlContent.Controls.Add(this.btnIptal);
             this.pnlContent.Controls.Add(this.gbMisafirKonaklama);
             this.pnlContent.Controls.Add(this.gbMisafirBilgi);
@@ -409,17 +409,18 @@
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // btnOnay
+            // btnDuzenle
             // 
-            this.btnOnay.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOnay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOnay.Location = new System.Drawing.Point(721, 351);
-            this.btnOnay.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOnay.Name = "btnOnay";
-            this.btnOnay.Size = new System.Drawing.Size(109, 40);
-            this.btnOnay.TabIndex = 75;
-            this.btnOnay.Text = "ONAYLA";
-            this.btnOnay.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDuzenle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDuzenle.Location = new System.Drawing.Point(721, 351);
+            this.btnDuzenle.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(109, 40);
+            this.btnDuzenle.TabIndex = 75;
+            this.btnDuzenle.Text = "DÜZENLE";
+            this.btnDuzenle.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
             // btnIptal
             // 
@@ -505,7 +506,7 @@
         private System.Windows.Forms.DateTimePicker dtpMisafirDogumTarihi;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.Button btnOnay;
+        private System.Windows.Forms.Button btnDuzenle;
         private System.Windows.Forms.Button btnIptal;
         private System.Windows.Forms.GroupBox gbMisafirKonaklama;
         private System.Windows.Forms.TextBox textBox2;
