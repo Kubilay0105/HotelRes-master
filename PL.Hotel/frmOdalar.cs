@@ -20,13 +20,14 @@ namespace PL.Hotel
         }
         SaleRepository ss = new SaleRepository();
         RoomRepository rr = new RoomRepository();
-        DateTime Gara;
-        DateTime Cara;
+        DateTime Gara=DateTime.Now;
+        DateTime Cara=DateTime.Now.AddDays(1);
         private void frmOdalar_Load(object sender, EventArgs e)
         {
+            
             Gara = dtpGirisAra.Value;
             Cara = dtpCikisAra.Value;
-            OdalarıGetir(Gara, Cara);
+            OdalarıGetir(Gara, Cara.AddDays(1));
         }
         private void dtpGirisAra_ValueChanged(object sender, EventArgs e)
         {

@@ -75,9 +75,10 @@ namespace PL.Hotel
 
         private void frmOtelAnasayfa_Load(object sender, EventArgs e)
         {
-            //timer3.Start();
-            ////lblTarih.Text = DateTime.Now.Date.ToShortDateString() + DateTime.Today.DayOfWeek.ToString();
-            
+
+            timer3.Start();
+            lblTarih.Text = DateTime.Now.Date.ToShortDateString() + DateTime.Today.DayOfWeek.ToString();
+
             //lblDoluOda.Text = Rp.FullRoomsCount().ToString();
             //lblBosOda.Text = (30 - Rp.FullRoomsCount()).ToString();
         }

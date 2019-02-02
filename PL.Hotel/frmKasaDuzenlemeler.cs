@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Hotel.Repositories;
+using DAL.Hotel.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,27 @@ namespace PL.Hotel
         public frmKasaDuzenlemeler()
         {
             InitializeComponent();
+        }
+        TransTypeRepository Ttr = new TransTypeRepository();
+        PaymentsRepository Pr = new PaymentsRepository();
+        int TtId;
+        DateTime Tarih;
+        
+        private void frmKasaDuzenlemeler_Load(object sender, EventArgs e)
+        {
+            cbIslemTurleri.DataSource = Ttr.GetAllTransType();
+            dgvKasaHareketler.DataSource = Pr.GetAllPayments();
+        }
+
+        private void cbIslemTurleri_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TransactionType Trans = (TransactionType)cbIslemTurleri.SelectedItem;
+            TtId = Trans.Id;
+        }
+
+        private void dtpTarih_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

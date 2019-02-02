@@ -53,7 +53,19 @@ namespace BLL.Hotel.Repositories
 
         public bool DeletePersonnel(int ID)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            try
+            {
+                Personnel personel = ent.Personnel.Where(x => x.Id == ID).FirstOrDefault();
+                personel.Status = false;
+                ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public List<Personnel> GetPersonnels()
@@ -79,7 +91,7 @@ namespace BLL.Hotel.Repositories
         public bool PersonnelControl(Personnel p)
         {
             var Personel = (from per in ent.Personnel
-                            where per.PersonName == p.PersonName
+                            where per.IdentificationNo == p.IdentificationNo
                             select per).FirstOrDefault();
             if (Personel != null)
                 return true;
@@ -94,9 +106,9 @@ namespace BLL.Hotel.Repositories
         }
         public bool PersonnelControlFromUpdate(Personnel p)
         {
-            var personel = (from ext in ent.ExtraTypes
-                            where ext.Type == p.PersonName && ext.Id != p.Id
-                            select ext).FirstOrDefault();
+            var personel = (from per in ent.Personnel
+                            where per.IdentificationNo == p.IdentificationNo && per.Id != p.Id
+                            select per).FirstOrDefault();
             if (personel != null)
                 return true;
             return false;

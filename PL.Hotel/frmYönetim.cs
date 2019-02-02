@@ -126,7 +126,7 @@ namespace PL.Hotel
 
         private void tsExtraTurleri_Click(object sender, EventArgs e)
         {
-            frmExtraIslemler frm = new frmExtraIslemler();
+            frmExtraa frm = new frmExtraa();
             FormAc(frm);
         }
 

@@ -189,6 +189,9 @@
     <EmbeddedResource Include="frmExtraIslemler.resx">
       <DependentUpon>frmExtraIslemler.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKasaDuzenlemeler.resx">
+      <DependentUpon>frmKasaDuzenlemeler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmKasaIslemleri.resx">
       <DependentUpon>frmKasaIslemleri.cs</DependentUpon>
     </EmbeddedResource>

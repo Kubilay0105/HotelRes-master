@@ -24,8 +24,6 @@ namespace PL.Hotel
         
         private void frmExtraa_Load(object sender, EventArgs e)
         {
-           
-            txtDate.Text = DateTime.Now.ToShortDateString();
             dgvExtralar.DataSource = ex.GetExtraTypes();
         }
 

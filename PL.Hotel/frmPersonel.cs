@@ -24,38 +24,50 @@ namespace PL.Hotel
         int ID;
         private void frmPersonel_Load(object sender, EventArgs e)
         {
-            txtDate.Text = DateTime.Now.ToShortDateString();
-            dgvPersonel.DataSource = pr.GetPersonnels();
+            GridDuzenle(pr.GetPersonnels());
+            rbPersonel.Checked = true;
         }
 
         private void tsEkle_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtPersonelAd.Text))
+            if (!string.IsNullOrEmpty(txtPersonelAd.Text) && !string.IsNullOrEmpty(txtTC.Text))
             {
 
                 Personnel yeni = new Personnel();
-                //Özellikleri girilir.
                 yeni.PersonName = txtPersonelAd.Text;
+                yeni.IdentificationNo = txtTC.Text;
 
                 if (pr.PersonnelControl(yeni))
                 {
-                    MessageBox.Show("Bu personel kayıtlı!", " Tekrar kayıt yapılamaz!");
+                    MessageBox.Show("Bu Tc ye ait personel kayıtlı!", " Tekrar kayıt yapılamaz!");
                 }
                 else
                 {
                     yeni.PersonSurname = txtPersonelSoyad.Text;
-                    yeni.Phone = txtTel.Text;
+                    yeni.Phone =mtxtTel.Text;
                     yeni.Adress = txtAdres.Text;
+                    if (rbAdmin.Checked) yeni.Admin = true;
+                    else yeni.Admin = false;
                     yeni.Uname = txtUsername.Text;
                     yeni.Upwd = txtPasword.Text;
                     yeni.JobName = txtUnvan.Text;
-                    yeni.Salary = Convert.ToDecimal(txtMaas.Text);
+                    yeni.Status = true;
+                    try
+                    {
+                        yeni.Salary = Convert.ToDecimal(txtMaas.Text);
+
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
                     if (pr.AddPersonnel(yeni))
                     {
                         MessageBox.Show("Yeni personel eklendi.", "Kayıt gerçekleşti.");
-                        dgvPersonel.DataSource = pr.GetPersonnels();
+                        GridDuzenle(pr.GetPersonnels());
 
-                        //Temizle();
+                        Temizle();
                     }
                 }
             }
@@ -68,18 +80,21 @@ namespace PL.Hotel
 
         private void tsGuncelle_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtPersonelAd.Text))
+            if (!string.IsNullOrEmpty(txtPersonelAd.Text) && !string.IsNullOrEmpty(txtTC.Text))
             {
                 Personnel degisen = pr.GetPersonnelById(ID);
                 degisen.PersonName = txtPersonelAd.Text;
                 degisen.PersonSurname = txtPersonelSoyad.Text;
                 degisen.IdentificationNo = txtTC.Text;
-                degisen.Phone = txtTel.Text;
+                if (rbAdmin.Checked) degisen.Admin = true;
+                else degisen.Admin = false;
+                degisen.Phone = mtxtTel.Text;
                 degisen.Adress = txtAdres.Text;
                 degisen.Uname = txtUsername.Text;
                 degisen.Upwd = txtPasword.Text;
                 degisen.JobName = txtUnvan.Text;
                 degisen.Salary = Convert.ToDecimal(txtMaas.Text);
+                degisen.Status = true;
                 if (pr.PersonnelControlFromUpdate(degisen))
                 {
                     MessageBox.Show("Bu personel kayıtlı!", "Tekrar kayıt yapılamaz !");
@@ -89,14 +104,14 @@ namespace PL.Hotel
                     if (pr.UpdatePersonnel(degisen))
                     {
                         MessageBox.Show("Personel bilgileri değiştirildi.", "Update gerçekleşti.");
-                        dgvPersonel.DataSource = pr.GetPersonnels();
-                        //Temizle();
+                        GridDuzenle(pr.GetPersonnels());
+                        Temizle();
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Extra tür ismi girilmelidir!", "Dikkat! Eksik Bilgi!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Personel girilmelidir!", "Dikkat! Eksik Bilgi!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             txtPersonelAd.Focus();
         }
@@ -108,18 +123,26 @@ namespace PL.Hotel
                 if (pr.DeletePersonnel(ID))
                 {
                     MessageBox.Show("Personel bilgileri silindi.", "Silme gerçekleşti.");
-                    dgvPersonel.DataSource = pr.GetPersonnels();
-                    //Temizle();
+                    GridDuzenle(pr.GetPersonnels());
+                    Temizle();
                 }
             }
+        }
+        private void GridDuzenle(List<Personnel> PerList)
+        {
+            dgvPersonel.DataSource = PerList;
+
+            dgvPersonel.Columns[0].Visible = false;
+            dgvPersonel.Columns[3].Visible = false;
+            dgvPersonel.Columns[11].Visible = false;
         }
         private void dgvPersonel_DoubleClick(object sender, EventArgs e)
         {
             ID = Convert.ToInt32(dgvPersonel.SelectedRows[0].Cells[0].Value);
             txtPersonelAd.Text = dgvPersonel.SelectedRows[0].Cells[1].Value.ToString();
             txtPersonelSoyad.Text = dgvPersonel.SelectedRows[0].Cells[2].Value.ToString();
-            txtTC.Text= dgvPersonel.SelectedRows[0].Cells[4].Value == null ? "" : dgvPersonel.SelectedRows[0].Cells[4].Value.ToString();
-            txtTel.Text = dgvPersonel.SelectedRows[0].Cells[5].Value.ToString();
+            txtTC.Text = dgvPersonel.SelectedRows[0].Cells[4].Value.ToString();
+            mtxtTel.Text = dgvPersonel.SelectedRows[0].Cells[5].Value.ToString();
             txtAdres.Text = dgvPersonel.SelectedRows[0].Cells[6].Value.ToString();
             txtUsername.Text = dgvPersonel.SelectedRows[0].Cells[7].Value.ToString();
             txtPasword.Text = dgvPersonel.SelectedRows[0].Cells[8].Value.ToString();
@@ -127,6 +150,14 @@ namespace PL.Hotel
             txtMaas.Text = dgvPersonel.SelectedRows[0].Cells[10].Value.ToString();
 
             txtPersonelAd.Focus();
+        }
+        private void Temizle()
+        {
+            foreach (TextBox item in this.Controls)
+            {
+                item.Clear();
+            }
+            mtxtTel.Clear();
         }
     }
 }
