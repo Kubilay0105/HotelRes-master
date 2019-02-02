@@ -73,17 +73,17 @@ namespace PL.Hotel
 
         private void pdocFatura_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            List<GuestTransaction> liste = new List<GuestTransaction>(); 
-               liste= gtr.GetGTrans();
+            List<GuestTransaction> liste = new List<GuestTransaction>();
+           liste= gtr.GetGTransByGuestId(gr.GetGuestIdByTC(txtTKCNO.Text));
             StringFormat sf = new StringFormat();
             sf.Alignment = StringAlignment.Near;
-            e.Graphics.DrawString(txtAdi.Text + " " +txtSoyadi.Text + "Ödeme Bilgileri ",fntBaslik,sb,400,150 );
+            e.Graphics.DrawString(txtAdi.Text + "   " +txtSoyadi.Text +"    " +"Ödeme Bilgileri ",fntBaslik,sb,100,150 );
             e.Graphics.DrawString("TC            Tarih        İşlem Tipi         Borç      Ödenen     Acıklama", fntBaslik, sb, 50,200);
-            e.Graphics.DrawString("__________________________________________________________________________", fntBaslik, sb, 50, 250);
+            e.Graphics.DrawString("_______________________________________________________________________", fntBaslik, sb, 50, 250);
             for(int i=0;i<liste.Count;i++)
             {
                 e.Graphics.DrawString(txtTKCNO.Text, fntIcerik,sb,50,300+(30*i));
-                e.Graphics.DrawString(liste[i].Date.ToShortDateString(), fntIcerik, sb, 170, 300+(30 * i));
+                e.Graphics.DrawString(liste[i].Date.ToShortDateString(), fntIcerik, sb, 160, 300+(30 * i));
                 e.Graphics.DrawString(liste[i].TransType.ToString(), fntIcerik, sb, 290,300 +(30 * i));
                 e.Graphics.DrawString(liste[i].Debt.ToString(), fntIcerik, sb, 400,300 + (30 * i));
                 e.Graphics.DrawString(liste[i].Credit.ToString(), fntIcerik, sb, 500,300+(30 * i));
