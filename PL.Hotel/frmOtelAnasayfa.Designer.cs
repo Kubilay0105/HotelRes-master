@@ -106,7 +106,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(1016, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(60, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Admin";
             // 
@@ -220,6 +220,7 @@
             this.btnMisafirler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMisafirler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMisafirler.UseVisualStyleBackColor = true;
+            this.btnMisafirler.Click += new System.EventHandler(this.btnMisafirler_Click);
             // 
             // btnOdemeler
             // 
@@ -520,7 +521,7 @@
             // 
             // frmOtelAnasayfa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 650);
             this.Controls.Add(this.pnlContent);

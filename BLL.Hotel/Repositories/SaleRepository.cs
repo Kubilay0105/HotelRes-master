@@ -53,6 +53,24 @@ namespace BLL.Hotel.Repositories
         {
             return ent.Sales.Where(x=>x.Status==true).Select(x=>x.Guest).ToList();
         }
+        public bool UpdateSales(int RoomId, int NOG)
+        {
+            bool Sonuc = false;
+            int st = (from sale in ent.Sales
+                      where sale.RoomId == RoomId
+                      select sale.NoOfGuests).FirstOrDefault();
+            st = NOG;
+            try
+            {
+                ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
         public List<Guest> GetReservationGuest()
         {
             DateTime Tarih;

@@ -28,185 +28,202 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRaporlar));
-            this.tsRaporlar = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsRaporlar.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.vw_SonBirYılBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.HotelResDataSet = new PL.Hotel.HotelResDataSet();
+            this.PaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.PaymentsTableAdapter = new PL.Hotel.HotelResDataSetTableAdapters.PaymentsTableAdapter();
+            this.vw_SonBirYılTableAdapter = new PL.Hotel.HotelResDataSetTableAdapters.vw_SonBirYılTableAdapter();
+            this.vw_AylıkOrtalamaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vw_AylıkOrtalamaTableAdapter = new PL.Hotel.HotelResDataSetTableAdapters.vw_AylıkOrtalamaTableAdapter();
+            this.sp_YıllıkOrtalamaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sp_YıllıkOrtalamaTableAdapter = new PL.Hotel.HotelResDataSetTableAdapters.sp_YıllıkOrtalamaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.vw_SonBirYılBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HotelResDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentsBindingSource)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vw_AylıkOrtalamaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_YıllıkOrtalamaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // tsRaporlar
+            // vw_SonBirYılBindingSource
             // 
-            this.tsRaporlar.AutoSize = false;
-            this.tsRaporlar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tsRaporlar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripSeparator1,
-            this.toolStripButton2,
-            this.toolStripSeparator2,
-            this.toolStripButton3,
-            this.toolStripSeparator3,
-            this.toolStripButton4,
-            this.toolStripSeparator4,
-            this.toolStripButton5,
-            this.toolStripSeparator5,
-            this.toolStripButton6,
-            this.toolStripSeparator6,
-            this.toolStripButton7,
-            this.toolStripSeparator7});
-            this.tsRaporlar.Location = new System.Drawing.Point(0, 0);
-            this.tsRaporlar.Name = "tsRaporlar";
-            this.tsRaporlar.Size = new System.Drawing.Size(987, 49);
-            this.tsRaporlar.TabIndex = 0;
-            this.tsRaporlar.Text = "toolStrip1";
+            this.vw_SonBirYılBindingSource.DataMember = "vw_SonBirYıl";
+            this.vw_SonBirYılBindingSource.DataSource = this.HotelResDataSet;
             // 
-            // toolStripButton1
+            // HotelResDataSet
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(98, 46);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.HotelResDataSet.DataSetName = "HotelResDataSet";
+            this.HotelResDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // toolStripSeparator1
+            // PaymentsBindingSource
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 49);
+            this.PaymentsBindingSource.DataMember = "Payments";
+            this.PaymentsBindingSource.DataSource = this.HotelResDataSet;
             // 
-            // toolStripButton2
+            // tabPage3
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(98, 46);
-            this.toolStripButton2.Text = "toolStripButton1";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tabPage3.Controls.Add(this.reportViewer3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1308, 687);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Aylık Gelir/Gider ";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // toolStripSeparator2
+            // reportViewer3
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 49);
+            this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.sp_YıllıkOrtalamaBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "PL.Hotel.rprAylıkGelir.rdlc";
+            this.reportViewer3.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer3.Name = "reportViewer3";
+            this.reportViewer3.ServerReport.BearerToken = null;
+            this.reportViewer3.Size = new System.Drawing.Size(1302, 681);
+            this.reportViewer3.TabIndex = 0;
             // 
-            // toolStripButton3
+            // tabPage2
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(98, 46);
-            this.toolStripButton3.Text = "toolStripButton1";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tabPage2.Controls.Add(this.reportViewer2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1308, 687);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Oda Satış Raporlu";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // toolStripSeparator3
+            // reportViewer2
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 49);
+            this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource5.Name = "DataSet1";
+            reportDataSource5.Value = this.vw_SonBirYılBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "PL.Hotel.rprOdaSatis.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(1302, 681);
+            this.reportViewer2.TabIndex = 0;
             // 
-            // toolStripButton4
+            // tabPage1
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(98, 46);
-            this.toolStripButton4.Text = "toolStripButton1";
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tabPage1.Controls.Add(this.reportViewer1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1308, 687);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Kasa Hareketleri";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // toolStripSeparator4
+            // reportViewer1
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 49);
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource6.Name = "DataSet1";
+            reportDataSource6.Value = this.PaymentsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PL.Hotel.rpr.OtelKasaHareket.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1302, 681);
+            this.reportViewer1.TabIndex = 0;
             // 
-            // toolStripButton5
+            // tabControl1
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(98, 46);
-            this.toolStripButton5.Text = "toolStripButton1";
-            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1316, 716);
+            this.tabControl1.TabIndex = 1;
             // 
-            // toolStripSeparator5
+            // PaymentsTableAdapter
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 49);
+            this.PaymentsTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripButton6
+            // vw_SonBirYılTableAdapter
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(98, 46);
-            this.toolStripButton6.Text = "toolStripButton1";
-            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.vw_SonBirYılTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripSeparator6
+            // vw_AylıkOrtalamaBindingSource
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 49);
+            this.vw_AylıkOrtalamaBindingSource.DataMember = "vw_AylıkOrtalama";
+            this.vw_AylıkOrtalamaBindingSource.DataSource = this.HotelResDataSet;
             // 
-            // toolStripButton7
+            // vw_AylıkOrtalamaTableAdapter
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(98, 46);
-            this.toolStripButton7.Text = "toolStripButton1";
-            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.vw_AylıkOrtalamaTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripSeparator7
+            // sp_YıllıkOrtalamaBindingSource
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 49);
+            this.sp_YıllıkOrtalamaBindingSource.DataMember = "sp_YıllıkOrtalama";
+            this.sp_YıllıkOrtalamaBindingSource.DataSource = this.HotelResDataSet;
+            // 
+            // sp_YıllıkOrtalamaTableAdapter
+            // 
+            this.sp_YıllıkOrtalamaTableAdapter.ClearBeforeFill = true;
             // 
             // frmRaporlar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 582);
-            this.Controls.Add(this.tsRaporlar);
+            this.ClientSize = new System.Drawing.Size(1316, 716);
+            this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRaporlar";
             this.Text = "frmRaporlar";
-            this.tsRaporlar.ResumeLayout(false);
-            this.tsRaporlar.PerformLayout();
+            this.Load += new System.EventHandler(this.frmRaporlar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.vw_SonBirYılBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HotelResDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentsBindingSource)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.vw_AylıkOrtalamaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_YıllıkOrtalamaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip tsRaporlar;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.BindingSource PaymentsBindingSource;
+        private HotelResDataSet HotelResDataSet;
+        private HotelResDataSetTableAdapters.PaymentsTableAdapter PaymentsTableAdapter;
+        private System.Windows.Forms.BindingSource vw_SonBirYılBindingSource;
+        private HotelResDataSetTableAdapters.vw_SonBirYılTableAdapter vw_SonBirYılTableAdapter;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
+        private System.Windows.Forms.BindingSource vw_AylıkOrtalamaBindingSource;
+        private HotelResDataSetTableAdapters.vw_AylıkOrtalamaTableAdapter vw_AylıkOrtalamaTableAdapter;
+        private System.Windows.Forms.BindingSource sp_YıllıkOrtalamaBindingSource;
+        private HotelResDataSetTableAdapters.sp_YıllıkOrtalamaTableAdapter sp_YıllıkOrtalamaTableAdapter;
     }
 }
