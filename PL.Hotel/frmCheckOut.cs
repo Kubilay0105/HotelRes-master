@@ -77,17 +77,21 @@ namespace PL.Hotel
            liste= gtr.GetGTransByGuestId(gr.GetGuestIdByTC(txtTKCNO.Text));
             StringFormat sf = new StringFormat();
             sf.Alignment = StringAlignment.Near;
-            e.Graphics.DrawString(txtAdi.Text + "   " +txtSoyadi.Text +"    " +"Ödeme Bilgileri ",fntBaslik,sb,100,150 );
-            e.Graphics.DrawString("TC            Tarih        İşlem Tipi         Borç      Ödenen     Acıklama", fntBaslik, sb, 50,200);
-            e.Graphics.DrawString("_______________________________________________________________________", fntBaslik, sb, 50, 250);
+            e.Graphics.DrawString(DateTime.Now.ToShortDateString(), fntBaslik, sb, 700, 50);
+            e.Graphics.DrawString("Ödeme Bilgileri ",fntBaslik,sb,300,100 );
+            e.Graphics.DrawString("Adı:  "+txtAdi.Text, fntBaslik, sb, 50, 150);
+            e.Graphics.DrawString("Soyadı:  "+txtSoyadi.Text, fntBaslik, sb, 50, 200);
+            e.Graphics.DrawString("TC            Tarih        İşlem Tipi         Borç      Ödenen     Acıklama", fntBaslik, sb, 50, 250);
+            e.Graphics.DrawString("_______________________________________________________________________", fntBaslik, sb, 50,300);
+
             for(int i=0;i<liste.Count;i++)
             {
-                e.Graphics.DrawString(txtTKCNO.Text, fntIcerik,sb,50,300+(30*i));
-                e.Graphics.DrawString(liste[i].Date.ToShortDateString(), fntIcerik, sb, 160, 300+(30 * i));
-                e.Graphics.DrawString(liste[i].TransType.ToString(), fntIcerik, sb, 290,300 +(30 * i));
-                e.Graphics.DrawString(liste[i].Debt.ToString(), fntIcerik, sb, 400,300 + (30 * i));
-                e.Graphics.DrawString(liste[i].Credit.ToString(), fntIcerik, sb, 500,300+(30 * i));
-                e.Graphics.DrawString(liste[i].Description.ToString(), fntIcerik, sb, 600,300+(30 * i));
+                e.Graphics.DrawString(txtTKCNO.Text, fntIcerik,sb,50,400+(30*i));
+                e.Graphics.DrawString(liste[i].Date.ToShortDateString(), fntIcerik, sb, 160,400+(30 * i));
+                e.Graphics.DrawString(liste[i].TransType.ToString(), fntIcerik, sb, 290,400 +(30 * i));
+                e.Graphics.DrawString(liste[i].Debt.ToString(), fntIcerik, sb, 400,400 + (30 * i));
+                e.Graphics.DrawString(liste[i].Credit.ToString(), fntIcerik, sb, 500,400+(30 * i));
+                e.Graphics.DrawString(liste[i].Description.ToString(), fntIcerik, sb, 600,400+(30 * i));
             }
 
         }
