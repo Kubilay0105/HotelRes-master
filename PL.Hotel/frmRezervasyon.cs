@@ -32,12 +32,12 @@ namespace PL.Hotel
         private void frmRezervasyon_Load(object sender, EventArgs e)
         {
             Rezlist= sr.GetSales(Convert.ToDateTime(DateTime.Now.ToShortDateString()));
-            dgvRezervasyon.DataSource = Rezlist;
+            GridDuzenle(Rezlist);
         }
 
         private void txtTc_TextChanged(object sender, EventArgs e)
         {
-            dgvRezervasyon.DataSource=Rezlist.Where(x => x.GuestIdtf.StartsWith(txtTc.Text)).ToList();
+            GridDuzenle(Rezlist.Where(x => x.GuestIdtf.StartsWith(txtTc.Text)).ToList());
         }
 
         private void dgvRezervasyon_DoubleClick(object sender, EventArgs e)
@@ -54,6 +54,8 @@ namespace PL.Hotel
             if (Res.CancelReservations(GId))
             {
                 MessageBox.Show("İptal işlemi gerçekleşti.");
+                GridDuzenle(Rezlist);
+
             }
             else MessageBox.Show("iptal işlemi gerçekleşmedi.");
         }
@@ -63,8 +65,22 @@ namespace PL.Hotel
             if (Res.UpdateResarvation(GId))
             {
                 MessageBox.Show("Check-In işlemi gerçekleşti.");
+                GridDuzenle(Rezlist);
+
             }
             else MessageBox.Show("Check-In işlemi gerçekleşmedi.");
+
+        }
+        private void GridDuzenle(List<ReservationsModel> list)
+        {
+            dgvRezervasyon.DataSource = list;
+            dgvRezervasyon.Columns[0].Visible = false;
+            dgvRezervasyon.Columns[1].Visible = false;
+            dgvRezervasyon.Columns[2].HeaderText = "Name";
+            dgvRezervasyon.Columns[3].HeaderText = "Surname";
+            dgvRezervasyon.Columns[4].HeaderText = "Identification No";
+            dgvRezervasyon.Columns[5].HeaderText = "Phone";
+            dgvRezervasyon.Columns[6].HeaderText = "Mail";
 
         }
     }

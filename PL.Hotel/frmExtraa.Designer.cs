@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsGuncelle = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsSil = new System.Windows.Forms.ToolStripButton();
             this.tsEkle = new System.Windows.Forms.ToolStripButton();
             this.label6 = new System.Windows.Forms.Label();
             this.txtExtraTur = new System.Windows.Forms.TextBox();
@@ -60,7 +60,7 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsGuncelle,
-            this.toolStripButton3,
+            this.tsSil,
             this.tsEkle});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -81,17 +81,18 @@
             this.tsGuncelle.Text = "toolStripButton2";
             this.tsGuncelle.Click += new System.EventHandler(this.tsGuncelle_Click);
             // 
-            // toolStripButton3
+            // tsSil
             // 
-            this.toolStripButton3.AutoSize = false;
-            this.toolStripButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(90, 100);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.tsSil.AutoSize = false;
+            this.tsSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
+            this.tsSil.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsSil.Image = ((System.Drawing.Image)(resources.GetObject("tsSil.Image")));
+            this.tsSil.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsSil.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsSil.Name = "tsSil";
+            this.tsSil.Size = new System.Drawing.Size(90, 100);
+            this.tsSil.Text = "toolStripButton3";
+            this.tsSil.Click += new System.EventHandler(this.tsSil_Click);
             // 
             // tsEkle
             // 
@@ -150,6 +151,7 @@
             this.dgvExtralar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvExtralar.Size = new System.Drawing.Size(318, 171);
             this.dgvExtralar.TabIndex = 38;
+            this.dgvExtralar.DoubleClick += new System.EventHandler(this.dgvExtralar_DoubleClick);
             // 
             // label1
             // 
@@ -191,7 +193,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsGuncelle;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsSil;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtExtraTur;
         private System.Windows.Forms.Label label9;

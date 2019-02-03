@@ -53,6 +53,8 @@
             this.btnBul = new System.Windows.Forms.Button();
             this.txtOdaAra = new System.Windows.Forms.TextBox();
             this.dgvMisafirListesi = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlHeader.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.gbMisafirBilgi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisafirListesi)).BeginInit();
@@ -61,6 +63,7 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
+            this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
@@ -86,7 +89,7 @@
             // 
             this.btnEkle.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEkle.Location = new System.Drawing.Point(721, 308);
+            this.btnEkle.Location = new System.Drawing.Point(519, 301);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(2);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(109, 40);
@@ -99,7 +102,7 @@
             // 
             this.btnDuzenle.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDuzenle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDuzenle.Location = new System.Drawing.Point(721, 351);
+            this.btnDuzenle.Location = new System.Drawing.Point(519, 344);
             this.btnDuzenle.Margin = new System.Windows.Forms.Padding(2);
             this.btnDuzenle.Name = "btnDuzenle";
             this.btnDuzenle.Size = new System.Drawing.Size(109, 40);
@@ -117,7 +120,7 @@
             this.btnSil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSil.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSil.Location = new System.Drawing.Point(721, 395);
+            this.btnSil.Location = new System.Drawing.Point(519, 388);
             this.btnSil.Margin = new System.Windows.Forms.Padding(2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(109, 40);
@@ -145,7 +148,7 @@
             this.gbMisafirBilgi.Controls.Add(this.dtpMisafirDogumTarihi);
             this.gbMisafirBilgi.Controls.Add(this.label13);
             this.gbMisafirBilgi.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gbMisafirBilgi.Location = new System.Drawing.Point(63, 220);
+            this.gbMisafirBilgi.Location = new System.Drawing.Point(171, 220);
             this.gbMisafirBilgi.Margin = new System.Windows.Forms.Padding(2);
             this.gbMisafirBilgi.Name = "gbMisafirBilgi";
             this.gbMisafirBilgi.Padding = new System.Windows.Forms.Padding(2);
@@ -345,6 +348,17 @@
             this.dgvMisafirListesi.TabIndex = 69;
             this.dgvMisafirListesi.DoubleClick += new System.EventHandler(this.dgvMisafirListesi_DoubleClick);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(299, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Misafir Ekle";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmMisafirler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +370,7 @@
             this.Name = "frmMisafirler";
             this.Text = "frmMisafirler";
             this.Load += new System.EventHandler(this.frmMisafirler_Load);
+            this.pnlHeader.ResumeLayout(false);
             this.pnlContent.ResumeLayout(false);
             this.pnlContent.PerformLayout();
             this.gbMisafirBilgi.ResumeLayout(false);
@@ -392,5 +407,6 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnDuzenle;
         private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -34,9 +34,7 @@ namespace PL.Hotel
            
             if (!string.IsNullOrEmpty(txtExtraTur.Text ))
             {
-                //Yeni bir nesne oluşturulur.
                 ExtraType yeni = new ExtraType();
-                //Özellikleri girilir.
                 yeni.Type = txtExtraTur.Text;
             
                 if (ex.ExtraControl(yeni))
@@ -46,13 +44,13 @@ namespace PL.Hotel
                 else
                 {
                     yeni.Price =Convert.ToDecimal (txtFiyat.Text);
-                    //if (ex.AddExtra(yeni))
-                    //{
-                    //    MessageBox.Show("Yeni extra eklendi.", "Kayıt gerçekleşti.");
-                    //  dgvExtralar.DataSource = ex.GetExtraTypes();
-                    //    //btnKaydet.Enabled = false;
-                    //    //Temizle();
-                    //}
+                    if (ex.AddExtra(yeni))
+                    {
+                        MessageBox.Show("Yeni extra eklendi.", "Kayıt gerçekleşti.");
+                        dgvExtralar.DataSource = ex.GetExtraTypes();
+                        //btnKaydet.Enabled = false;
+                        Temizle();
+                    }
                 }
             }
             else
@@ -80,7 +78,7 @@ namespace PL.Hotel
                     {
                         MessageBox.Show("Extra bilgileri değiştirildi.", "Update gerçekleşti.");
                         dgvExtralar.DataSource = ex.GetExtraTypes();
-                        //Temizle();
+                        Temizle();
                     }
                 }
             }
@@ -102,6 +100,23 @@ namespace PL.Hotel
             txtExtraTur.Focus();
         }
 
-       
+        private void tsSil_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Silmek İstiyor musunuz?", "SİLİNSİN Mİ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (ex.DeleteExtra(ID))
+                {
+                    MessageBox.Show("Extra Tür silindi.", "Silme gerçekleşti.");
+                    dgvExtralar.DataSource = ex.GetExtraTypes();
+                    Temizle();
+                }
+            }
+        }
+
+        private void Temizle()
+        {
+            txtExtraTur.Clear();
+            txtFiyat.Clear();
+        }
     }
 }

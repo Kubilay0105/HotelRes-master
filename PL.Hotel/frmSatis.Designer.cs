@@ -60,7 +60,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.btnOnayla = new System.Windows.Forms.Button();
-            this.btnEkle = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -82,7 +81,6 @@
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.btnOnayla);
-            this.panel2.Controls.Add(this.btnEkle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 58);
             this.panel2.Name = "panel2";
@@ -413,16 +411,6 @@
             this.btnOnayla.UseVisualStyleBackColor = true;
             this.btnOnayla.Click += new System.EventHandler(this.btnOnayla_Click);
             // 
-            // btnEkle
-            // 
-            this.btnEkle.Location = new System.Drawing.Point(118, 425);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(162, 30);
-            this.btnEkle.TabIndex = 27;
-            this.btnEkle.Text = "Müşteri Kaydet";
-            this.btnEkle.UseVisualStyleBackColor = true;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
-            // 
             // frmSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -465,7 +453,6 @@
         private System.Windows.Forms.TextBox txtAdi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnOdaSec;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtCikisTarihi;

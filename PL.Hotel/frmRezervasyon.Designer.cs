@@ -62,17 +62,18 @@
             // 
             // dgvRezervasyon
             // 
+            this.dgvRezervasyon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvRezervasyon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRezervasyon.Location = new System.Drawing.Point(12, 129);
+            this.dgvRezervasyon.Location = new System.Drawing.Point(172, 129);
             this.dgvRezervasyon.Name = "dgvRezervasyon";
             this.dgvRezervasyon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRezervasyon.Size = new System.Drawing.Size(658, 190);
+            this.dgvRezervasyon.Size = new System.Drawing.Size(736, 190);
             this.dgvRezervasyon.TabIndex = 4;
             this.dgvRezervasyon.DoubleClick += new System.EventHandler(this.dgvRezervasyon_DoubleClick);
             // 
             // dtpGiris
             // 
-            this.dtpGiris.Location = new System.Drawing.Point(99, 103);
+            this.dtpGiris.Location = new System.Drawing.Point(259, 103);
             this.dtpGiris.Name = "dtpGiris";
             this.dtpGiris.Size = new System.Drawing.Size(156, 20);
             this.dtpGiris.TabIndex = 5;
@@ -80,7 +81,7 @@
             // 
             // txtTc
             // 
-            this.txtTc.Location = new System.Drawing.Point(447, 103);
+            this.txtTc.Location = new System.Drawing.Point(607, 103);
             this.txtTc.MaxLength = 11;
             this.txtTc.Name = "txtTc";
             this.txtTc.Size = new System.Drawing.Size(156, 20);
@@ -89,7 +90,7 @@
             // 
             // btnCheckin
             // 
-            this.btnCheckin.Location = new System.Drawing.Point(326, 325);
+            this.btnCheckin.Location = new System.Drawing.Point(607, 357);
             this.btnCheckin.Name = "btnCheckin";
             this.btnCheckin.Size = new System.Drawing.Size(105, 42);
             this.btnCheckin.TabIndex = 10;
@@ -105,7 +106,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(29, 325);
+            this.groupBox1.Location = new System.Drawing.Point(307, 324);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(255, 154);
             this.groupBox1.TabIndex = 11;
@@ -176,7 +177,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(346, 101);
+            this.label2.Location = new System.Drawing.Point(506, 101);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
@@ -187,7 +188,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 101);
+            this.label6.Location = new System.Drawing.Point(171, 101);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 20);
@@ -196,7 +197,7 @@
             // 
             // btnRezIptal
             // 
-            this.btnRezIptal.Location = new System.Drawing.Point(326, 382);
+            this.btnRezIptal.Location = new System.Drawing.Point(607, 414);
             this.btnRezIptal.Name = "btnRezIptal";
             this.btnRezIptal.Size = new System.Drawing.Size(105, 42);
             this.btnRezIptal.TabIndex = 14;

@@ -34,6 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvOdalar = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.txtOdaNo = new System.Windows.Forms.TextBox();
             this.nudAdet = new System.Windows.Forms.NumericUpDown();
@@ -50,29 +51,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbEkstra = new System.Windows.Forms.ComboBox();
             this.pnlExtraa = new System.Windows.Forms.Panel();
-            this.dgvOdalar = new System.Windows.Forms.DataGridView();
-            this.dgvExtralar = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtAdi = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtSoyad = new System.Windows.Forms.TextBox();
-            this.btnDuzenle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
             this.numDegisenAdet = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtDegisenTutar = new System.Windows.Forms.TextBox();
             this.txtDegisenAdet = new System.Windows.Forms.TextBox();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnDuzenle = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAdi = new System.Windows.Forms.TextBox();
+            this.dgvExtralar = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOdalar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).BeginInit();
             this.pnlExtraa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOdalar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExtralar)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDegisenAdet)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExtralar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -139,6 +139,18 @@
             this.panel3.Size = new System.Drawing.Size(288, 550);
             this.panel3.TabIndex = 33;
             // 
+            // dgvOdalar
+            // 
+            this.dgvOdalar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvOdalar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvOdalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOdalar.Location = new System.Drawing.Point(87, 263);
+            this.dgvOdalar.Name = "dgvOdalar";
+            this.dgvOdalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOdalar.Size = new System.Drawing.Size(145, 177);
+            this.dgvOdalar.TabIndex = 0;
+            this.dgvOdalar.DoubleClick += new System.EventHandler(this.dgvOdalar_DoubleClick);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -184,9 +196,9 @@
             // 
             // btnOda
             // 
-            this.btnOda.Location = new System.Drawing.Point(108, 446);
+            this.btnOda.Location = new System.Drawing.Point(87, 446);
             this.btnOda.Name = "btnOda";
-            this.btnOda.Size = new System.Drawing.Size(133, 40);
+            this.btnOda.Size = new System.Drawing.Size(145, 40);
             this.btnOda.TabIndex = 43;
             this.btnOda.Text = "Odaya Ekle";
             this.btnOda.UseVisualStyleBackColor = true;
@@ -301,103 +313,6 @@
             this.pnlExtraa.Size = new System.Drawing.Size(528, 550);
             this.pnlExtraa.TabIndex = 34;
             // 
-            // dgvOdalar
-            // 
-            this.dgvOdalar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvOdalar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvOdalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOdalar.Location = new System.Drawing.Point(87, 263);
-            this.dgvOdalar.Name = "dgvOdalar";
-            this.dgvOdalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOdalar.Size = new System.Drawing.Size(156, 177);
-            this.dgvOdalar.TabIndex = 0;
-            this.dgvOdalar.DoubleClick += new System.EventHandler(this.dgvOdalar_DoubleClick);
-            // 
-            // dgvExtralar
-            // 
-            this.dgvExtralar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvExtralar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExtralar.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dgvExtralar.Location = new System.Drawing.Point(35, 202);
-            this.dgvExtralar.Name = "dgvExtralar";
-            this.dgvExtralar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExtralar.Size = new System.Drawing.Size(459, 171);
-            this.dgvExtralar.TabIndex = 0;
-            this.dgvExtralar.Visible = false;
-            this.dgvExtralar.DoubleClick += new System.EventHandler(this.dgvExtralar_DoubleClick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtSoyad);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtAdi);
-            this.groupBox1.Location = new System.Drawing.Point(87, 71);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 112);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Müşteri Bilgileri";
-            this.groupBox1.Visible = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(10, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(25, 13);
-            this.label7.TabIndex = 41;
-            this.label7.Text = "Adı";
-            // 
-            // txtAdi
-            // 
-            this.txtAdi.Location = new System.Drawing.Point(87, 28);
-            this.txtAdi.Name = "txtAdi";
-            this.txtAdi.ReadOnly = true;
-            this.txtAdi.Size = new System.Drawing.Size(151, 20);
-            this.txtAdi.TabIndex = 40;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(10, 64);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 13);
-            this.label8.TabIndex = 43;
-            this.label8.Text = "Soyadı";
-            // 
-            // txtSoyad
-            // 
-            this.txtSoyad.Location = new System.Drawing.Point(87, 61);
-            this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.ReadOnly = true;
-            this.txtSoyad.Size = new System.Drawing.Size(151, 20);
-            this.txtSoyad.TabIndex = 42;
-            // 
-            // btnDuzenle
-            // 
-            this.btnDuzenle.Location = new System.Drawing.Point(97, 446);
-            this.btnDuzenle.Name = "btnDuzenle";
-            this.btnDuzenle.Size = new System.Drawing.Size(133, 40);
-            this.btnDuzenle.TabIndex = 44;
-            this.btnDuzenle.Text = "Değiştir";
-            this.btnDuzenle.UseVisualStyleBackColor = true;
-            this.btnDuzenle.Visible = false;
-            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
-            // 
-            // btnSil
-            // 
-            this.btnSil.Location = new System.Drawing.Point(236, 446);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(133, 40);
-            this.btnSil.TabIndex = 45;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
-            this.btnSil.Visible = false;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
-            // 
             // numDegisenAdet
             // 
             this.numDegisenAdet.Location = new System.Drawing.Point(210, 388);
@@ -447,6 +362,91 @@
             this.txtDegisenAdet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDegisenAdet.Visible = false;
             // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(236, 446);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(133, 40);
+            this.btnSil.TabIndex = 45;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Visible = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnDuzenle
+            // 
+            this.btnDuzenle.Location = new System.Drawing.Point(97, 446);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(133, 40);
+            this.btnDuzenle.TabIndex = 44;
+            this.btnDuzenle.Text = "Değiştir";
+            this.btnDuzenle.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Visible = false;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtSoyad);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtAdi);
+            this.groupBox1.Location = new System.Drawing.Point(87, 71);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(359, 112);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Müşteri Bilgileri";
+            this.groupBox1.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(10, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 13);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "Soyadı";
+            // 
+            // txtSoyad
+            // 
+            this.txtSoyad.Location = new System.Drawing.Point(87, 61);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.ReadOnly = true;
+            this.txtSoyad.Size = new System.Drawing.Size(151, 20);
+            this.txtSoyad.TabIndex = 42;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(10, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 13);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "Adı";
+            // 
+            // txtAdi
+            // 
+            this.txtAdi.Location = new System.Drawing.Point(87, 28);
+            this.txtAdi.Name = "txtAdi";
+            this.txtAdi.ReadOnly = true;
+            this.txtAdi.Size = new System.Drawing.Size(151, 20);
+            this.txtAdi.TabIndex = 40;
+            // 
+            // dgvExtralar
+            // 
+            this.dgvExtralar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvExtralar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExtralar.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dgvExtralar.Location = new System.Drawing.Point(35, 202);
+            this.dgvExtralar.Name = "dgvExtralar";
+            this.dgvExtralar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvExtralar.Size = new System.Drawing.Size(459, 171);
+            this.dgvExtralar.TabIndex = 0;
+            this.dgvExtralar.Visible = false;
+            this.dgvExtralar.DoubleClick += new System.EventHandler(this.dgvExtralar_DoubleClick);
+            // 
             // frmExtraIslemler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,14 +464,14 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOdalar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).EndInit();
             this.pnlExtraa.ResumeLayout(false);
             this.pnlExtraa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOdalar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExtralar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDegisenAdet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numDegisenAdet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExtralar)).EndInit();
             this.ResumeLayout(false);
 
         }

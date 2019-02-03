@@ -45,6 +45,23 @@ namespace BLL.Hotel.Repositories
             }
            
         }
+        public bool AddExtra(ExtraType ex)
+        {
+            bool Sonuc = false;
+
+            ent.ExtraTypes.Add(ex);
+            try
+            {
+                ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return Sonuc;
+        }
         public bool DeleteExtra(int ID)
         {
             bool sonuc = false;
