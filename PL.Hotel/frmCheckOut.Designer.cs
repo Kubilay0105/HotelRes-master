@@ -182,26 +182,26 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtKonaklamaBorc);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtExtraBorc);
             this.groupBox1.Controls.Add(this.txtBorc);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.txtExtraBorc);
             this.groupBox1.Controls.Add(this.txtKazanc);
             this.groupBox1.Controls.Add(this.txtKalanBorc);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(681, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(217, 231);
+            this.groupBox1.Size = new System.Drawing.Size(217, 196);
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ödeme Bilgileri";
             // 
             // txtBorc
             // 
-            this.txtBorc.Location = new System.Drawing.Point(121, 148);
+            this.txtBorc.Location = new System.Drawing.Point(121, 16);
             this.txtBorc.Name = "txtBorc";
             this.txtBorc.ReadOnly = true;
             this.txtBorc.Size = new System.Drawing.Size(90, 22);
@@ -212,7 +212,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(6, 150);
+            this.label9.Location = new System.Drawing.Point(6, 18);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(83, 17);
             this.label9.TabIndex = 89;
@@ -222,7 +222,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.Location = new System.Drawing.Point(6, 201);
+            this.label14.Location = new System.Drawing.Point(6, 69);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(40, 17);
             this.label14.TabIndex = 91;
@@ -232,7 +232,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(6, 175);
+            this.label13.Location = new System.Drawing.Point(6, 43);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 17);
             this.label13.TabIndex = 90;
@@ -240,7 +240,7 @@
             // 
             // txtKazanc
             // 
-            this.txtKazanc.Location = new System.Drawing.Point(121, 173);
+            this.txtKazanc.Location = new System.Drawing.Point(121, 41);
             this.txtKazanc.Name = "txtKazanc";
             this.txtKazanc.ReadOnly = true;
             this.txtKazanc.Size = new System.Drawing.Size(90, 22);
@@ -249,7 +249,7 @@
             // 
             // txtKalanBorc
             // 
-            this.txtKalanBorc.Location = new System.Drawing.Point(121, 199);
+            this.txtKalanBorc.Location = new System.Drawing.Point(121, 67);
             this.txtKalanBorc.Name = "txtKalanBorc";
             this.txtKalanBorc.ReadOnly = true;
             this.txtKalanBorc.Size = new System.Drawing.Size(90, 22);
@@ -273,41 +273,45 @@
             // 
             // txtKonaklamaBorc
             // 
-            this.txtKonaklamaBorc.Location = new System.Drawing.Point(121, 21);
+            this.txtKonaklamaBorc.Location = new System.Drawing.Point(121, 95);
             this.txtKonaklamaBorc.Name = "txtKonaklamaBorc";
             this.txtKonaklamaBorc.ReadOnly = true;
             this.txtKonaklamaBorc.Size = new System.Drawing.Size(90, 22);
             this.txtKonaklamaBorc.TabIndex = 92;
             this.txtKonaklamaBorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKonaklamaBorc.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(6, 23);
+            this.label3.Location = new System.Drawing.Point(6, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 17);
             this.label3.TabIndex = 94;
             this.label3.Text = "Konaklama Borcu";
+            this.label3.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(6, 48);
+            this.label4.Location = new System.Drawing.Point(6, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 95;
             this.label4.Text = "Extralar";
+            this.label4.Visible = false;
             // 
             // txtExtraBorc
             // 
-            this.txtExtraBorc.Location = new System.Drawing.Point(121, 46);
+            this.txtExtraBorc.Location = new System.Drawing.Point(121, 120);
             this.txtExtraBorc.Name = "txtExtraBorc";
             this.txtExtraBorc.ReadOnly = true;
             this.txtExtraBorc.Size = new System.Drawing.Size(90, 22);
             this.txtExtraBorc.TabIndex = 93;
             this.txtExtraBorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtExtraBorc.Visible = false;
             // 
             // btnCheckout
             // 

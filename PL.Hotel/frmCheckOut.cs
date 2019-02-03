@@ -123,6 +123,8 @@ namespace PL.Hotel
 
         private void btnErkenCikis_Click(object sender, EventArgs e)
         {
+            txtKonaklamaBorc.Visible = true;
+            txtExtraBorc.Visible = true;
             btnCikisOnayla.Enabled = false;
             btnOnayla2.Enabled = true;
             decimal KonaklamaOdenen=0,ExtraOdenen=0,ExtraHarcanan=0;
