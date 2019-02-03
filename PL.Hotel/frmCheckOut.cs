@@ -26,6 +26,7 @@ namespace PL.Hotel
         CheckOutRepo Cr = new CheckOutRepo();
         string TcKimlikNo;
         int GId,RId,SId;
+        decimal GerekliOdeme;
         Font fntBaslik = new Font("Times New Roman", 16, FontStyle.Bold);
         Font fntIcerik = new Font("Times New Roman", 12, FontStyle.Regular);
         SolidBrush sb = new SolidBrush(Color.Black);
@@ -134,7 +135,7 @@ namespace PL.Hotel
             int GunSayisi = fark.Days;
             decimal OdaFiyat = rr.GetRoomPrice(rr.GetRoomNo(RId));
             //Ödenmesi gereken Konaklama Fiyatı
-            decimal GerekliOdeme = GunSayisi * OdaFiyat;
+            GerekliOdeme = (GunSayisi+1) * OdaFiyat;
             foreach (DataGridViewRow dr in dgvExtralar.Rows)
             {
                 if(dr.Cells[4].Value.ToString()=="Konaklama Ücreti")
@@ -152,6 +153,19 @@ namespace PL.Hotel
             }
             txtKonaklamaBorc.Text = (GerekliOdeme-KonaklamaOdenen).ToString();
             txtExtraBorc.Text=(ExtraHarcanan-ExtraOdenen).ToString();
+        }
+
+        private void btnOnayla2_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToDecimal(txtKonaklamaBorc.Text) == 0 && Convert.ToDecimal(txtExtraBorc.Text) == 0)
+            {
+                if (Cr.EarlyCheckOut(GId, RId, GerekliOdeme))
+                {
+                    MessageBox.Show("CheckOut işlemi başarıyla gerçekleşti");
+                }
+                else MessageBox.Show("Ödeme Gerçekleşmedi");
+            }
+            else MessageBox.Show("Ödenmemiş borç bulunmaktadır.");
         }
         #region FaturaYazdır        
 

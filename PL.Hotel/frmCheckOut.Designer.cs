@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCheckOut));
             this.label1 = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.btnErkenCikis = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
             this.btnSorgula = new System.Windows.Forms.Button();
             this.txtTcNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,20 +42,18 @@
             this.btnOdemeYap = new System.Windows.Forms.Button();
             this.btnCikisOnayla = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtKonaklamaBorc = new System.Windows.Forms.TextBox();
             this.txtBorc = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtExtraBorc = new System.Windows.Forms.TextBox();
             this.txtKazanc = new System.Windows.Forms.TextBox();
             this.txtKalanBorc = new System.Windows.Forms.TextBox();
             this.ppdiaFatura = new System.Windows.Forms.PrintPreviewDialog();
             this.pdocFatura = new System.Drawing.Printing.PrintDocument();
-            this.txtKonaklamaBorc = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtExtraBorc = new System.Windows.Forms.TextBox();
-            this.btnCheckout = new System.Windows.Forms.Button();
-            this.btnErkenCikis = new System.Windows.Forms.Button();
             this.pnlContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExtralar)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -92,6 +92,25 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(1000, 485);
             this.pnlContent.TabIndex = 3;
+            // 
+            // btnErkenCikis
+            // 
+            this.btnErkenCikis.Location = new System.Drawing.Point(634, 20);
+            this.btnErkenCikis.Name = "btnErkenCikis";
+            this.btnErkenCikis.Size = new System.Drawing.Size(117, 23);
+            this.btnErkenCikis.TabIndex = 113;
+            this.btnErkenCikis.Text = "Erken Check-Out";
+            this.btnErkenCikis.UseVisualStyleBackColor = true;
+            this.btnErkenCikis.Click += new System.EventHandler(this.btnErkenCikis_Click);
+            // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Location = new System.Drawing.Point(504, 20);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(124, 23);
+            this.btnCheckout.TabIndex = 112;
+            this.btnCheckout.Text = "Check-Out";
+            this.btnCheckout.UseVisualStyleBackColor = true;
             // 
             // btnSorgula
             // 
@@ -156,6 +175,7 @@
             this.btnOnayla2.TabIndex = 103;
             this.btnOnayla2.Text = "Check-out-2";
             this.btnOnayla2.UseVisualStyleBackColor = true;
+            this.btnOnayla2.Click += new System.EventHandler(this.btnOnayla2_Click);
             // 
             // btnOdemeYap
             // 
@@ -199,6 +219,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ödeme Bilgileri";
             // 
+            // txtKonaklamaBorc
+            // 
+            this.txtKonaklamaBorc.Location = new System.Drawing.Point(121, 95);
+            this.txtKonaklamaBorc.Name = "txtKonaklamaBorc";
+            this.txtKonaklamaBorc.ReadOnly = true;
+            this.txtKonaklamaBorc.Size = new System.Drawing.Size(90, 22);
+            this.txtKonaklamaBorc.TabIndex = 92;
+            this.txtKonaklamaBorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKonaklamaBorc.Visible = false;
+            // 
             // txtBorc
             // 
             this.txtBorc.Location = new System.Drawing.Point(121, 16);
@@ -207,6 +237,17 @@
             this.txtBorc.Size = new System.Drawing.Size(90, 22);
             this.txtBorc.TabIndex = 69;
             this.txtBorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(6, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 17);
+            this.label3.TabIndex = 94;
+            this.label3.Text = "Konaklama Borcu";
+            this.label3.Visible = false;
             // 
             // label9
             // 
@@ -217,6 +258,17 @@
             this.label9.Size = new System.Drawing.Size(83, 17);
             this.label9.TabIndex = 89;
             this.label9.Text = "Toplam Borç";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(6, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 95;
+            this.label4.Text = "Extralar";
+            this.label4.Visible = false;
             // 
             // label14
             // 
@@ -237,6 +289,16 @@
             this.label13.Size = new System.Drawing.Size(54, 17);
             this.label13.TabIndex = 90;
             this.label13.Text = "Ödenen";
+            // 
+            // txtExtraBorc
+            // 
+            this.txtExtraBorc.Location = new System.Drawing.Point(121, 120);
+            this.txtExtraBorc.Name = "txtExtraBorc";
+            this.txtExtraBorc.ReadOnly = true;
+            this.txtExtraBorc.Size = new System.Drawing.Size(90, 22);
+            this.txtExtraBorc.TabIndex = 93;
+            this.txtExtraBorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtExtraBorc.Visible = false;
             // 
             // txtKazanc
             // 
@@ -270,67 +332,6 @@
             // pdocFatura
             // 
             this.pdocFatura.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdocFatura_PrintPage);
-            // 
-            // txtKonaklamaBorc
-            // 
-            this.txtKonaklamaBorc.Location = new System.Drawing.Point(121, 95);
-            this.txtKonaklamaBorc.Name = "txtKonaklamaBorc";
-            this.txtKonaklamaBorc.ReadOnly = true;
-            this.txtKonaklamaBorc.Size = new System.Drawing.Size(90, 22);
-            this.txtKonaklamaBorc.TabIndex = 92;
-            this.txtKonaklamaBorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtKonaklamaBorc.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(6, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 17);
-            this.label3.TabIndex = 94;
-            this.label3.Text = "Konaklama Borcu";
-            this.label3.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(6, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 17);
-            this.label4.TabIndex = 95;
-            this.label4.Text = "Extralar";
-            this.label4.Visible = false;
-            // 
-            // txtExtraBorc
-            // 
-            this.txtExtraBorc.Location = new System.Drawing.Point(121, 120);
-            this.txtExtraBorc.Name = "txtExtraBorc";
-            this.txtExtraBorc.ReadOnly = true;
-            this.txtExtraBorc.Size = new System.Drawing.Size(90, 22);
-            this.txtExtraBorc.TabIndex = 93;
-            this.txtExtraBorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtExtraBorc.Visible = false;
-            // 
-            // btnCheckout
-            // 
-            this.btnCheckout.Location = new System.Drawing.Point(504, 20);
-            this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(124, 23);
-            this.btnCheckout.TabIndex = 112;
-            this.btnCheckout.Text = "Check-Out";
-            this.btnCheckout.UseVisualStyleBackColor = true;
-            // 
-            // btnErkenCikis
-            // 
-            this.btnErkenCikis.Location = new System.Drawing.Point(634, 20);
-            this.btnErkenCikis.Name = "btnErkenCikis";
-            this.btnErkenCikis.Size = new System.Drawing.Size(117, 23);
-            this.btnErkenCikis.TabIndex = 113;
-            this.btnErkenCikis.Text = "Erken Check-Out";
-            this.btnErkenCikis.UseVisualStyleBackColor = true;
-            this.btnErkenCikis.Click += new System.EventHandler(this.btnErkenCikis_Click);
             // 
             // frmCheckOut
             // 
