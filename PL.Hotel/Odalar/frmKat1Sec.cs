@@ -24,23 +24,42 @@ namespace PL.Hotel.Odalar
         DateTime Cara;
         private void dtpCikisAra_ValueChanged(object sender, EventArgs e)
         {
-            Gara = dtpGirisAra.Value;
-            Cara = dtpCikisAra.Value;
-            OdalarıGetir(Gara, Cara);
+            if (dtpCikisAra.Value < dtpGirisAra.Value || dtpGirisAra.Value < DateTime.Now.Date)
+            {
+                MessageBox.Show("Tarih seçimine dikkat ediniz.");
+                dtpGirisAra.Value = DateTime.Now.Date;
+                dtpCikisAra.Value = dtpGirisAra.Value.AddDays(1);
+            }
+            else
+            {
+                Gara = dtpGirisAra.Value;
+                Cara = dtpCikisAra.Value;
+                OdalarıGetir(Gara.Date, Cara.Date);
+            }
         }
 
         private void frmKat1Sec_Load(object sender, EventArgs e)
         {
             Gara = dtpGirisAra.Value;
+            dtpCikisAra.Value = dtpGirisAra.Value.AddDays(1);
             Cara = dtpCikisAra.Value;
-            OdalarıGetir(Gara, Cara);
+            OdalarıGetir(Gara.Date, Cara.Date);
         }
 
         private void dtpGirisAra_ValueChanged(object sender, EventArgs e)
         {
-            Gara = dtpGirisAra.Value;
-            Cara = dtpCikisAra.Value;
-            OdalarıGetir(Gara, Cara);
+            if (dtpCikisAra.Value < dtpGirisAra.Value || dtpGirisAra.Value < DateTime.Now.Date)
+            {
+                MessageBox.Show("Tarih seçimine dikkat ediniz.");
+                dtpGirisAra.Value = DateTime.Now.Date;
+                dtpCikisAra.Value = dtpGirisAra.Value.AddDays(1);
+            }
+            else
+            {
+                Gara = dtpGirisAra.Value;
+                Cara = dtpCikisAra.Value;
+                OdalarıGetir(Gara.Date, Cara.Date);
+            }
         }
         private void OdalarıGetir(DateTime g, DateTime c)
         {

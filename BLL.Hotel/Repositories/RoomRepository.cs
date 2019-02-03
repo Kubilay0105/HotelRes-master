@@ -61,12 +61,26 @@ namespace BLL.Hotel.Repositories
             }
             return liste;
         }
-        public int FullRoomsCount()
+        public int FullRoomsCount(DateTime dt)
         {
             int DoluSayi=(from s in ent.Sales
-                         where s.Status==true
+                         where s.Status==true && s.CheckIn<=dt && s.CheckOut>=dt
                          select s).Count();
             return DoluSayi;
+        }
+        public int CheckInCount(DateTime Tarih)
+        {
+            int Cc = (from s in ent.Sales
+                              where s.Status == false && s.CheckIn.Month == Tarih.Month && s.CheckIn.Day == Tarih.Day
+                              select s).Count();
+            return Cc;
+        }
+        public int CheckOutCount(DateTime Tarih)
+        {
+            int Cc = (from s in ent.Sales
+                      where s.Status == false && s.CheckOut.Month == Tarih.Month && s.CheckOut.Day == Tarih.Day
+                      select s).Count();
+            return Cc;
         }
         //ıd ye göre oda o getiren sorgu yaz
         public Room GetRoom(int Rid)

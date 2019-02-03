@@ -80,5 +80,13 @@ namespace PL.Hotel
             txtKazanc.Clear();
             txtBorc.Clear();
         }
+        int GId;
+        private void dgvMusteriler_DoubleClick(object sender, EventArgs e)
+        {
+            GId=Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
+            frmOdemeMusteriHareketleri frm = new frmOdemeMusteriHareketleri();
+            frm.GId = GId;
+            frm.ShowDialog();
+        }
     }
 }

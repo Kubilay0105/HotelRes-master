@@ -118,6 +118,12 @@
     <Compile Include="frmOdemeHizli.Designer.cs">
       <DependentUpon>frmOdemeHizli.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOdemeMusteriHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOdemeMusteriHareketleri.Designer.cs">
+      <DependentUpon>frmOdemeMusteriHareketleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Odalar\frmKat1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOdemeHizli.resx">
       <DependentUpon>frmOdemeHizli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOdemeMusteriHareketleri.resx">
+      <DependentUpon>frmOdemeMusteriHareketleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Odalar\frmKat1.resx">
       <DependentUpon>frmKat1.cs</DependentUpon>

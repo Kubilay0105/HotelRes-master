@@ -27,29 +27,29 @@ namespace PL.Hotel
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            pnlLeftMenu.Width = pnlLeftMenu.Width + 10;
-            if (pnlLeftMenu.Width == 180)
-            {
-                timer1.Stop();
-            }
+            //pnlLeftMenu.Width = pnlLeftMenu.Width + 10;
+            //if (pnlLeftMenu.Width == 180)
+            //{
+            //    timer1.Stop();
+            //}
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            pnlLeftMenu.Width = pnlLeftMenu.Width - 10;
-            if (pnlLeftMenu.Width == 50)
-            {
-                timer2.Stop();
-            }
+            //pnlLeftMenu.Width = pnlLeftMenu.Width - 10;
+            //if (pnlLeftMenu.Width == 50)
+            //{
+            //    timer2.Stop();
+            //}
         }
 
         private void btnMenuAc_Click(object sender, EventArgs e)
         {
-            if (pnlLeftMenu.Width == 180)
-            {
-                timer2.Start();
-            }
-            else { timer1.Start(); }
+            //if (pnlLeftMenu.Width == 180)
+            //{
+            //    timer2.Start();
+            //}
+            //else { timer1.Start(); }
         }
         private void FormAc(Form AF)
         {
@@ -80,9 +80,12 @@ namespace PL.Hotel
             this.Location = Point.Empty;
             timer3.Start();
             lblTarih.Text = DateTime.Now.Date.ToShortDateString() + DateTime.Today.DayOfWeek.ToString();
-
-            //lblDoluOda.Text = Rp.FullRoomsCount().ToString();
-            //lblBosOda.Text = (30 - Rp.FullRoomsCount()).ToString();
+            lblDoluOda.Text = Rp.FullRoomsCount(DateTime.Now).ToString();
+            lblBosOda.Text = (30 - Convert.ToInt32(lblDoluOda.Text)).ToString();
+            lblCheckIn.Text = Rp.CheckInCount(DateTime.Now).ToString();
+            lblCheckOut.Text = Rp.CheckOutCount(DateTime.Now).ToString();
+            frmOdalar frm = new frmOdalar();
+            FormAc(frm);
         }
 
         private void frmOtelAnasayfa_Shown(object sender, EventArgs e)
@@ -94,9 +97,9 @@ namespace PL.Hotel
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            //string saat = DateTime.Now.ToLongTimeString();
+            string saat = DateTime.Now.ToLongTimeString();
 
-            //lblSaat.Text = saat;
+            lblSaat.Text = saat;
         }
 
         private void frmSatisIslemleri_Click(object sender, EventArgs e)

@@ -219,10 +219,10 @@
             // 
             this.l305.BackColor = System.Drawing.Color.Red;
             this.l305.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l305.Location = new System.Drawing.Point(738, 141);
+            this.l305.Location = new System.Drawing.Point(723, 141);
             this.l305.Margin = new System.Windows.Forms.Padding(0);
             this.l305.Name = "l305";
-            this.l305.Size = new System.Drawing.Size(10, 73);
+            this.l305.Size = new System.Drawing.Size(25, 73);
             this.l305.TabIndex = 153;
             // 
             // panel7
@@ -289,10 +289,10 @@
             // 
             this.l304.BackColor = System.Drawing.Color.Red;
             this.l304.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l304.Location = new System.Drawing.Point(592, 123);
+            this.l304.Location = new System.Drawing.Point(577, 123);
             this.l304.Margin = new System.Windows.Forms.Padding(0);
             this.l304.Name = "l304";
-            this.l304.Size = new System.Drawing.Size(10, 73);
+            this.l304.Size = new System.Drawing.Size(25, 73);
             this.l304.TabIndex = 150;
             // 
             // panel5
@@ -359,10 +359,10 @@
             // 
             this.l303.BackColor = System.Drawing.Color.Red;
             this.l303.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l303.Location = new System.Drawing.Point(452, 93);
+            this.l303.Location = new System.Drawing.Point(437, 93);
             this.l303.Margin = new System.Windows.Forms.Padding(0);
             this.l303.Name = "l303";
-            this.l303.Size = new System.Drawing.Size(10, 73);
+            this.l303.Size = new System.Drawing.Size(25, 73);
             this.l303.TabIndex = 147;
             // 
             // panel3
@@ -429,10 +429,10 @@
             // 
             this.l302.BackColor = System.Drawing.Color.Red;
             this.l302.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l302.Location = new System.Drawing.Point(304, 122);
+            this.l302.Location = new System.Drawing.Point(289, 122);
             this.l302.Margin = new System.Windows.Forms.Padding(0);
             this.l302.Name = "l302";
-            this.l302.Size = new System.Drawing.Size(10, 73);
+            this.l302.Size = new System.Drawing.Size(25, 73);
             this.l302.TabIndex = 144;
             // 
             // panel2
@@ -499,10 +499,10 @@
             // 
             this.l301.BackColor = System.Drawing.Color.Red;
             this.l301.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l301.Location = new System.Drawing.Point(165, 151);
+            this.l301.Location = new System.Drawing.Point(150, 151);
             this.l301.Margin = new System.Windows.Forms.Padding(0);
             this.l301.Name = "l301";
-            this.l301.Size = new System.Drawing.Size(10, 73);
+            this.l301.Size = new System.Drawing.Size(25, 73);
             this.l301.TabIndex = 141;
             // 
             // dtpCikisAra
@@ -585,10 +585,10 @@
             // 
             this.l306.BackColor = System.Drawing.Color.Red;
             this.l306.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l306.Location = new System.Drawing.Point(737, 291);
+            this.l306.Location = new System.Drawing.Point(722, 291);
             this.l306.Margin = new System.Windows.Forms.Padding(0);
             this.l306.Name = "l306";
-            this.l306.Size = new System.Drawing.Size(10, 73);
+            this.l306.Size = new System.Drawing.Size(25, 73);
             this.l306.TabIndex = 136;
             // 
             // panel17
@@ -655,10 +655,10 @@
             // 
             this.l307.BackColor = System.Drawing.Color.Red;
             this.l307.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l307.Location = new System.Drawing.Point(591, 318);
+            this.l307.Location = new System.Drawing.Point(576, 318);
             this.l307.Margin = new System.Windows.Forms.Padding(0);
             this.l307.Name = "l307";
-            this.l307.Size = new System.Drawing.Size(10, 73);
+            this.l307.Size = new System.Drawing.Size(25, 73);
             this.l307.TabIndex = 133;
             // 
             // panel15
@@ -725,10 +725,10 @@
             // 
             this.l308.BackColor = System.Drawing.Color.Red;
             this.l308.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l308.Location = new System.Drawing.Point(451, 343);
+            this.l308.Location = new System.Drawing.Point(436, 343);
             this.l308.Margin = new System.Windows.Forms.Padding(0);
             this.l308.Name = "l308";
-            this.l308.Size = new System.Drawing.Size(10, 73);
+            this.l308.Size = new System.Drawing.Size(25, 73);
             this.l308.TabIndex = 130;
             // 
             // panel13
@@ -795,10 +795,10 @@
             // 
             this.l309.BackColor = System.Drawing.Color.Red;
             this.l309.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l309.Location = new System.Drawing.Point(302, 317);
+            this.l309.Location = new System.Drawing.Point(287, 317);
             this.l309.Margin = new System.Windows.Forms.Padding(0);
             this.l309.Name = "l309";
-            this.l309.Size = new System.Drawing.Size(10, 73);
+            this.l309.Size = new System.Drawing.Size(25, 73);
             this.l309.TabIndex = 127;
             // 
             // panel11
@@ -865,10 +865,10 @@
             // 
             this.l310.BackColor = System.Drawing.Color.Red;
             this.l310.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l310.Location = new System.Drawing.Point(163, 291);
+            this.l310.Location = new System.Drawing.Point(148, 291);
             this.l310.Margin = new System.Windows.Forms.Padding(0);
             this.l310.Name = "l310";
-            this.l310.Size = new System.Drawing.Size(10, 73);
+            this.l310.Size = new System.Drawing.Size(25, 73);
             this.l310.TabIndex = 124;
             // 
             // frmKat3

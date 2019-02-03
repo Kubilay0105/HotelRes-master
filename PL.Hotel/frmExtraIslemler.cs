@@ -21,13 +21,15 @@ namespace PL.Hotel
         RoomRepository Rr = new RoomRepository();
         SaleRepository Sr = new SaleRepository();
         ExtraRepository Er = new ExtraRepository();
+        GuestRepository Gr = new GuestRepository();
         ExtraType ET = new ExtraType();
         int RId,GId,ExtraTypeId;
         private void frmExtraIslemler_Load(object sender, EventArgs e)
         {
-            dgvOdalar.Visible = false;
             cbEkstra.DataSource = Er.GetExtraTypes();
-            txtDate.Text = DateTime.Now.ToShortDateString();         
+            txtDate.Text = DateTime.Now.ToShortDateString();
+            SatisListe = Sr.GetSaleforFullRoom(DateTime.Now);
+            GridDuzenle(Rr.GetFullRooms(SatisListe));
         }
 
         private void txtUnit_TextChanged(object sender, EventArgs e)
@@ -41,7 +43,20 @@ namespace PL.Hotel
                 txtSum.Clear();
             }
         }
+        private void GridDuzenle(List<Room> liste)
+        {
+            dgvOdalar.DataSource = liste;
+            dgvOdalar.Columns[0].Visible = false;
+            dgvOdalar.Columns[1].Width = 100;
+            dgvOdalar.Columns[1].HeaderText = "      Oda No";
+            dgvOdalar.Columns[1].DefaultCellStyle.Alignment =DataGridViewContentAlignment.MiddleCenter;
+            dgvOdalar.Columns[2].Visible = false;
+            dgvOdalar.Columns[3].Visible = false;
+            dgvOdalar.Columns[4].Visible = false;
+            dgvOdalar.Columns[5].Visible = false;
 
+
+        }
         private void cbEkstra_SelectedIndexChanged(object sender, EventArgs e)
         {
             ExtraTypeId = (cbEkstra.SelectedItem as ExtraType).Id;
@@ -53,17 +68,38 @@ namespace PL.Hotel
         List<Sale> SatisListe = new List<Sale>();
         private void btnAdminn_Click(object sender, EventArgs e)
         {
-            dgvOdalar.Visible = true;
-            SatisListe = Sr.GetSaleforFullRoom(DateTime.Now);
-            dgvOdalar.DataSource = Rr.GetFullRooms(SatisListe);
-            //pnlExtraa.Controls.Clear();
-            //frmExtraa frm = new frmExtraa();
-            //frm.TopLevel = false;
-            //pnlExtraa.Controls.Add(frm);
-            //frm.Show();
-            //frm.Dock = DockStyle.Fill;
+            if (GId != 0)
+            {
+                dgvOdalar.Visible = true;
+                groupBox1.Visible = true;
+                dgvExtralar.Visible = true;
+                txtDegisenAdet.Visible = true;
+                txtDegisenTutar.Visible = true;
+                btnDuzenle.Visible = true;
+                btnSil.Visible = true;
+                label10.Visible = true;
+                label9.Visible = true;
+                numDegisenAdet.Visible = true;
+                Guest guestt = Gr.GetGuestById(GId);
+                txtAdi.Text = guestt.FirstName;
+                txtSoyad.Text = guestt.LastName;
+                GridDuzenle2(Er.GetExtraTransactions(GId));
+            }
+            else MessageBox.Show("Lütfen Oda Seçiniz.");
+            
         }
+        private void GridDuzenle2(List<ExtraTransactions> listex)
+        {
+            dgvExtralar.DataSource = listex;
+            dgvExtralar.Columns[0].Visible = false;
+            dgvExtralar.Columns[1].Visible = false;
+            dgvExtralar.Columns[2].Visible = false;
+            dgvExtralar.Columns[6].Visible = false;
+            dgvExtralar.Columns[7].Visible = false;
+            dgvExtralar.Columns[8].Visible = false;
+            dgvExtralar.Columns[10].Visible = false;
 
+        }
         private void nudAdet_ValueChanged(object sender, EventArgs e)
         {
             txtUnit.Text = nudAdet.Value.ToString();
@@ -75,7 +111,62 @@ namespace PL.Hotel
             txtPrice.Clear();
             txtSum.Clear();
             txtUnit.Clear();
-            dgvOdalar.Visible = false;
+        }
+        int ExId,TypId,RmId,ExGId;
+        DateTime Exdt;
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Silmek İstiyor musunuz?", "SİLİNSİN Mİ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (Er.DeleteExtra(ExId))
+                {
+                    MessageBox.Show("Ziyaretçi bilgileri silindi.", "Silme gerçekleşti.");
+                    GridDuzenle2(Er.GetExtraTransactions(GId));
+                    Temizle();
+                }
+            }
+        }
+
+        private void dgvExtralar_DoubleClick(object sender, EventArgs e)
+        {
+            ExId = Convert.ToInt32(dgvExtralar.SelectedRows[0].Cells[0].Value);
+            TypId = Convert.ToInt32(dgvExtralar.SelectedRows[0].Cells[1].Value);
+            RmId = Convert.ToInt32(dgvExtralar.SelectedRows[0].Cells[2].Value);
+            ExGId = Convert.ToInt32(dgvExtralar.SelectedRows[0].Cells[8].Value);
+            Exdt = Convert.ToDateTime(dgvExtralar.SelectedRows[0].Cells[5].Value);
+            txtDegisenAdet.Text = dgvExtralar.SelectedRows[0].Cells[3].Value.ToString();
+        }
+
+        private void numDegisenAdet_ValueChanged(object sender, EventArgs e)
+        {
+            txtDegisenAdet.Text = numDegisenAdet.Value.ToString();
+        }
+
+        private void btnDuzenle_Click(object sender, EventArgs e)
+        {
+            if (txtDegisenAdet.Text.Trim() != "" && txtDegisenTutar.Text.Trim() != "" && ExId !=0)
+            {
+                ExtraTransactions ext = new ExtraTransactions();
+                ext.Id = ExId;
+                ext.RoomId = RmId;
+                ext.TransactionDate = Exdt;
+                ext.TypeId = TypId;
+                ext.GuestId = ExGId;
+                ext.Status = true;
+                ext.Deleted = false;
+                ext.Unit=Convert.ToInt32(txtDegisenAdet.Text);
+                ext.Sum = Convert.ToDecimal(txtDegisenTutar.Text);
+
+                if (Er.UpdateExtraTrans(ext))
+                {
+                    MessageBox.Show("Eklendi");
+                    GridDuzenle2(Er.GetExtraTransactions(GId));
+
+                }
+                else MessageBox.Show("Düzenleme İşlemi Başarısız oldu.");
+            }
+            else MessageBox.Show("Eksik Bilgi Girişi");
         }
 
         private void btnOda_Click(object sender, EventArgs e)

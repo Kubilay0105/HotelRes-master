@@ -32,11 +32,18 @@ namespace PL.Hotel
             if (txtOdaAra.Text.Trim() != "")
             {
                 OdaId = Rr.GetRoomId(txtOdaAra.Text);
-                dgvMisafirListesi.DataSource = Gr.GetGuestsInRoom(OdaId);
+                GridDuzenle(Gr.GetGuestsInRoom(OdaId));
             }
             else MessageBox.Show("Eksik bilgi girdiniz.");
         }
-
+        private void GridDuzenle(List<Guest> list)
+        {
+            dgvMisafirListesi.DataSource = list;
+            dgvMisafirListesi.Columns[0].Visible = false;
+            dgvMisafirListesi.Columns[5].Visible = false;
+            dgvMisafirListesi.Columns[6].Visible = false;
+            dgvMisafirListesi.Columns[11].Visible = false;
+        }
         private void dgvMisafirListesi_DoubleClick(object sender, EventArgs e)
         {
             GId = Convert.ToInt32(dgvMisafirListesi.SelectedRows[0].Cells[0].Value);
@@ -44,10 +51,10 @@ namespace PL.Hotel
             dtpMisafirDogumTarihi.Value= Convert.ToDateTime(dgvMisafirListesi.SelectedRows[0].Cells[8].Value);
             txtMisafirSoyadi.Text = dgvMisafirListesi.SelectedRows[0].Cells[2].Value.ToString();
             txtMisafirTC.Text = dgvMisafirListesi.SelectedRows[0].Cells[3].Value.ToString();
-            txtTelefon.Text = dgvMisafirListesi.SelectedRows[0].Cells[9].Value.ToString();
-            txtMail.Text = dgvMisafirListesi.SelectedRows[0].Cells[10].Value.ToString();
-            txtAdres.Text = dgvMisafirListesi.SelectedRows[0].Cells[7].Value.ToString();
-            cbMisafirCinsiyet.SelectedIndex = 0;
+            txtTelefon.Text = dgvMisafirListesi.SelectedRows[0].Cells[9].Value == null ? "" : dgvMisafirListesi.SelectedRows[0].Cells[9].Value.ToString();
+            txtMail.Text = dgvMisafirListesi.SelectedRows[0].Cells[10].Value == null ? "" : dgvMisafirListesi.SelectedRows[0].Cells[10].Value.ToString();
+            txtAdres.Text = dgvMisafirListesi.SelectedRows[0].Cells[7].Value == null ? "" : dgvMisafirListesi.SelectedRows[0].Cells[7].Value.ToString();
+            cbMisafirCinsiyet.SelectedIndex = -1;
 
         }
 
@@ -70,7 +77,7 @@ namespace PL.Hotel
 
                 if (Gr.AddGuest(gst))
                 {
-                    dgvMisafirListesi.DataSource = Gr.GetGuestsInRoom(OdaId);
+                    GridDuzenle(Gr.GetGuestsInRoom(OdaId));
                     Temizle();
                 }
             }
@@ -95,7 +102,7 @@ namespace PL.Hotel
                 if (Gr.Delete(GId))
                 {
                     MessageBox.Show("Ziyaretçi bilgileri silindi.", "Silme gerçekleşti.");
-                    dgvMisafirListesi.DataSource = Gr.GetGuestsInRoom(OdaId);
+                    GridDuzenle(Gr.GetGuestsInRoom(OdaId));
                     Temizle();
                 }
             }
@@ -124,7 +131,7 @@ namespace PL.Hotel
 
                     if (Gr.UpdateGuest(gt))
                     {
-                        dgvMisafirListesi.DataSource = Gr.GetGuestsInRoom(OdaId);
+                        GridDuzenle(Gr.GetGuestsInRoom(OdaId));
                         Temizle();
                     }
                 }

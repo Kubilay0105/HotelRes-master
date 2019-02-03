@@ -53,6 +53,13 @@ namespace BLL.Hotel.Repositories
                          select g).FirstOrDefault();
             return gst;
         }
+        public Guest GetGuestById(int Id)
+        {
+            Guest gst = (from g in ent.Guests
+                         where g.Id == Id 
+                         select g).FirstOrDefault();
+            return gst;
+        }
 
         public int GetGuestIdByTC(string IdentificationNo)
         {

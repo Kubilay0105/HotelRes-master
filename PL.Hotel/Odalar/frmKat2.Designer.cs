@@ -219,10 +219,10 @@
             // 
             this.l205.BackColor = System.Drawing.Color.Red;
             this.l205.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l205.Location = new System.Drawing.Point(730, 141);
+            this.l205.Location = new System.Drawing.Point(720, 141);
             this.l205.Margin = new System.Windows.Forms.Padding(0);
             this.l205.Name = "l205";
-            this.l205.Size = new System.Drawing.Size(10, 73);
+            this.l205.Size = new System.Drawing.Size(20, 73);
             this.l205.TabIndex = 121;
             // 
             // panel7
@@ -289,10 +289,10 @@
             // 
             this.l204.BackColor = System.Drawing.Color.Red;
             this.l204.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l204.Location = new System.Drawing.Point(584, 123);
+            this.l204.Location = new System.Drawing.Point(574, 123);
             this.l204.Margin = new System.Windows.Forms.Padding(0);
             this.l204.Name = "l204";
-            this.l204.Size = new System.Drawing.Size(10, 73);
+            this.l204.Size = new System.Drawing.Size(20, 73);
             this.l204.TabIndex = 118;
             // 
             // panel5
@@ -359,10 +359,10 @@
             // 
             this.l203.BackColor = System.Drawing.Color.Red;
             this.l203.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l203.Location = new System.Drawing.Point(444, 93);
+            this.l203.Location = new System.Drawing.Point(434, 93);
             this.l203.Margin = new System.Windows.Forms.Padding(0);
             this.l203.Name = "l203";
-            this.l203.Size = new System.Drawing.Size(10, 73);
+            this.l203.Size = new System.Drawing.Size(20, 73);
             this.l203.TabIndex = 115;
             // 
             // panel3
@@ -429,10 +429,10 @@
             // 
             this.l202.BackColor = System.Drawing.Color.Red;
             this.l202.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l202.Location = new System.Drawing.Point(296, 122);
+            this.l202.Location = new System.Drawing.Point(286, 122);
             this.l202.Margin = new System.Windows.Forms.Padding(0);
             this.l202.Name = "l202";
-            this.l202.Size = new System.Drawing.Size(10, 73);
+            this.l202.Size = new System.Drawing.Size(20, 73);
             this.l202.TabIndex = 112;
             // 
             // panel2
@@ -499,10 +499,10 @@
             // 
             this.l201.BackColor = System.Drawing.Color.Red;
             this.l201.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l201.Location = new System.Drawing.Point(157, 151);
+            this.l201.Location = new System.Drawing.Point(147, 151);
             this.l201.Margin = new System.Windows.Forms.Padding(0);
             this.l201.Name = "l201";
-            this.l201.Size = new System.Drawing.Size(10, 73);
+            this.l201.Size = new System.Drawing.Size(20, 73);
             this.l201.TabIndex = 109;
             // 
             // dtpCikisAra
@@ -585,10 +585,10 @@
             // 
             this.l206.BackColor = System.Drawing.Color.Red;
             this.l206.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l206.Location = new System.Drawing.Point(729, 291);
+            this.l206.Location = new System.Drawing.Point(719, 291);
             this.l206.Margin = new System.Windows.Forms.Padding(0);
             this.l206.Name = "l206";
-            this.l206.Size = new System.Drawing.Size(10, 73);
+            this.l206.Size = new System.Drawing.Size(20, 73);
             this.l206.TabIndex = 104;
             // 
             // panel17
@@ -655,10 +655,10 @@
             // 
             this.l207.BackColor = System.Drawing.Color.Red;
             this.l207.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l207.Location = new System.Drawing.Point(583, 318);
+            this.l207.Location = new System.Drawing.Point(573, 318);
             this.l207.Margin = new System.Windows.Forms.Padding(0);
             this.l207.Name = "l207";
-            this.l207.Size = new System.Drawing.Size(10, 73);
+            this.l207.Size = new System.Drawing.Size(20, 73);
             this.l207.TabIndex = 101;
             // 
             // panel15
@@ -725,10 +725,10 @@
             // 
             this.l208.BackColor = System.Drawing.Color.Red;
             this.l208.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l208.Location = new System.Drawing.Point(443, 343);
+            this.l208.Location = new System.Drawing.Point(433, 343);
             this.l208.Margin = new System.Windows.Forms.Padding(0);
             this.l208.Name = "l208";
-            this.l208.Size = new System.Drawing.Size(10, 73);
+            this.l208.Size = new System.Drawing.Size(20, 73);
             this.l208.TabIndex = 98;
             // 
             // panel13
@@ -795,10 +795,10 @@
             // 
             this.l209.BackColor = System.Drawing.Color.Red;
             this.l209.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l209.Location = new System.Drawing.Point(294, 317);
+            this.l209.Location = new System.Drawing.Point(284, 317);
             this.l209.Margin = new System.Windows.Forms.Padding(0);
             this.l209.Name = "l209";
-            this.l209.Size = new System.Drawing.Size(10, 73);
+            this.l209.Size = new System.Drawing.Size(20, 73);
             this.l209.TabIndex = 95;
             // 
             // panel11
@@ -865,10 +865,10 @@
             // 
             this.l210.BackColor = System.Drawing.Color.Red;
             this.l210.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l210.Location = new System.Drawing.Point(155, 291);
+            this.l210.Location = new System.Drawing.Point(145, 291);
             this.l210.Margin = new System.Windows.Forms.Padding(0);
             this.l210.Name = "l210";
-            this.l210.Size = new System.Drawing.Size(10, 73);
+            this.l210.Size = new System.Drawing.Size(20, 73);
             this.l210.TabIndex = 92;
             // 
             // frmKat2

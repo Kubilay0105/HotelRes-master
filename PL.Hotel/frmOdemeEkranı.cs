@@ -32,7 +32,8 @@ namespace PL.Hotel
             //GunlukToplamlariGoster();
             //dtpTarih.Value = DateTime.Now;
             //dgvPayments.DataSource = pr.GetPaymentsByGuest(sr.GetSales(),txtTcKimlikNo.Text);
-
+            frmMusteriOdemeleri frm = new frmMusteriOdemeleri();
+            FormAc(frm);
         }
 
         

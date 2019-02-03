@@ -47,7 +47,41 @@ namespace BLL.Hotel.Repositories
         }
         public bool DeleteExtra(int ID)
         {
-            throw new NotImplementedException();
+            bool sonuc = false;
+            ExtraTransactions degisen = (from e in ent.ExtraTransactions
+                                         where e.Id ==ID
+                                         select e).FirstOrDefault();
+            degisen.Deleted = true;
+            try
+            {
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return sonuc;
+        }
+        public bool UpdateExtraTrans(ExtraTransactions Ex)
+        {
+            bool sonuc = false;
+            ExtraTransactions degisen = (from e in ent.ExtraTransactions
+                             where e.Id == Ex.Id
+                             select e).FirstOrDefault();
+
+            degisen.Sum = Ex.Sum;
+            degisen.Unit = Ex.Unit;
+            try
+            {
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return sonuc;
         }
 
         public ExtraTransactions GetExtraType(int ID)
@@ -58,7 +92,10 @@ namespace BLL.Hotel.Repositories
             return sonuc;
             
         }
-       
+       public List<ExtraTransactions> GetExtraTransactions(int GId)
+        {
+            return ent.ExtraTransactions.Where(x => x.GuestId == GId && x.Status==true).ToList();
+        }
 
 
         public List<ExtraType> GetExtraTypes()

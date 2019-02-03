@@ -33,15 +33,6 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnDuzenle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
-            this.gbMisafirKonaklama = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtOdaNo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.gbMisafirBilgi = new System.Windows.Forms.GroupBox();
             this.txtAdres = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,14 +54,13 @@
             this.txtOdaAra = new System.Windows.Forms.TextBox();
             this.dgvMisafirListesi = new System.Windows.Forms.DataGridView();
             this.pnlContent.SuspendLayout();
-            this.gbMisafirKonaklama.SuspendLayout();
             this.gbMisafirBilgi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisafirListesi)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
@@ -82,7 +72,6 @@
             this.pnlContent.Controls.Add(this.btnEkle);
             this.pnlContent.Controls.Add(this.btnDuzenle);
             this.pnlContent.Controls.Add(this.btnSil);
-            this.pnlContent.Controls.Add(this.gbMisafirKonaklama);
             this.pnlContent.Controls.Add(this.gbMisafirBilgi);
             this.pnlContent.Controls.Add(this.btnBul);
             this.pnlContent.Controls.Add(this.txtOdaAra);
@@ -136,110 +125,6 @@
             this.btnSil.Text = "SİL";
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
-            // 
-            // gbMisafirKonaklama
-            // 
-            this.gbMisafirKonaklama.Controls.Add(this.textBox2);
-            this.gbMisafirKonaklama.Controls.Add(this.textBox1);
-            this.gbMisafirKonaklama.Controls.Add(this.textBox3);
-            this.gbMisafirKonaklama.Controls.Add(this.label9);
-            this.gbMisafirKonaklama.Controls.Add(this.label12);
-            this.gbMisafirKonaklama.Controls.Add(this.txtOdaNo);
-            this.gbMisafirKonaklama.Controls.Add(this.label10);
-            this.gbMisafirKonaklama.Controls.Add(this.label11);
-            this.gbMisafirKonaklama.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gbMisafirKonaklama.Location = new System.Drawing.Point(359, 220);
-            this.gbMisafirKonaklama.Margin = new System.Windows.Forms.Padding(2);
-            this.gbMisafirKonaklama.Name = "gbMisafirKonaklama";
-            this.gbMisafirKonaklama.Padding = new System.Windows.Forms.Padding(2);
-            this.gbMisafirKonaklama.Size = new System.Drawing.Size(275, 325);
-            this.gbMisafirKonaklama.TabIndex = 73;
-            this.gbMisafirKonaklama.TabStop = false;
-            this.gbMisafirKonaklama.Text = "Konaklama Bilgileri";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(90, 59);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(168, 25);
-            this.textBox2.TabIndex = 29;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(91, 25);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(167, 25);
-            this.textBox1.TabIndex = 28;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(90, 123);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 100);
-            this.textBox3.TabIndex = 27;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(4, 25);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 20);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Giriş Tarihi:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(8, 121);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 20);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Açıklama:";
-            // 
-            // txtOdaNo
-            // 
-            this.txtOdaNo.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOdaNo.Location = new System.Drawing.Point(90, 92);
-            this.txtOdaNo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtOdaNo.Name = "txtOdaNo";
-            this.txtOdaNo.ReadOnly = true;
-            this.txtOdaNo.Size = new System.Drawing.Size(56, 25);
-            this.txtOdaNo.TabIndex = 25;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 56);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 20);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Çıkış Tarihi:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 90);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 20);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Oda No:";
             // 
             // gbMisafirBilgi
             // 
@@ -473,8 +358,6 @@
             this.Load += new System.EventHandler(this.frmMisafirler_Load);
             this.pnlContent.ResumeLayout(false);
             this.pnlContent.PerformLayout();
-            this.gbMisafirKonaklama.ResumeLayout(false);
-            this.gbMisafirKonaklama.PerformLayout();
             this.gbMisafirBilgi.ResumeLayout(false);
             this.gbMisafirBilgi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisafirListesi)).EndInit();
@@ -509,14 +392,5 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnDuzenle;
         private System.Windows.Forms.Button btnSil;
-        private System.Windows.Forms.GroupBox gbMisafirKonaklama;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtOdaNo;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
     }
 }

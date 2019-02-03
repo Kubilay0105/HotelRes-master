@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.Hotel.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace PL.Hotel
         {
             InitializeComponent();
         }
-
+        PersonnelRepository Pp = new PersonnelRepository();
         private void FormAc(Form AF)
         {
             foreach (Control F in this.pnlContent.Controls)
@@ -120,8 +121,12 @@ namespace PL.Hotel
 
         private void tsPersonelIslemleri_Click(object sender, EventArgs e)
         {
-            frmPersonel frm = new frmPersonel();
-            FormAc(frm);
+            if (Pp.AdminControl(General.PersonelId))
+            {
+                frmPersonel frm = new frmPersonel();
+                FormAc(frm);
+            }
+            else MessageBox.Show("Buraya Giriş Yetkiniz Bulunmamaktadır.");
         }
 
         private void tsExtraTurleri_Click(object sender, EventArgs e)
@@ -132,14 +137,24 @@ namespace PL.Hotel
 
         private void tsKasaIslemleri_Click(object sender, EventArgs e)
         {
-            frmKasaDuzenlemeler frm = new frmKasaDuzenlemeler();
-            FormAc(frm);
+            if (Pp.AdminControl(General.PersonelId))
+            {
+                frmKasaDuzenlemeler frm = new frmKasaDuzenlemeler();
+                FormAc(frm);
+            }
+            else MessageBox.Show("Buraya Giriş Yetkiniz Bulunmamaktadır.");
+            
         }
 
         private void tsRaporlar_Click(object sender, EventArgs e)
         {
-            frmRaporlar frm = new frmRaporlar();
-            frm.Show();
+            if (Pp.AdminControl(General.PersonelId))
+            {
+                frmRaporlar frm = new frmRaporlar();
+                FormAc(frm);
+            }
+            else MessageBox.Show("Buraya Giriş Yetkiniz Bulunmamaktadır.");
+            
         }
     }
 }

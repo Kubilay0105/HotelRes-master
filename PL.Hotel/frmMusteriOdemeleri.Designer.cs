@@ -32,30 +32,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbGelirTurleri = new System.Windows.Forms.ComboBox();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.dgvMusteriler = new System.Windows.Forms.DataGridView();
-            this.txtOdaNo = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTcNo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtOdenen = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtAciklama = new System.Windows.Forms.TextBox();
-            this.btnOdemeYap = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtKazanc = new System.Windows.Forms.TextBox();
             this.txtBorc = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtKalanBorc = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtKazanc = new System.Windows.Forms.TextBox();
+            this.btnOdemeYap = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtAciklama = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtOdenen = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTcNo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtOdaNo = new System.Windows.Forms.TextBox();
+            this.dgvMusteriler = new System.Windows.Forms.DataGridView();
             this.pnlHeader.SuspendLayout();
             this.pnlContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -99,124 +99,6 @@
             this.pnlContent.Size = new System.Drawing.Size(1150, 535);
             this.pnlContent.TabIndex = 1;
             // 
-            // dgvMusteriler
-            // 
-            this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMusteriler.Location = new System.Drawing.Point(25, 18);
-            this.dgvMusteriler.Name = "dgvMusteriler";
-            this.dgvMusteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMusteriler.Size = new System.Drawing.Size(680, 295);
-            this.dgvMusteriler.TabIndex = 2;
-            this.dgvMusteriler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvMusteriler_MouseDoubleClick);
-            // 
-            // txtOdaNo
-            // 
-            this.txtOdaNo.Location = new System.Drawing.Point(112, 35);
-            this.txtOdaNo.Name = "txtOdaNo";
-            this.txtOdaNo.Size = new System.Drawing.Size(151, 20);
-            this.txtOdaNo.TabIndex = 3;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtAciklama);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtOdenen);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtTcNo);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtOdaNo);
-            this.groupBox1.Controls.Add(this.cbGelirTurleri);
-            this.groupBox1.Location = new System.Drawing.Point(784, 18);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(332, 282);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ödeme İşlemleri";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(20, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Oda No";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(20, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "İşlem Türü";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(20, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Tc No";
-            // 
-            // txtTcNo
-            // 
-            this.txtTcNo.Location = new System.Drawing.Point(112, 71);
-            this.txtTcNo.Name = "txtTcNo";
-            this.txtTcNo.Size = new System.Drawing.Size(151, 20);
-            this.txtTcNo.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(20, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Tutar";
-            // 
-            // txtOdenen
-            // 
-            this.txtOdenen.Location = new System.Drawing.Point(112, 148);
-            this.txtOdenen.Name = "txtOdenen";
-            this.txtOdenen.Size = new System.Drawing.Size(151, 20);
-            this.txtOdenen.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(20, 185);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 17);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Açıklama";
-            // 
-            // txtAciklama
-            // 
-            this.txtAciklama.Location = new System.Drawing.Point(112, 184);
-            this.txtAciklama.Multiline = true;
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(151, 70);
-            this.txtAciklama.TabIndex = 10;
-            // 
-            // btnOdemeYap
-            // 
-            this.btnOdemeYap.Location = new System.Drawing.Point(818, 336);
-            this.btnOdemeYap.Name = "btnOdemeYap";
-            this.btnOdemeYap.Size = new System.Drawing.Size(240, 51);
-            this.btnOdemeYap.TabIndex = 5;
-            this.btnOdemeYap.Text = "Ödeme Yap";
-            this.btnOdemeYap.UseVisualStyleBackColor = true;
-            this.btnOdemeYap.Click += new System.EventHandler(this.btnOdemeYap_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label13);
@@ -231,6 +113,25 @@
             this.groupBox2.TabIndex = 100;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ödeme Bilgileri";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Location = new System.Drawing.Point(178, 31);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 17);
+            this.label13.TabIndex = 93;
+            this.label13.Text = "Ödenen";
+            // 
+            // txtKazanc
+            // 
+            this.txtKazanc.Location = new System.Drawing.Point(242, 29);
+            this.txtKazanc.Name = "txtKazanc";
+            this.txtKazanc.ReadOnly = true;
+            this.txtKazanc.Size = new System.Drawing.Size(90, 20);
+            this.txtKazanc.TabIndex = 92;
+            this.txtKazanc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBorc
             // 
@@ -270,24 +171,125 @@
             this.txtKalanBorc.TabIndex = 70;
             this.txtKalanBorc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label13
+            // btnOdemeYap
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(178, 31);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 17);
-            this.label13.TabIndex = 93;
-            this.label13.Text = "Ödenen";
+            this.btnOdemeYap.Location = new System.Drawing.Point(818, 336);
+            this.btnOdemeYap.Name = "btnOdemeYap";
+            this.btnOdemeYap.Size = new System.Drawing.Size(240, 51);
+            this.btnOdemeYap.TabIndex = 5;
+            this.btnOdemeYap.Text = "Ödeme Yap";
+            this.btnOdemeYap.UseVisualStyleBackColor = true;
+            this.btnOdemeYap.Click += new System.EventHandler(this.btnOdemeYap_Click);
             // 
-            // txtKazanc
+            // groupBox1
             // 
-            this.txtKazanc.Location = new System.Drawing.Point(242, 29);
-            this.txtKazanc.Name = "txtKazanc";
-            this.txtKazanc.ReadOnly = true;
-            this.txtKazanc.Size = new System.Drawing.Size(90, 20);
-            this.txtKazanc.TabIndex = 92;
-            this.txtKazanc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtAciklama);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtOdenen);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtTcNo);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtOdaNo);
+            this.groupBox1.Controls.Add(this.cbGelirTurleri);
+            this.groupBox1.Location = new System.Drawing.Point(784, 18);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(332, 282);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ödeme İşlemleri";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(20, 185);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Açıklama";
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.Location = new System.Drawing.Point(112, 184);
+            this.txtAciklama.Multiline = true;
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(151, 70);
+            this.txtAciklama.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(20, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Tutar";
+            // 
+            // txtOdenen
+            // 
+            this.txtOdenen.Location = new System.Drawing.Point(112, 148);
+            this.txtOdenen.Name = "txtOdenen";
+            this.txtOdenen.Size = new System.Drawing.Size(151, 20);
+            this.txtOdenen.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(20, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Tc No";
+            // 
+            // txtTcNo
+            // 
+            this.txtTcNo.Location = new System.Drawing.Point(112, 71);
+            this.txtTcNo.Name = "txtTcNo";
+            this.txtTcNo.Size = new System.Drawing.Size(151, 20);
+            this.txtTcNo.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(20, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "İşlem Türü";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(20, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Oda No";
+            // 
+            // txtOdaNo
+            // 
+            this.txtOdaNo.Location = new System.Drawing.Point(112, 35);
+            this.txtOdaNo.Name = "txtOdaNo";
+            this.txtOdaNo.Size = new System.Drawing.Size(151, 20);
+            this.txtOdaNo.TabIndex = 3;
+            // 
+            // dgvMusteriler
+            // 
+            this.dgvMusteriler.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMusteriler.Location = new System.Drawing.Point(37, 31);
+            this.dgvMusteriler.Name = "dgvMusteriler";
+            this.dgvMusteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMusteriler.Size = new System.Drawing.Size(680, 295);
+            this.dgvMusteriler.TabIndex = 2;
+            this.dgvMusteriler.DoubleClick += new System.EventHandler(this.dgvMusteriler_DoubleClick);
+            this.dgvMusteriler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvMusteriler_MouseDoubleClick);
             // 
             // frmMusteriOdemeleri
             // 
@@ -302,11 +304,11 @@
             this.Load += new System.EventHandler(this.frmMusteriOdemeleri_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlContent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.ResumeLayout(false);
 
         }
