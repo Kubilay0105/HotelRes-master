@@ -106,6 +106,12 @@
     <Compile Include="frmMisafirler.Designer.cs">
       <DependentUpon>frmMisafirler.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOdemeHizli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOdemeHizli.Designer.cs">
+      <DependentUpon>frmOdemeHizli.cs</DependentUpon>
+    </Compile>
     <Compile Include="Odalar\frmKat1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMisafirler.resx">
       <DependentUpon>frmMisafirler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOdemeHizli.resx">
+      <DependentUpon>frmOdemeHizli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Odalar\frmKat1.resx">
       <DependentUpon>frmKat1.cs</DependentUpon>

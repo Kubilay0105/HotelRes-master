@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Hotel.Context;
+using DAL.Hotel.Model;
 
 namespace BLL.Hotel.Repositories
 {
@@ -44,7 +45,6 @@ namespace BLL.Hotel.Repositories
             }
            
         }
-        
         public bool DeleteExtra(int ID)
         {
             throw new NotImplementedException();
@@ -53,11 +53,12 @@ namespace BLL.Hotel.Repositories
         public ExtraTransactions GetExtraType(int ID)
         {
             ExtraTransactions sonuc = (from ex in ent.ExtraTransactions
-                         where ex.RoomId == ID 
+                         where ex.RoomId == ID && ex.Deleted==false && ex.Status==true
                          select ex).FirstOrDefault();
             return sonuc;
             
         }
+       
 
 
         public List<ExtraType> GetExtraTypes()
@@ -67,7 +68,7 @@ namespace BLL.Hotel.Repositories
         public string GetExtraTypeAll(int id)
         {
             string tur = (from ex in ent.ExtraTypes
-                                where ex.Id == id
+                                where ex.Id == id && ex.Deleted==false
                                 select ex.Type).FirstOrDefault();
             return tur;
         }
@@ -89,9 +90,9 @@ namespace BLL.Hotel.Repositories
         public decimal GetExtraTypePrice(int RoomId)
         {
             decimal sonucPrice = (from r in ent.ExtraTransactions
-                             from rt in ent.ExtraTypes
-                             where r.RoomId == RoomId
-                             where r.TypeId == rt.Id
+                             from rt in ent.ExtraTypes 
+                             where r.RoomId == RoomId && r.Deleted==false
+                             where r.TypeId == rt.Id 
                              select rt.Price).FirstOrDefault();
             return sonucPrice;
         }

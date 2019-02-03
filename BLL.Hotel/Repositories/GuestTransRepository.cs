@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Hotel.Context;
+using DAL.Hotel.Model;
 
 namespace BLL.Hotel.Repositories
 {
@@ -67,6 +68,16 @@ namespace BLL.Hotel.Repositories
                                             select gt).ToList();
 
             return liste;
+        }
+        public List<GuestTransModel> GetExtrasByGuestId(Guest g)
+        {
+            RoomRepository Rr = new RoomRepository();
+            string Rno = Rr.GetRoomNo(g.RoomId);
+            List<GuestTransModel> sonuc = (from gt in ent.GuestTransactions
+                                           where gt.GuestId == g.Id && gt.Status == true
+                                           select new GuestTransModel { Id = gt.Id, GuestName = g.FirstName, GuestSurname = g.LastName, RoomNo = Rno, TransType = gt.TransType, Debt = gt.Debt, Credit = gt.Credit, Date = gt.Date }).ToList();
+            return sonuc;
+
         }
     }
 }

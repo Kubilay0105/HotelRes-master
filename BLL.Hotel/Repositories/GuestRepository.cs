@@ -80,25 +80,25 @@ namespace BLL.Hotel.Repositories
             }
             return sonuc;
         }
-        public bool UpdateGuestByTC(string TC)
-        {
-            bool sonuc = false;
-            Guest sondeger = (from s in ent.Guests
-                            where s.IdentificationNo == TC
-                            select s).FirstOrDefault();
-            sondeger.Status = false;
-            try
-            {
-                ent.SaveChanges();
-                sonuc = true;
-            }
-            catch (Exception ex)
-            {
-                string hata = ex.Message;
-            }
-            return sonuc;
+        //public bool UpdateGuestByTC(string TC)
+        //{
+        //    bool sonuc = false;
+        //    Guest sondeger = (from s in ent.Guests
+        //                    where s.IdentificationNo == TC
+        //                    select s).FirstOrDefault();
+        //    sondeger.Status = false;
+        //    try
+        //    {
+        //        ent.SaveChanges();
+        //        sonuc = true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        string hata = ex.Message;
+        //    }
+        //    return sonuc;
 
-        }
+        //}
         public bool UpdateControl(Guest gs)
         {
             bool Sonuc = false;

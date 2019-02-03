@@ -61,6 +61,7 @@
     <Compile Include="Context\Payment.cs" />
     <Compile Include="Context\TransactionType.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\GuestTransModel.cs" />
     <Compile Include="Model\ReservationsModel.cs" />
     <Compile Include="Model\PaymentModel.cs" />
     <Compile Include="Model\SaleModel.cs" />

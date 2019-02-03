@@ -23,6 +23,9 @@ namespace PL.Hotel
         SaleRepository sr = new SaleRepository();
         RoomRepository rr = new RoomRepository();
         GuestTransRepository gtr = new GuestTransRepository();
+        CheckOutRepo Cr = new CheckOutRepo();
+        string TcKimlikNo;
+        int GId;
         Font fntBaslik = new Font("Times New Roman", 16, FontStyle.Bold);
         Font fntIcerik = new Font("Times New Roman", 12, FontStyle.Regular);
         SolidBrush sb = new SolidBrush(Color.Black);
@@ -51,13 +54,13 @@ namespace PL.Hotel
         {
             if (Convert.ToDecimal(txtKalanBorc.Text) == 0)
             {
-                gr.UpdateGuestByTC(txtTKCNO.Text);
-                rr.UpdateRoomByRoomNo(txtOdaNo.Text);
-                //pr.UpdatePaymentBySalesId(sr.GetSaleIdByGuest(gr.GetGuestIdByTC(txtTKCNO.Text)));
-                sr.UpdateSalesByGuestId(gr.GetGuestIdByTC(txtTKCNO.Text));
 
-                MessageBox.Show("Çıkış işlemi tamamlandı");
+                if (Cr.NormalCheckOut(GId))
+                {
+                    MessageBox.Show("Çıkış işlemi tamamlandı");
 
+                }
+                else MessageBox.Show("Çıkış İşlemi Tamamlanamadı");
             }
             else
                 MessageBox.Show("Sistemde kayıtlı borç görünmekte");
@@ -65,9 +68,52 @@ namespace PL.Hotel
 
         private void btnOdemeYap_Click(object sender, EventArgs e)
         { 
-            frmOdemeEkranı frm = new frmOdemeEkranı();
-            frm.Show();
+            frmOdemeHizli frm = new frmOdemeHizli();
+            frm.GId = GId;
+            frm.Tc = TcKimlikNo;
+            frm.ShowDialog();
+            Guest gst = gr.GetGuestByTC(txtTcNo.Text);
+            dgvExtralar.DataSource = gtr.GetExtrasByGuestId(gst);
+            BorcSorgula();
             //    FormAcikmi(frm);
+
+        }
+
+        private void btnSorgula_Click(object sender, EventArgs e)
+        {
+            TcKimlikNo = txtTcNo.Text;
+            if (txtTcNo.Text.Trim() != "")
+            {
+                Guest gst = gr.GetGuestByTC(txtTcNo.Text);
+                GId = gst.Id;
+                if (gst == null)
+                {
+                    MessageBox.Show("Bu Tc Kimlik No'ya sahip birisi bulunamadı.");
+                }
+                else
+                {
+                    dgvExtralar.DataSource = gtr.GetExtrasByGuestId(gst);
+                    BorcSorgula();
+                }
+                
+            }
+            else MessageBox.Show("Eksik Bilgi Girişi !");
+        }
+        private void BorcSorgula()
+        {
+            decimal GirenToplam = 0;
+            decimal CikanToplam = 0;
+            foreach (DataGridViewRow dr in dgvExtralar.Rows)
+            {
+                GirenToplam += Convert.ToDecimal(dr.Cells[5].Value);
+                CikanToplam += Convert.ToDecimal(dr.Cells[6].Value);
+            }
+            txtBorc.Text = string.Format("{0:#,##0}", GirenToplam);
+            txtKazanc.Text = string.Format("{0:#,##0}", CikanToplam);
+            txtKalanBorc.Text = string.Format("{0:#,##0}", GirenToplam - CikanToplam);
+        }
+        private void dgvExtralar_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
 
         }
         #region FaturaYazdır        
@@ -75,19 +121,19 @@ namespace PL.Hotel
         private void pdocFatura_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             List<GuestTransaction> liste = new List<GuestTransaction>();
-            liste = gtr.GetGTransByGuestId(gr.GetGuestIdByTC(txtTKCNO.Text));
+            liste = gtr.GetGTransByGuestId(GId);
             StringFormat sf = new StringFormat();
             sf.Alignment = StringAlignment.Near;
             e.Graphics.DrawString(DateTime.Now.ToShortDateString(), fntBaslik, sb, 700, 50);
             e.Graphics.DrawString("Ödeme Bilgileri ", fntBaslik, sb, 300, 100);
-            e.Graphics.DrawString("Adı:  " + txtAdi.Text, fntBaslik, sb, 50, 150);
-            e.Graphics.DrawString("Soyadı:  " + txtSoyadi.Text, fntBaslik, sb, 50, 200);
+            //e.Graphics.DrawString("Adı:  " + txtAdi.Text, fntBaslik, sb, 50, 150);
+            //e.Graphics.DrawString("Soyadı:  " + txtSoyadi.Text, fntBaslik, sb, 50, 200);
             e.Graphics.DrawString("TC            Tarih        İşlem Tipi         Borç      Ödenen     Acıklama", fntBaslik, sb, 50, 250);
             e.Graphics.DrawString("_______________________________________________________________________", fntBaslik, sb, 50, 300);
 
             for (int i = 0; i < liste.Count; i++)
             {
-                e.Graphics.DrawString(txtTKCNO.Text, fntIcerik, sb, 50, 400 + (30 * i));
+                e.Graphics.DrawString(TcKimlikNo, fntIcerik, sb, 50, 400 + (30 * i));
                 e.Graphics.DrawString(liste[i].Date.ToShortDateString(), fntIcerik, sb, 160, 400 + (30 * i));
                 e.Graphics.DrawString(liste[i].TransType.ToString(), fntIcerik, sb, 290, 400 + (30 * i));
                 e.Graphics.DrawString(liste[i].Debt.ToString(), fntIcerik, sb, 400, 400 + (30 * i));
@@ -100,6 +146,7 @@ namespace PL.Hotel
         {
             ppdiaFatura.ShowDialog();
         }
+
         #endregion
 
 
