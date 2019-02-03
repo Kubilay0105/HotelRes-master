@@ -96,5 +96,10 @@ namespace PL.Hotel.Odalar
             frmSatis.Cikis = Cara;
             txtOdaNo.Text = odano;
         }
+
+        private void dtpCikisAra_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

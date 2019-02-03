@@ -81,7 +81,11 @@ namespace BLL.Hotel.Repositories
         {
             return ent.Sales.Where(x=>x.Id==SaleId && x.Status==true ).Select(x=>x).FirstOrDefault();
         }
+        public Sale GetSaleByGuest(int GuestId)
+        {
+            return ent.Sales.Where(x => x.GuestId == GuestId && x.Status == true).Select(x => x).FirstOrDefault();
 
+        }
         public List<ReservationsModel> GetSales(DateTime today)
         {
             List<ReservationsModel> SaleList = (from sl in ent.Sales

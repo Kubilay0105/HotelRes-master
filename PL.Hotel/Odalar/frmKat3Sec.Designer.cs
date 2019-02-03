@@ -101,6 +101,7 @@
             this.dtpCikisAra.Name = "dtpCikisAra";
             this.dtpCikisAra.Size = new System.Drawing.Size(200, 20);
             this.dtpCikisAra.TabIndex = 86;
+            this.dtpCikisAra.ValueChanged += new System.EventHandler(this.dtpCikisAra_ValueChanged_1);
             // 
             // dtpGirisAra
             // 

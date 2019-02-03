@@ -25,7 +25,7 @@ namespace PL.Hotel
         GuestTransRepository gtr = new GuestTransRepository();
         CheckOutRepo Cr = new CheckOutRepo();
         string TcKimlikNo;
-        int GId,RId;
+        int GId,RId,SId;
         Font fntBaslik = new Font("Times New Roman", 16, FontStyle.Bold);
         Font fntIcerik = new Font("Times New Roman", 12, FontStyle.Regular);
         SolidBrush sb = new SolidBrush(Color.Black);
@@ -81,12 +81,15 @@ namespace PL.Hotel
 
         private void btnSorgula_Click(object sender, EventArgs e)
         {
+            btnCheckout.Visible = true;
+            btnErkenCikis.Visible = true;
             TcKimlikNo = txtTcNo.Text;
             if (txtTcNo.Text.Trim() != "")
             {
                 Guest gst = gr.GetGuestByTC(txtTcNo.Text);
                 GId = gst.Id;
                 RId = gst.RoomId;
+                
                 if (gst == null)
                 {
                     MessageBox.Show("Bu Tc Kimlik No'ya sahip birisi bulunamadı.");
@@ -117,6 +120,37 @@ namespace PL.Hotel
         {
 
         }
+
+        private void btnErkenCikis_Click(object sender, EventArgs e)
+        {
+            btnCikisOnayla.Enabled = false;
+            btnOnayla2.Enabled = true;
+            decimal KonaklamaOdenen=0,ExtraOdenen=0,ExtraHarcanan=0;
+
+            Sale sl =sr.GetSaleByGuest(GId);
+            TimeSpan fark = DateTime.Now.Date - sl.CheckIn.Date;
+            int GunSayisi = fark.Days;
+            decimal OdaFiyat = rr.GetRoomPrice(rr.GetRoomNo(RId));
+            //Ödenmesi gereken Konaklama Fiyatı
+            decimal GerekliOdeme = GunSayisi * OdaFiyat;
+            foreach (DataGridViewRow dr in dgvExtralar.Rows)
+            {
+                if(dr.Cells[4].Value.ToString()=="Konaklama Ücreti")
+                {
+                    KonaklamaOdenen+= Convert.ToDecimal(dr.Cells[6].Value);
+                }
+            }
+            foreach (DataGridViewRow dr1 in dgvExtralar.Rows)
+            {
+                if (dr1.Cells[4].Value.ToString() == "Extra Ücreti")
+                {
+                    ExtraHarcanan += Convert.ToDecimal(dr1.Cells[5]);
+                    ExtraOdenen += Convert.ToDecimal(dr1.Cells[6].Value);
+                }
+            }
+            txtKonaklamaBorc.Text = (GerekliOdeme-KonaklamaOdenen).ToString();
+            txtExtraBorc.Text=(ExtraHarcanan-ExtraOdenen).ToString();
+        }
         #region FaturaYazdır        
 
         private void pdocFatura_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -143,6 +177,8 @@ namespace PL.Hotel
             }
 
         }
+
+
         private void btnYazdır_Click(object sender, EventArgs e)
         {
             ppdiaFatura.ShowDialog();
