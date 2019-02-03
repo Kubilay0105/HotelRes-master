@@ -60,6 +60,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.btnOnayla = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -68,6 +70,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -411,6 +414,17 @@
             this.btnOnayla.UseVisualStyleBackColor = true;
             this.btnOnayla.Click += new System.EventHandler(this.btnOnayla_Click);
             // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(327, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(253, 37);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Oda Satış";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,6 +437,7 @@
             this.ShowInTaskbar = false;
             this.Text = "frmSatis";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -466,5 +481,6 @@
         private System.Windows.Forms.TextBox txtOdaNo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnOnayla;
+        private System.Windows.Forms.Label label5;
     }
 }

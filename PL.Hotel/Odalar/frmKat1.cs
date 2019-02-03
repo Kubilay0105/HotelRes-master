@@ -113,7 +113,7 @@ namespace PL.Hotel
                     {
                         if (rm.RoomNumber == item.Name.Substring(1))
                         {
-                            if (rm.State) item.BackColor = Color.Red;
+                            if (rm.State) item.BackColor = Color.FromArgb(255, 255, 73, 0);
                             else item.BackColor = Color.GreenYellow;
                         }
                     }

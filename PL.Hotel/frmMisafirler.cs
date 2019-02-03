@@ -108,6 +108,13 @@ namespace PL.Hotel
             }
         }
 
+        private void btnSorgula_Click(object sender, EventArgs e)
+        {
+            frmMisafirSorgulama frm = new frmMisafirSorgulama();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+        }
+
         private void btnDuzenle_Click(object sender, EventArgs e)
         {
             if (txtMisafirAdi.Text.Trim() != "" && txtMisafirSoyadi.Text.Trim() != "" && txtMisafirTC.Text.Trim() != "")

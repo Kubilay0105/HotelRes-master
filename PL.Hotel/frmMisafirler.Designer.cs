@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnDuzenle = new System.Windows.Forms.Button();
@@ -53,7 +54,7 @@
             this.btnBul = new System.Windows.Forms.Button();
             this.txtOdaAra = new System.Windows.Forms.TextBox();
             this.dgvMisafirListesi = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSorgula = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.gbMisafirBilgi.SuspendLayout();
@@ -70,8 +71,20 @@
             this.pnlHeader.Size = new System.Drawing.Size(1000, 59);
             this.pnlHeader.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(299, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Misafir Ekle";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pnlContent
             // 
+            this.pnlContent.Controls.Add(this.btnSorgula);
             this.pnlContent.Controls.Add(this.btnEkle);
             this.pnlContent.Controls.Add(this.btnDuzenle);
             this.pnlContent.Controls.Add(this.btnSil);
@@ -322,9 +335,9 @@
             // 
             // btnBul
             // 
-            this.btnBul.Location = new System.Drawing.Point(519, 23);
+            this.btnBul.Location = new System.Drawing.Point(519, 25);
             this.btnBul.Name = "btnBul";
-            this.btnBul.Size = new System.Drawing.Size(75, 23);
+            this.btnBul.Size = new System.Drawing.Size(94, 25);
             this.btnBul.TabIndex = 71;
             this.btnBul.Text = "BUL";
             this.btnBul.UseVisualStyleBackColor = true;
@@ -332,9 +345,10 @@
             // 
             // txtOdaAra
             // 
-            this.txtOdaAra.Location = new System.Drawing.Point(403, 26);
+            this.txtOdaAra.Location = new System.Drawing.Point(391, 25);
+            this.txtOdaAra.Multiline = true;
             this.txtOdaAra.Name = "txtOdaAra";
-            this.txtOdaAra.Size = new System.Drawing.Size(100, 20);
+            this.txtOdaAra.Size = new System.Drawing.Size(122, 25);
             this.txtOdaAra.TabIndex = 70;
             // 
             // dgvMisafirListesi
@@ -348,16 +362,18 @@
             this.dgvMisafirListesi.TabIndex = 69;
             this.dgvMisafirListesi.DoubleClick += new System.EventHandler(this.dgvMisafirListesi_DoubleClick);
             // 
-            // label1
+            // btnSorgula
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(299, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Misafir Ekle";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSorgula.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSorgula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSorgula.Location = new System.Drawing.Point(11, 13);
+            this.btnSorgula.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSorgula.Name = "btnSorgula";
+            this.btnSorgula.Size = new System.Drawing.Size(166, 40);
+            this.btnSorgula.TabIndex = 77;
+            this.btnSorgula.Text = "MÜŞTERİ SORGULA";
+            this.btnSorgula.UseVisualStyleBackColor = true;
+            this.btnSorgula.Click += new System.EventHandler(this.btnSorgula_Click);
             // 
             // frmMisafirler
             // 
@@ -408,5 +424,6 @@
         private System.Windows.Forms.Button btnDuzenle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSorgula;
     }
 }

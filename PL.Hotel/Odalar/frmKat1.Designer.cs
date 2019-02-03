@@ -117,6 +117,7 @@
             // 
             // pnlKat1
             // 
+            this.pnlKat1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlKat1.BackgroundImage")));
             this.pnlKat1.Controls.Add(this.panel9);
             this.pnlKat1.Controls.Add(this.pnl105);
             this.pnlKat1.Controls.Add(this.l105);
@@ -204,11 +205,12 @@
             this.lb105.BackColor = System.Drawing.Color.Transparent;
             this.lb105.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lb105.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb105.Location = new System.Drawing.Point(8, 17);
+            this.lb105.Location = new System.Drawing.Point(8, 14);
             this.lb105.Name = "lb105";
             this.lb105.Size = new System.Drawing.Size(49, 17);
             this.lb105.TabIndex = 3;
-            this.lb105.Text = "Suit";
+            this.lb105.Text = " Suit";
+            this.lb105.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -225,12 +227,12 @@
             // 
             // l105
             // 
-            this.l105.BackColor = System.Drawing.Color.Red;
+            this.l105.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l105.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l105.Location = new System.Drawing.Point(690, 136);
+            this.l105.Location = new System.Drawing.Point(698, 136);
             this.l105.Margin = new System.Windows.Forms.Padding(0);
             this.l105.Name = "l105";
-            this.l105.Size = new System.Drawing.Size(24, 73);
+            this.l105.Size = new System.Drawing.Size(16, 73);
             this.l105.TabIndex = 89;
             // 
             // panel7
@@ -282,11 +284,12 @@
             this.lb104.BackColor = System.Drawing.Color.Transparent;
             this.lb104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lb104.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb104.Location = new System.Drawing.Point(8, 17);
+            this.lb104.Location = new System.Drawing.Point(15, 17);
             this.lb104.Name = "lb104";
             this.lb104.Size = new System.Drawing.Size(49, 17);
             this.lb104.TabIndex = 3;
             this.lb104.Text = "Suit";
+            this.lb104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -303,12 +306,12 @@
             // 
             // l104
             // 
-            this.l104.BackColor = System.Drawing.Color.Red;
+            this.l104.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l104.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l104.Location = new System.Drawing.Point(544, 118);
+            this.l104.Location = new System.Drawing.Point(551, 118);
             this.l104.Margin = new System.Windows.Forms.Padding(0);
             this.l104.Name = "l104";
-            this.l104.Size = new System.Drawing.Size(24, 73);
+            this.l104.Size = new System.Drawing.Size(17, 73);
             this.l104.TabIndex = 86;
             // 
             // panel5
@@ -360,11 +363,12 @@
             this.lb103.BackColor = System.Drawing.Color.Transparent;
             this.lb103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lb103.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb103.Location = new System.Drawing.Point(9, 17);
+            this.lb103.Location = new System.Drawing.Point(16, 17);
             this.lb103.Name = "lb103";
             this.lb103.Size = new System.Drawing.Size(49, 17);
             this.lb103.TabIndex = 3;
             this.lb103.Text = "Suit";
+            this.lb103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl103
             // 
@@ -381,12 +385,12 @@
             // 
             // l103
             // 
-            this.l103.BackColor = System.Drawing.Color.Red;
+            this.l103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l103.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l103.Location = new System.Drawing.Point(403, 88);
+            this.l103.Location = new System.Drawing.Point(411, 88);
             this.l103.Margin = new System.Windows.Forms.Padding(0);
             this.l103.Name = "l103";
-            this.l103.Size = new System.Drawing.Size(25, 73);
+            this.l103.Size = new System.Drawing.Size(17, 73);
             this.l103.TabIndex = 83;
             // 
             // panel3
@@ -459,12 +463,12 @@
             // 
             // l102
             // 
-            this.l102.BackColor = System.Drawing.Color.Red;
+            this.l102.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l102.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l102.Location = new System.Drawing.Point(256, 117);
+            this.l102.Location = new System.Drawing.Point(264, 117);
             this.l102.Margin = new System.Windows.Forms.Padding(0);
             this.l102.Name = "l102";
-            this.l102.Size = new System.Drawing.Size(24, 73);
+            this.l102.Size = new System.Drawing.Size(16, 73);
             this.l102.TabIndex = 80;
             // 
             // panel2
@@ -537,12 +541,12 @@
             // 
             // l101
             // 
-            this.l101.BackColor = System.Drawing.Color.Red;
+            this.l101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l101.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l101.Location = new System.Drawing.Point(117, 146);
+            this.l101.Location = new System.Drawing.Point(125, 146);
             this.l101.Margin = new System.Windows.Forms.Padding(0);
             this.l101.Name = "l101";
-            this.l101.Size = new System.Drawing.Size(24, 73);
+            this.l101.Size = new System.Drawing.Size(16, 73);
             this.l101.TabIndex = 77;
             // 
             // dtpCikisAra
@@ -614,7 +618,8 @@
             this.lb106.Name = "lb106";
             this.lb106.Size = new System.Drawing.Size(49, 17);
             this.lb106.TabIndex = 3;
-            this.lb106.Text = "Suit";
+            this.lb106.Text = "  Suit";
+            this.lb106.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label27
             // 
@@ -631,12 +636,12 @@
             // 
             // l106
             // 
-            this.l106.BackColor = System.Drawing.Color.Red;
+            this.l106.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l106.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l106.Location = new System.Drawing.Point(689, 286);
+            this.l106.Location = new System.Drawing.Point(697, 286);
             this.l106.Margin = new System.Windows.Forms.Padding(0);
             this.l106.Name = "l106";
-            this.l106.Size = new System.Drawing.Size(24, 73);
+            this.l106.Size = new System.Drawing.Size(16, 73);
             this.l106.TabIndex = 72;
             // 
             // panel17
@@ -692,7 +697,8 @@
             this.lb107.Name = "lb107";
             this.lb107.Size = new System.Drawing.Size(49, 17);
             this.lb107.TabIndex = 3;
-            this.lb107.Text = "Suit";
+            this.lb107.Text = "   Suit";
+            this.lb107.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label24
             // 
@@ -709,12 +715,12 @@
             // 
             // l107
             // 
-            this.l107.BackColor = System.Drawing.Color.Red;
+            this.l107.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l107.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l107.Location = new System.Drawing.Point(543, 313);
+            this.l107.Location = new System.Drawing.Point(551, 313);
             this.l107.Margin = new System.Windows.Forms.Padding(0);
             this.l107.Name = "l107";
-            this.l107.Size = new System.Drawing.Size(24, 73);
+            this.l107.Size = new System.Drawing.Size(16, 73);
             this.l107.TabIndex = 69;
             // 
             // panel15
@@ -770,7 +776,8 @@
             this.lb108.Name = "lb108";
             this.lb108.Size = new System.Drawing.Size(49, 17);
             this.lb108.TabIndex = 3;
-            this.lb108.Text = "Suit";
+            this.lb108.Text = "   Suit";
+            this.lb108.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label21
             // 
@@ -787,12 +794,12 @@
             // 
             // l108
             // 
-            this.l108.BackColor = System.Drawing.Color.Red;
+            this.l108.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l108.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l108.Location = new System.Drawing.Point(403, 338);
+            this.l108.Location = new System.Drawing.Point(411, 338);
             this.l108.Margin = new System.Windows.Forms.Padding(0);
             this.l108.Name = "l108";
-            this.l108.Size = new System.Drawing.Size(24, 73);
+            this.l108.Size = new System.Drawing.Size(16, 73);
             this.l108.TabIndex = 66;
             // 
             // panel13
@@ -848,7 +855,8 @@
             this.lb109.Name = "lb109";
             this.lb109.Size = new System.Drawing.Size(49, 17);
             this.lb109.TabIndex = 3;
-            this.lb109.Text = "Suit";
+            this.lb109.Text = "  Suit";
+            this.lb109.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label18
             // 
@@ -860,17 +868,17 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(42, 13);
             this.label18.TabIndex = 3;
-            this.label18.Text = "109";
+            this.label18.Text = "  109";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // l109
             // 
-            this.l109.BackColor = System.Drawing.Color.Red;
+            this.l109.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l109.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l109.Location = new System.Drawing.Point(254, 312);
+            this.l109.Location = new System.Drawing.Point(262, 312);
             this.l109.Margin = new System.Windows.Forms.Padding(0);
             this.l109.Name = "l109";
-            this.l109.Size = new System.Drawing.Size(24, 73);
+            this.l109.Size = new System.Drawing.Size(16, 73);
             this.l109.TabIndex = 63;
             // 
             // panel11
@@ -927,6 +935,7 @@
             this.lb110.Size = new System.Drawing.Size(49, 17);
             this.lb110.TabIndex = 3;
             this.lb110.Text = "Suit";
+            this.lb110.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
@@ -938,17 +947,17 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(42, 13);
             this.label15.TabIndex = 3;
-            this.label15.Text = "110";
+            this.label15.Text = "  110";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // l110
             // 
-            this.l110.BackColor = System.Drawing.Color.Red;
+            this.l110.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(54)))), ((int)(((byte)(22)))));
             this.l110.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.l110.Location = new System.Drawing.Point(115, 286);
+            this.l110.Location = new System.Drawing.Point(123, 286);
             this.l110.Margin = new System.Windows.Forms.Padding(0);
             this.l110.Name = "l110";
-            this.l110.Size = new System.Drawing.Size(24, 73);
+            this.l110.Size = new System.Drawing.Size(16, 73);
             this.l110.TabIndex = 60;
             // 
             // frmKat1

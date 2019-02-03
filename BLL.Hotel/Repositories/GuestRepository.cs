@@ -29,11 +29,11 @@ namespace BLL.Hotel.Repositories
 
         public List<Guest> GetAllGuest()
         {
-            return ent.Guests.OrderByDescending(x=>x.Id).ToList();
+            return ent.Guests.Where(x=>x.Status==true).OrderByDescending(x=>x.Id).ToList();
         }
         public Guest GetGuest()
         {
-            return ent.Guests.OrderByDescending(x => x.Id).FirstOrDefault();
+            return ent.Guests.Where(x => x.Status == true).OrderByDescending(x => x.Id).FirstOrDefault();
         }
         public List<Guest> GetGuest(int roomId, bool stat)
         {
@@ -153,7 +153,7 @@ namespace BLL.Hotel.Repositories
         }
         public List<Guest> GetGuestBySearch(string Ad,string Soyad,string Tc)
         {
-            return ent.Guests.Where(x => x.FirstName.StartsWith(Ad) && x.LastName.StartsWith(Soyad) && x.IdentificationNo.StartsWith(Tc)).ToList();
+            return ent.Guests.Where(x => x.FirstName.StartsWith(Ad) && x.LastName.StartsWith(Soyad) && x.IdentificationNo.StartsWith(Tc)&& x.Status==true).ToList();
         }
     }
 }

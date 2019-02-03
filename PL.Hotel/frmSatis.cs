@@ -69,6 +69,7 @@ namespace PL.Hotel
         private void btnOdaSec_Click(object sender, EventArgs e)
         {
             frmOdaSec frm = new frmOdaSec();
+            frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog();
             TimeSpan fark = Cikis - Giris;
             int gunsayisi = fark.Days;
