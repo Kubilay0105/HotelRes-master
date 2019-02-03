@@ -70,7 +70,7 @@ namespace BLL.Hotel.Repositories
 
         public List<Personnel> GetPersonnels()
         {
-            return ent.Personnel.ToList();
+            return ent.Personnel.Where(x=>x.Status==true).ToList();
         }
 
         

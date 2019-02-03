@@ -142,5 +142,11 @@ namespace PL.Hotel
             frmMisafirler frm = new frmMisafirler();
             FormAc(frm);
         }
+
+        private void btnRezervasyon_Click(object sender, EventArgs e)
+        {
+            frmRezervasyon frm = new frmRezervasyon();
+            FormAc(frm);
+        }
     }
 }

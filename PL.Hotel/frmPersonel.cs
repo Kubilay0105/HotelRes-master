@@ -153,9 +153,10 @@ namespace PL.Hotel
         }
         private void Temizle()
         {
-            foreach (TextBox item in this.Controls)
+            foreach (Control item in this.Controls)
             {
-                item.Clear();
+                if(item is TextBox)
+                     item.Text="";
             }
             mtxtTel.Clear();
         }

@@ -36,6 +36,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pnlLeftMenu = new System.Windows.Forms.Panel();
+            this.btnRezervasyon = new System.Windows.Forms.Button();
             this.btnKasa = new System.Windows.Forms.Button();
             this.btnExtra = new System.Windows.Forms.Button();
             this.btnMisafirler = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlLeftMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -142,7 +142,7 @@
             // pnlLeftMenu
             // 
             this.pnlLeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.pnlLeftMenu.Controls.Add(this.button1);
+            this.pnlLeftMenu.Controls.Add(this.btnRezervasyon);
             this.pnlLeftMenu.Controls.Add(this.btnKasa);
             this.pnlLeftMenu.Controls.Add(this.btnExtra);
             this.pnlLeftMenu.Controls.Add(this.btnMisafirler);
@@ -157,6 +157,28 @@
             this.pnlLeftMenu.Name = "pnlLeftMenu";
             this.pnlLeftMenu.Size = new System.Drawing.Size(188, 550);
             this.pnlLeftMenu.TabIndex = 1;
+            // 
+            // btnRezervasyon
+            // 
+            this.btnRezervasyon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRezervasyon.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnRezervasyon.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRezervasyon.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRezervasyon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRezervasyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRezervasyon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRezervasyon.Image = ((System.Drawing.Image)(resources.GetObject("btnRezervasyon.Image")));
+            this.btnRezervasyon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRezervasyon.Location = new System.Drawing.Point(0, 378);
+            this.btnRezervasyon.Name = "btnRezervasyon";
+            this.btnRezervasyon.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRezervasyon.Size = new System.Drawing.Size(188, 48);
+            this.btnRezervasyon.TabIndex = 29;
+            this.btnRezervasyon.Text = "   Rezervasyonlar";
+            this.btnRezervasyon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRezervasyon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRezervasyon.UseVisualStyleBackColor = true;
+            this.btnRezervasyon.Click += new System.EventHandler(this.btnRezervasyon_Click);
             // 
             // btnKasa
             // 
@@ -533,27 +555,6 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 378);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(188, 48);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "   Kasa";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // frmOtelAnasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,6 +622,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblTarih;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRezervasyon;
     }
 }
