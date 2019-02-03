@@ -148,5 +148,11 @@ namespace PL.Hotel
             frmRezervasyon frm = new frmRezervasyon();
             FormAc(frm);
         }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            frmCheckOut frm = new frmCheckOut();
+            FormAc(frm);
+        }
     }
 }

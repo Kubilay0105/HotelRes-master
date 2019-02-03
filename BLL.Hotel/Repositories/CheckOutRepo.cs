@@ -10,15 +10,18 @@ namespace BLL.Hotel.Repositories
     public class CheckOutRepo
     {
         OtelResContext ent = new OtelResContext();
-        public bool NormalCheckOut(int GId)
+        public bool NormalCheckOut(int GId,int RId)
         {
             using (var trans = ent.Database.BeginTransaction())
             {
                 bool sonuc = false;
                 try
                 {
-                    Guest gst = ent.Guests.Where(x => x.Id == GId).FirstOrDefault();//
-                    gst.Status = false;
+                    List<Guest> glist = ent.Guests.Where(x => x.RoomId == RId && x.Status == true).ToList();
+                    foreach (Guest ig in glist)
+                    {
+                        ig.Status = false;
+                    }
                     ent.SaveChanges();
 
                     List<GuestTransaction> gt = ent.GuestTransactions.Where(x => x.GuestId == GId).ToList();

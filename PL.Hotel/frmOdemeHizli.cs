@@ -24,7 +24,9 @@ namespace PL.Hotel
         public int GId { get; set; }
         private void frmOdemeHizli_Load(object sender, EventArgs e)
         {
+            cbGelirTurleri.DataSource = Tr.GetTransTypeByDefin("Gelir");
             txtTcNo.Text = Tc;
+
         }
 
         private void btnOdemeYap_Click(object sender, EventArgs e)
@@ -53,5 +55,7 @@ namespace PL.Hotel
             }
             else MessageBox.Show("Ödeme işleminiz başarısız.", "İşlem gerçekleşmedi.");
         }
+
+        
     }
 }

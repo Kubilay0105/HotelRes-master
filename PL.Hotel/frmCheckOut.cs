@@ -25,7 +25,7 @@ namespace PL.Hotel
         GuestTransRepository gtr = new GuestTransRepository();
         CheckOutRepo Cr = new CheckOutRepo();
         string TcKimlikNo;
-        int GId;
+        int GId,RId;
         Font fntBaslik = new Font("Times New Roman", 16, FontStyle.Bold);
         Font fntIcerik = new Font("Times New Roman", 12, FontStyle.Regular);
         SolidBrush sb = new SolidBrush(Color.Black);
@@ -55,7 +55,7 @@ namespace PL.Hotel
             if (Convert.ToDecimal(txtKalanBorc.Text) == 0)
             {
 
-                if (Cr.NormalCheckOut(GId))
+                if (Cr.NormalCheckOut(GId,RId))
                 {
                     MessageBox.Show("Çıkış işlemi tamamlandı");
 
@@ -86,6 +86,7 @@ namespace PL.Hotel
             {
                 Guest gst = gr.GetGuestByTC(txtTcNo.Text);
                 GId = gst.Id;
+                RId = gst.RoomId;
                 if (gst == null)
                 {
                     MessageBox.Show("Bu Tc Kimlik No'ya sahip birisi bulunamadı.");

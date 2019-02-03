@@ -36,6 +36,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pnlLeftMenu = new System.Windows.Forms.Panel();
+            this.btnCheckOut = new System.Windows.Forms.Button();
             this.btnRezervasyon = new System.Windows.Forms.Button();
             this.btnKasa = new System.Windows.Forms.Button();
             this.btnExtra = new System.Windows.Forms.Button();
@@ -142,6 +143,7 @@
             // pnlLeftMenu
             // 
             this.pnlLeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.pnlLeftMenu.Controls.Add(this.btnCheckOut);
             this.pnlLeftMenu.Controls.Add(this.btnRezervasyon);
             this.pnlLeftMenu.Controls.Add(this.btnKasa);
             this.pnlLeftMenu.Controls.Add(this.btnExtra);
@@ -157,6 +159,28 @@
             this.pnlLeftMenu.Name = "pnlLeftMenu";
             this.pnlLeftMenu.Size = new System.Drawing.Size(188, 550);
             this.pnlLeftMenu.TabIndex = 1;
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCheckOut.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnCheckOut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCheckOut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCheckOut.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckOut.Image")));
+            this.btnCheckOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckOut.Location = new System.Drawing.Point(0, 426);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnCheckOut.Size = new System.Drawing.Size(188, 48);
+            this.btnCheckOut.TabIndex = 30;
+            this.btnCheckOut.Text = "   Çıkış İşlemleri";
+            this.btnCheckOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // btnRezervasyon
             // 
@@ -623,5 +647,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblTarih;
         private System.Windows.Forms.Button btnRezervasyon;
+        private System.Windows.Forms.Button btnCheckOut;
     }
 }
