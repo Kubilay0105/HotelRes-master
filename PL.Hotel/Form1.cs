@@ -47,6 +47,7 @@ namespace PL.Hotel
                 {
                     General.PersonelAdi = item.PersonName;
                     General.PersonelId = item.Id;
+                    General.PersonelSoyadi = item.PersonSurname;
                 }
 
                 frm.Show();

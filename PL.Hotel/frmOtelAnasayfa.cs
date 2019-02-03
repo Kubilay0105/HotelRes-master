@@ -71,6 +71,7 @@ namespace PL.Hotel
         {
             frmOdalar frm = new frmOdalar();
             FormAc(frm);
+            
         }
 
         private void frmOtelAnasayfa_Load(object sender, EventArgs e)
@@ -79,7 +80,8 @@ namespace PL.Hotel
             this.Size = screen.WorkingArea.Size;
             this.Location = Point.Empty;
             timer3.Start();
-            lblTarih.Text = DateTime.Now.Date.ToShortDateString() + DateTime.Today.DayOfWeek.ToString();
+            lblPerson.Text = General.PersonelAdi + "  " + General.PersonelSoyadi;
+            lblTarih.Text = DateTime.Now.Date.ToShortDateString() + "  "+ DateTime.Today.DayOfWeek.ToString();
             lblDoluOda.Text = Rp.FullRoomsCount(DateTime.Now).ToString();
             lblBosOda.Text = (30 - Convert.ToInt32(lblDoluOda.Text)).ToString();
             lblCheckIn.Text = Rp.CheckInCount(DateTime.Now).ToString();

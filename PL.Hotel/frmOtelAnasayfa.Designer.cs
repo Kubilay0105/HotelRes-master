@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOtelAnasayfa));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnMenuAc = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPerson = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pnlLeftMenu = new System.Windows.Forms.Panel();
@@ -49,6 +49,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblSaat = new System.Windows.Forms.Label();
             this.lblTarih = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblBosOda = new System.Windows.Forms.Label();
@@ -65,10 +66,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.lblSaat = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlLeftMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,7 +86,7 @@
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.pnlHeader.Controls.Add(this.btnMenuAc);
-            this.pnlHeader.Controls.Add(this.label1);
+            this.pnlHeader.Controls.Add(this.lblPerson);
             this.pnlHeader.Controls.Add(this.button8);
             this.pnlHeader.Controls.Add(this.button3);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -103,16 +107,16 @@
             this.btnMenuAc.TabIndex = 4;
             this.btnMenuAc.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblPerson
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(1016, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Admin";
+            this.lblPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPerson.AutoSize = true;
+            this.lblPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPerson.Location = new System.Drawing.Point(934, 30);
+            this.lblPerson.Name = "lblPerson";
+            this.lblPerson.Size = new System.Drawing.Size(47, 17);
+            this.lblPerson.TabIndex = 3;
+            this.lblPerson.Text = "Admin";
             // 
             // button8
             // 
@@ -120,7 +124,7 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(974, 22);
+            this.button8.Location = new System.Drawing.Point(888, 22);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(36, 35);
@@ -394,6 +398,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 613);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -414,12 +421,21 @@
             this.panel4.Size = new System.Drawing.Size(912, 54);
             this.panel4.TabIndex = 3;
             // 
+            // lblSaat
+            // 
+            this.lblSaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSaat.Location = new System.Drawing.Point(180, 5);
+            this.lblSaat.Name = "lblSaat";
+            this.lblSaat.Size = new System.Drawing.Size(120, 41);
+            this.lblSaat.TabIndex = 4;
+            this.lblSaat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblTarih
             // 
             this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTarih.Location = new System.Drawing.Point(3, 5);
             this.lblTarih.Name = "lblTarih";
-            this.lblTarih.Size = new System.Drawing.Size(222, 41);
+            this.lblTarih.Size = new System.Drawing.Size(171, 41);
             this.lblTarih.TabIndex = 3;
             this.lblTarih.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -581,14 +597,29 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // lblSaat
+            // label1
             // 
-            this.lblSaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSaat.Location = new System.Drawing.Point(231, 6);
-            this.lblSaat.Name = "lblSaat";
-            this.lblSaat.Size = new System.Drawing.Size(120, 41);
-            this.lblSaat.TabIndex = 4;
-            this.lblSaat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.Location = new System.Drawing.Point(12, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 23);
+            this.label1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(82, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 23);
+            this.label2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(47, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 23);
+            this.label3.TabIndex = 2;
             // 
             // frmOtelAnasayfa
             // 
@@ -611,6 +642,7 @@
             this.pnlHeader.PerformLayout();
             this.pnlLeftMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -632,7 +664,7 @@
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPerson;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Panel panel2;
@@ -660,5 +692,8 @@
         private System.Windows.Forms.Button btnRezervasyon;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Label lblSaat;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
