@@ -216,7 +216,6 @@
             this.btnRezervasyon.Size = new System.Drawing.Size(188, 48);
             this.btnRezervasyon.TabIndex = 29;
             this.btnRezervasyon.Text = "   Rezervasyonlar";
-            this.btnRezervasyon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRezervasyon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRezervasyon.UseVisualStyleBackColor = true;
             this.btnRezervasyon.Click += new System.EventHandler(this.btnRezervasyon_Click);

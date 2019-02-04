@@ -30,22 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRaporlar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlContent = new System.Windows.Forms.Panel();
             this.tsRaporlar = new System.Windows.Forms.ToolStrip();
             this.tsGunlukKasaHareketleri = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsMusteriHareketler = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.pnlContent = new System.Windows.Forms.Panel();
+            this.tsPersonel = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.tsRaporlar.SuspendLayout();
             this.SuspendLayout();
@@ -60,14 +51,6 @@
             this.panel1.Size = new System.Drawing.Size(987, 51);
             this.panel1.TabIndex = 0;
             // 
-            // pnlContent
-            // 
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(0, 51);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(987, 531);
-            this.pnlContent.TabIndex = 1;
-            // 
             // tsRaporlar
             // 
             this.tsRaporlar.AutoSize = false;
@@ -77,16 +60,7 @@
             this.toolStripSeparator1,
             this.tsMusteriHareketler,
             this.toolStripSeparator2,
-            this.toolStripButton3,
-            this.toolStripSeparator3,
-            this.toolStripButton4,
-            this.toolStripSeparator4,
-            this.toolStripButton5,
-            this.toolStripSeparator5,
-            this.toolStripButton6,
-            this.toolStripSeparator6,
-            this.toolStripButton7,
-            this.toolStripSeparator7});
+            this.tsPersonel});
             this.tsRaporlar.Location = new System.Drawing.Point(0, 0);
             this.tsRaporlar.Name = "tsRaporlar";
             this.tsRaporlar.Size = new System.Drawing.Size(987, 48);
@@ -99,9 +73,10 @@
             this.tsGunlukKasaHareketleri.Image = ((System.Drawing.Image)(resources.GetObject("tsGunlukKasaHareketleri.Image")));
             this.tsGunlukKasaHareketleri.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsGunlukKasaHareketleri.Name = "tsGunlukKasaHareketleri";
-            this.tsGunlukKasaHareketleri.Size = new System.Drawing.Size(117, 45);
-            this.tsGunlukKasaHareketleri.Text = "Günlük Kasa Raporu";
+            this.tsGunlukKasaHareketleri.Size = new System.Drawing.Size(95, 45);
+            this.tsGunlukKasaHareketleri.Text = "Kasa Hareketleri";
             this.tsGunlukKasaHareketleri.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsGunlukKasaHareketleri.Click += new System.EventHandler(this.tsGunlukKasaHareketleri_Click);
             // 
             // toolStripSeparator1
             // 
@@ -117,86 +92,31 @@
             this.tsMusteriHareketler.Size = new System.Drawing.Size(108, 45);
             this.tsMusteriHareketler.Text = "Müşteri Hareketler";
             this.tsMusteriHareketler.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsMusteriHareketler.Click += new System.EventHandler(this.tsMusteriHareketler_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 48);
             // 
-            // toolStripButton3
+            // pnlContent
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(98, 45);
-            this.toolStripButton3.Text = "toolStripButton1";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(0, 51);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(987, 531);
+            this.pnlContent.TabIndex = 1;
             // 
-            // toolStripSeparator3
+            // tsPersonel
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 48);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(98, 45);
-            this.toolStripButton4.Text = "toolStripButton1";
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 48);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(98, 45);
-            this.toolStripButton5.Text = "toolStripButton1";
-            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 48);
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(98, 45);
-            this.toolStripButton6.Text = "toolStripButton1";
-            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 48);
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(98, 45);
-            this.toolStripButton7.Text = "toolStripButton1";
-            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 48);
+            this.tsPersonel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsPersonel.Image = ((System.Drawing.Image)(resources.GetObject("tsPersonel.Image")));
+            this.tsPersonel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsPersonel.Name = "tsPersonel";
+            this.tsPersonel.Size = new System.Drawing.Size(99, 45);
+            this.tsPersonel.Text = "Personel Satışları";
+            this.tsPersonel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsPersonel.Click += new System.EventHandler(this.tsPersonel_Click);
             // 
             // frmRaporlar
             // 
@@ -222,16 +142,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tsMusteriHareketler;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.Panel pnlContent;
+        private System.Windows.Forms.ToolStripButton tsPersonel;
     }
 }

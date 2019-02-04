@@ -30,6 +30,7 @@ namespace BLL.Hotel.Repositories
                                 orderby g.Id descending
                                 select g).FirstOrDefault();
                     gt.Status = false;
+                   
                     gt.Debt = 0;
                     ent.SaveChanges();
                     trans.Commit();

@@ -83,7 +83,7 @@ namespace PL.Hotel
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            if (txtAdi.Text.Trim() == "" || txtSoyadi.Text == "" || txtTc.Text == "")
+            if (txtAdi.Text.Trim() == "" || txtSoyadi.Text.Trim() == "" || txtTc.Text.Trim() == "" && txtTc.Text.Trim().Length==11  )
             {
                 MessageBox.Show("Zorunlu alanlar girilmedi.", "Dikkat Eksik Bilgi!");
             }

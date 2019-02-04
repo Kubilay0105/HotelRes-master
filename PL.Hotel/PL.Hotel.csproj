@@ -38,20 +38,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common">
-      <HintPath>..\..\..\..\.nuget\packages\microsoft.reportingservices.reportviewercontrol.winforms\150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization">
-      <HintPath>..\..\..\..\.nuget\packages\microsoft.reportingservices.reportviewercontrol.winforms\150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design">
-      <HintPath>..\..\..\..\.nuget\packages\microsoft.reportingservices.reportviewercontrol.winforms\150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel">
-      <HintPath>..\..\..\..\.nuget\packages\microsoft.reportingservices.reportviewercontrol.winforms\150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms">
-      <HintPath>..\..\..\wf-ADONET-OKUL\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -72,6 +76,24 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\frmPERSONELLLL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\frmPERSONELLLL.Designer.cs">
+      <DependentUpon>frmPERSONELLLL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\frmrprYıllık.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\frmrprYıllık.Designer.cs">
+      <DependentUpon>frmrprYıllık.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCheckOut.cs">
       <SubType>Form</SubType>
@@ -149,11 +171,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelResaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Hr1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Hr1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Odalar\frmKat1.cs">
       <SubType>Form</SubType>
@@ -277,6 +294,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raporlar\frmPersonelStis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\frmPersonelStis.Designer.cs">
+      <DependentUpon>frmPersonelStis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Raporlar\GunlukKasa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,8 +312,18 @@
     <Compile Include="Raporlar\rprMusteriHareket.Designer.cs">
       <DependentUpon>rprMusteriHareket.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\frmPERSONELLLL.resx">
+      <DependentUpon>frmPERSONELLLL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\frmrprYıllık.resx">
+      <DependentUpon>frmrprYıllık.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheckOutErken.resx">
       <DependentUpon>frmCheckOutErken.cs</DependentUpon>
@@ -397,14 +430,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Raporlar\frmPersonelStis.resx">
+      <DependentUpon>frmPersonelStis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Raporlar\GunlukKasa.resx">
       <DependentUpon>GunlukKasa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Raporlar\rprMusteriHareket.resx">
       <DependentUpon>rprMusteriHareket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\rprYillikRaporllar.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="rprWMusteriHareket.rdlc" />
     <None Include="HotelResaDataSet.xsc">
       <DependentUpon>HotelResaDataSet.xsd</DependentUpon>
     </None>
@@ -415,17 +454,6 @@
     </None>
     <None Include="HotelResaDataSet.xss">
       <DependentUpon>HotelResaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Hr1.xsc">
-      <DependentUpon>Hr1.xsd</DependentUpon>
-    </None>
-    <None Include="Hr1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Hr1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Hr1.xss">
-      <DependentUpon>Hr1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -463,6 +491,19 @@
     <Content Include="Resources\icons8-turkish-lira-20.png" />
     <Content Include="Resources\icons8-turkish-lira-35.png" />
     <Content Include="Resources\icons8-turkish-lira-filled-35-.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

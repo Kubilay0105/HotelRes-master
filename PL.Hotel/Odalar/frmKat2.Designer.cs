@@ -117,6 +117,7 @@
             // 
             // pnlKat2
             // 
+            this.pnlKat2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlKat2.BackgroundImage")));
             this.pnlKat2.Controls.Add(this.panel9);
             this.pnlKat2.Controls.Add(this.pnl105);
             this.pnlKat2.Controls.Add(this.l205);

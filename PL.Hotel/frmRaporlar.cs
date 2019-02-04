@@ -16,5 +16,38 @@ namespace PL.Hotel
         {
             InitializeComponent();
         }
+
+        private void tsGunlukKasaHareketleri_Click(object sender, EventArgs e)
+        {
+            rpr1 frm = new rpr1();
+            FormAc(frm);
+        }
+        private void FormAc(Form AF)
+        {
+            foreach (Control F in this.pnlContent.Controls)
+            {
+                if (F is Form)
+                {
+                    Form MF = (Form)F;
+                    MF.Close();
+                }
+            }
+            AF.TopLevel = false;
+            this.pnlContent.Controls.Add(AF);
+            AF.Dock = DockStyle.Fill;
+            AF.Show();
+        }
+
+        private void tsMusteriHareketler_Click(object sender, EventArgs e)
+        {
+            frmrprYıllık frm = new frmrprYıllık();
+            FormAc(frm);
+        }
+
+        private void tsPersonel_Click(object sender, EventArgs e)
+        {
+            frmPERSONELLLL frm = new frmPERSONELLLL();
+            FormAc(frm);
+        }
     }
 }

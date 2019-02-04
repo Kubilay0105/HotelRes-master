@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnOdaSec = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -60,7 +61,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.btnOnayla = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,6 +76,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 58);
             this.panel1.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(327, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(253, 37);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Oda Satış";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -349,6 +360,7 @@
             this.txtTc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTc.Location = new System.Drawing.Point(108, 90);
+            this.txtTc.MaxLength = 11;
             this.txtTc.Name = "txtTc";
             this.txtTc.Size = new System.Drawing.Size(176, 20);
             this.txtTc.TabIndex = 5;
@@ -413,17 +425,6 @@
             this.btnOnayla.Text = "Onayla";
             this.btnOnayla.UseVisualStyleBackColor = true;
             this.btnOnayla.Click += new System.EventHandler(this.btnOnayla_Click);
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(327, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(253, 37);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Oda Satış";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmSatis
             // 
