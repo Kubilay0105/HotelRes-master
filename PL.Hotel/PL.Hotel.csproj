@@ -38,6 +38,21 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common">
+      <HintPath>..\..\..\..\.nuget\packages\microsoft.reportingservices.reportviewercontrol.winforms\150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization">
+      <HintPath>..\..\..\..\.nuget\packages\microsoft.reportingservices.reportviewercontrol.winforms\150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design">
+      <HintPath>..\..\..\..\.nuget\packages\microsoft.reportingservices.reportviewercontrol.winforms\150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <HintPath>..\..\..\..\.nuget\packages\microsoft.reportingservices.reportviewercontrol.winforms\150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\..\wf-ADONET-OKUL\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -129,6 +144,16 @@
     </Compile>
     <Compile Include="frmOdemeMusteriHareketleri.Designer.cs">
       <DependentUpon>frmOdemeMusteriHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelResaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelResaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Hr1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hr1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Odalar\frmKat1.cs">
       <SubType>Form</SubType>
@@ -252,6 +277,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raporlar\GunlukKasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\GunlukKasa.Designer.cs">
+      <DependentUpon>GunlukKasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\rprMusteriHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\rprMusteriHareket.Designer.cs">
+      <DependentUpon>rprMusteriHareket.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -360,6 +397,36 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Raporlar\GunlukKasa.resx">
+      <DependentUpon>GunlukKasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\rprMusteriHareket.resx">
+      <DependentUpon>rprMusteriHareket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <None Include="HotelResaDataSet.xsc">
+      <DependentUpon>HotelResaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HotelResaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelResaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelResaDataSet.xss">
+      <DependentUpon>HotelResaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Hr1.xsc">
+      <DependentUpon>Hr1.xsd</DependentUpon>
+    </None>
+    <None Include="Hr1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hr1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hr1.xss">
+      <DependentUpon>Hr1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -151,7 +151,7 @@ namespace PL.Hotel
             if (Pp.AdminControl(General.PersonelId))
             {
                 frmRaporlar frm = new frmRaporlar();
-                FormAc(frm);
+                frm.ShowDialog();
             }
             else MessageBox.Show("Buraya Giriş Yetkiniz Bulunmamaktadır.");
             
