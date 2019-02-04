@@ -71,10 +71,10 @@ namespace PL.Hotel
             frmOdaSec frm = new frmOdaSec();
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog();
-            TimeSpan fark = Cikis - Giris;
+            TimeSpan fark = Cikis.Date - Giris.Date;
             int gunsayisi = fark.Days;
             decimal OdaFiyat = Rp.GetRoomPrice(OdaNo);
-            ToplamTutar = ((gunsayisi+1) * OdaFiyat);
+            ToplamTutar = (gunsayisi * OdaFiyat);
             txtToplamTutar.Text = ToplamTutar.ToString();
             txtOdaNo.Text = OdaNo;
             txtGirisTarihi.Text = Giris.ToShortDateString();
@@ -101,6 +101,7 @@ namespace PL.Hotel
             gue.Email = txtEmail.Text;
             if (Giris.Date == DateTime.Now.Date) { gue.Status = true; }
             else { gue.Status = false; }
+            gue.Deleted = false;
             if (Gp.AddGuest(gue))
             {
                 Guest gst = Gp.GetGuest();

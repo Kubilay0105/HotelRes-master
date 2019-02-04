@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOtelAnasayfa));
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnMenuAc = new System.Windows.Forms.Button();
             this.lblPerson = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlLeftMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -97,6 +97,16 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1100, 63);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Segoe Script", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(85, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(681, 36);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "WELCOME TO THE HOTEL CALIFORNIA";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMenuAc
             // 
@@ -171,8 +181,8 @@
             // 
             this.btnCheckOut.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCheckOut.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnCheckOut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCheckOut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCheckOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnCheckOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -193,8 +203,8 @@
             // 
             this.btnRezervasyon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRezervasyon.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnRezervasyon.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnRezervasyon.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRezervasyon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnRezervasyon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.btnRezervasyon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRezervasyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnRezervasyon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -215,8 +225,8 @@
             // 
             this.btnKasa.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKasa.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnKasa.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnKasa.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnKasa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnKasa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.btnKasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKasa.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -237,8 +247,8 @@
             // 
             this.btnExtra.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnExtra.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnExtra.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnExtra.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnExtra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnExtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.btnExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExtra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -259,8 +269,8 @@
             // 
             this.btnMisafirler.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMisafirler.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnMisafirler.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnMisafirler.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnMisafirler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnMisafirler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.btnMisafirler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMisafirler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMisafirler.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -282,8 +292,8 @@
             // 
             this.btnOdemeler.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOdemeler.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnOdemeler.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnOdemeler.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnOdemeler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnOdemeler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.btnOdemeler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdemeler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeler.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -305,8 +315,8 @@
             // 
             this.btnYonetim.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnYonetim.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnYonetim.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnYonetim.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnYonetim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnYonetim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.btnYonetim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYonetim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnYonetim.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -328,8 +338,8 @@
             // 
             this.frmSatisIslemleri.Dock = System.Windows.Forms.DockStyle.Top;
             this.frmSatisIslemleri.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.frmSatisIslemleri.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.frmSatisIslemleri.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.frmSatisIslemleri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.frmSatisIslemleri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.frmSatisIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.frmSatisIslemleri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.frmSatisIslemleri.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -351,8 +361,8 @@
             // 
             this.btnOdalar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOdalar.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btnOdalar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnOdalar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnOdalar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnOdalar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(210)))), ((int)(((byte)(125)))));
             this.btnOdalar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdalar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -622,16 +632,6 @@
             // 
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Segoe Script", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(85, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(681, 36);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "WELCOME TO THE HOTEL CALIFORNIA";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmOtelAnasayfa
             // 

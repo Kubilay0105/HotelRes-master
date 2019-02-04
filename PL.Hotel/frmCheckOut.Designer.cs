@@ -111,6 +111,7 @@
             this.btnCheckout.TabIndex = 112;
             this.btnCheckout.Text = "Check-Out";
             this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // btnSorgula
             // 

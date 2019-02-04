@@ -22,6 +22,7 @@ namespace PL.Hotel
         SaleRepository Sr = new SaleRepository();
         ExtraRepository Er = new ExtraRepository();
         GuestRepository Gr = new GuestRepository();
+        GuestTransRepository Gtr = new GuestTransRepository();
         ExtraType ET = new ExtraType();
         int RId,GId,ExtraTypeId;
         private void frmExtraIslemler_Load(object sender, EventArgs e)
@@ -160,8 +161,12 @@ namespace PL.Hotel
 
                 if (Er.UpdateExtraTrans(ext))
                 {
-                    MessageBox.Show("Eklendi");
-                    GridDuzenle2(Er.GetExtraTransactions(GId));
+                    if (Gtr.UpdateGTransandExtra(ext))
+                    {
+                        MessageBox.Show("Düzenleme İşlemi Başarıyla Gerçekleşti.");
+                        GridDuzenle2(Er.GetExtraTransactions(GId));
+                    }
+                    else MessageBox.Show("Düzenleme yapılamadı.");
 
                 }
                 else MessageBox.Show("Düzenleme İşlemi Başarısız oldu.");

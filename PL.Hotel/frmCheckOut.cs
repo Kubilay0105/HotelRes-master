@@ -32,7 +32,7 @@ namespace PL.Hotel
         SolidBrush sb = new SolidBrush(Color.Black);
         private void frmCheckOut_Load(object sender, EventArgs e)
         {
-
+            btnOnayla2.Enabled = false;
         }
 
         private void btnBorcSorgula_Click(object sender, EventArgs e)
@@ -129,30 +129,37 @@ namespace PL.Hotel
             btnCikisOnayla.Enabled = false;
             btnOnayla2.Enabled = true;
             decimal KonaklamaOdenen=0,ExtraOdenen=0,ExtraHarcanan=0;
-
-            Sale sl =sr.GetSaleByGuest(GId);
-            TimeSpan fark = DateTime.Now.Date - sl.CheckIn.Date;
-            int GunSayisi = fark.Days;
-            decimal OdaFiyat = rr.GetRoomPrice(rr.GetRoomNo(RId));
-            //Ödenmesi gereken Konaklama Fiyatı
-            GerekliOdeme = (GunSayisi+1) * OdaFiyat;
-            foreach (DataGridViewRow dr in dgvExtralar.Rows)
+            if (GId == 0)
             {
-                if(dr.Cells[4].Value.ToString()=="Konaklama Ücreti")
-                {
-                    KonaklamaOdenen+= Convert.ToDecimal(dr.Cells[6].Value);
-                }
+                MessageBox.Show("Lütfen Çıkış yapacak müşteri bilgilerini giriniz.");
             }
-            foreach (DataGridViewRow dr1 in dgvExtralar.Rows)
+            else
             {
-                if (dr1.Cells[4].Value.ToString() == "Extra Ücreti")
+                Sale sl = sr.GetSaleByGuest(GId);
+                TimeSpan fark = DateTime.Now.Date - sl.CheckIn.Date;
+                int GunSayisi = fark.Days;
+                decimal OdaFiyat = rr.GetRoomPrice(rr.GetRoomNo(RId));
+                //Ödenmesi gereken Konaklama Fiyatı
+                GerekliOdeme = (GunSayisi + 1) * OdaFiyat;
+                foreach (DataGridViewRow dr in dgvExtralar.Rows)
                 {
-                    ExtraHarcanan += Convert.ToDecimal(dr1.Cells[5]);
-                    ExtraOdenen += Convert.ToDecimal(dr1.Cells[6].Value);
+                    if (dr.Cells[4].Value.ToString() == "Konaklama Ücreti")
+                    {
+                        KonaklamaOdenen += Convert.ToDecimal(dr.Cells[6].Value);
+                    }
                 }
+                foreach (DataGridViewRow dr1 in dgvExtralar.Rows)
+                {
+                    if (dr1.Cells[4].Value.ToString() == "Extra Ücreti")
+                    {
+                        ExtraHarcanan += Convert.ToDecimal(dr1.Cells[5].Value);
+                        ExtraOdenen += Convert.ToDecimal(dr1.Cells[6].Value);
+                    }
+                }
+                txtKonaklamaBorc.Text = (GerekliOdeme - KonaklamaOdenen).ToString();
+                txtExtraBorc.Text = (ExtraHarcanan - ExtraOdenen).ToString();
             }
-            txtKonaklamaBorc.Text = (GerekliOdeme-KonaklamaOdenen).ToString();
-            txtExtraBorc.Text=(ExtraHarcanan-ExtraOdenen).ToString();
+            
         }
 
         private void btnOnayla2_Click(object sender, EventArgs e)
@@ -166,6 +173,12 @@ namespace PL.Hotel
                 else MessageBox.Show("Ödeme Gerçekleşmedi");
             }
             else MessageBox.Show("Ödenmemiş borç bulunmaktadır.");
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            btnOnayla2.Enabled = false;
+            btnCikisOnayla.Enabled = true;
         }
         #region FaturaYazdır        
 

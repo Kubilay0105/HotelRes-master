@@ -17,7 +17,7 @@ namespace PL.Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new rprMusteriHareket());
+            Application.Run(new Form1());
         }
     }
 }

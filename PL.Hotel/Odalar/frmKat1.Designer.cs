@@ -207,9 +207,9 @@
             this.lb105.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb105.Location = new System.Drawing.Point(8, 14);
             this.lb105.Name = "lb105";
-            this.lb105.Size = new System.Drawing.Size(49, 17);
+            this.lb105.Size = new System.Drawing.Size(63, 17);
             this.lb105.TabIndex = 3;
-            this.lb105.Text = " Suit";
+            this.lb105.Text = "Standart";
             this.lb105.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -284,11 +284,11 @@
             this.lb104.BackColor = System.Drawing.Color.Transparent;
             this.lb104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lb104.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb104.Location = new System.Drawing.Point(15, 17);
+            this.lb104.Location = new System.Drawing.Point(10, 17);
             this.lb104.Name = "lb104";
-            this.lb104.Size = new System.Drawing.Size(49, 17);
+            this.lb104.Size = new System.Drawing.Size(54, 17);
             this.lb104.TabIndex = 3;
-            this.lb104.Text = "Suit";
+            this.lb104.Text = "Standart";
             this.lb104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -363,11 +363,11 @@
             this.lb103.BackColor = System.Drawing.Color.Transparent;
             this.lb103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lb103.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb103.Location = new System.Drawing.Point(16, 17);
+            this.lb103.Location = new System.Drawing.Point(16, 26);
             this.lb103.Name = "lb103";
             this.lb103.Size = new System.Drawing.Size(49, 17);
             this.lb103.TabIndex = 3;
-            this.lb103.Text = "Suit";
+            this.lb103.Text = "Double";
             this.lb103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl103
@@ -447,6 +447,7 @@
             this.lb102.Size = new System.Drawing.Size(49, 17);
             this.lb102.TabIndex = 3;
             this.lb102.Text = "Suit";
+            this.lb102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl102
             // 
@@ -520,11 +521,12 @@
             this.lb101.BackColor = System.Drawing.Color.Transparent;
             this.lb101.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lb101.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb101.Location = new System.Drawing.Point(23, 21);
+            this.lb101.Location = new System.Drawing.Point(9, 21);
             this.lb101.Name = "lb101";
-            this.lb101.Size = new System.Drawing.Size(49, 17);
+            this.lb101.Size = new System.Drawing.Size(63, 17);
             this.lb101.TabIndex = 3;
-            this.lb101.Text = "Suit";
+            this.lb101.Text = "Standart";
+            this.lb101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl101
             // 
@@ -774,9 +776,9 @@
             this.lb108.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb108.Location = new System.Drawing.Point(8, 17);
             this.lb108.Name = "lb108";
-            this.lb108.Size = new System.Drawing.Size(49, 17);
+            this.lb108.Size = new System.Drawing.Size(58, 17);
             this.lb108.TabIndex = 3;
-            this.lb108.Text = "   Suit";
+            this.lb108.Text = "Standart";
             this.lb108.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label21
@@ -934,7 +936,7 @@
             this.lb110.Name = "lb110";
             this.lb110.Size = new System.Drawing.Size(49, 17);
             this.lb110.TabIndex = 3;
-            this.lb110.Text = "Suit";
+            this.lb110.Text = "Double";
             this.lb110.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15

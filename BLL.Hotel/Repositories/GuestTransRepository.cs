@@ -38,15 +38,45 @@ namespace BLL.Hotel.Repositories
             throw new NotImplementedException();
         }
 
-        public bool DeleteGTrans(int ID)
+        public bool DeleteGTrans(int GuestID,DateTime Exdt)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            GuestTransaction degisen = (from gt in ent.GuestTransactions
+                                        where GuestID == gt.GuestId && Exdt == gt.Date
+                                        select gt).FirstOrDefault();
+            degisen.Status=false;
+            try
+            {
+                ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return Sonuc;
         }
 
-        public bool UpdateGTrans()
+        public bool UpdateGTransandExtra(ExtraTransactions Ex)
         {
-            throw new NotImplementedException();
-        }
+            bool Sonuc = false;
+            GuestTransaction degisen = (from gt in ent.GuestTransactions
+                                        where Ex.GuestId == gt.GuestId && Ex.TransactionDate == gt.Date
+                                        select gt).FirstOrDefault();
+            degisen.Debt = Ex.Sum;
+            try
+            {
+                ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return Sonuc;
+;        }
         public List<decimal> PaymentsByGuest(int GuestId)
         {
             List<Decimal> payments = new List<decimal>();

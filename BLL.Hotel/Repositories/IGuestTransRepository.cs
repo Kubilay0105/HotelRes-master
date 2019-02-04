@@ -10,9 +10,9 @@ namespace BLL.Hotel.Repositories
     public interface IGuestTransRepository
     {
         bool AddGTrans(GuestTransaction gt);
-        bool UpdateGTrans();
+        bool UpdateGTransandExtra(ExtraTransactions Ex);
         bool DeleteGTrans(GuestTransaction gt);
-        bool DeleteGTrans(int ID);
+        bool DeleteGTrans(int GuestID, DateTime Exdt);
         List<GuestTransaction> GetGTransByGuestId(int GId);
     }
 }
