@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(651, 295);
             this.Controls.Add(this.dgvHareketler);
             this.Name = "frmOdemeMusteriHareketleri";
-            this.Text = "frmOdemeMusteriHareketleri";
+            this.Text = "Müşteri Ödeme Hareketleri";
             this.Load += new System.EventHandler(this.frmOdemeMusteriHareketleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHareketler)).EndInit();
             this.ResumeLayout(false);

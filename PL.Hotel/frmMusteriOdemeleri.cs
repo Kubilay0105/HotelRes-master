@@ -26,21 +26,29 @@ namespace PL.Hotel
         int Gid;
         private void frmMusteriOdemeleri_Load(object sender, EventArgs e)
         {
-            dgvMusteriler.DataSource = Gr.GetAllGuest();
+            GridDuzenle(Gr.GetAllGuest());
             cbGelirTurleri.DataSource = Tr.GetTransTypeByDefin("Gelir");
         }
+        private void GridDuzenle(List<Guest> list)
+        {
+            dgvMusteriler.DataSource = list;
+            dgvMusteriler.Columns[0].Visible = false;
+            dgvMusteriler.Columns[5].Visible = false;
 
+            dgvMusteriler.Columns[6].Visible = false;
+            dgvMusteriler.Columns[11].Visible = false;
+        }
         private void dgvMusteriler_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Gid=Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
-            txtTcNo.Text = dgvMusteriler.SelectedRows[0].Cells[3].Value.ToString();
-            txtOdaNo.Text= Rr.GetRoomNo(Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[6].Value));
+            //Gid=Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
+            //txtTcNo.Text = dgvMusteriler.SelectedRows[0].Cells[3].Value.ToString();
+            //txtOdaNo.Text= Rr.GetRoomNo(Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[6].Value));
 
-            List<decimal> liste = Gtr.PaymentsByGuest(Gid);
+            //List<decimal> liste = Gtr.PaymentsByGuest(Gid);
 
-            txtBorc.Text = string.Format("{0:#,##0}", liste[0]);
-            txtKazanc.Text = string.Format("{0:#,##0}", liste[1]);
-            txtKalanBorc.Text = string.Format("{0:#,##0}", liste[2]);
+            //txtBorc.Text = string.Format("{0:#,##0}", liste[0]);
+            //txtKazanc.Text = string.Format("{0:#,##0}", liste[1]);
+            //txtKalanBorc.Text = string.Format("{0:#,##0}", liste[2]);
         }
 
         private void btnOdemeYap_Click(object sender, EventArgs e)
@@ -87,6 +95,37 @@ namespace PL.Hotel
             frmOdemeMusteriHareketleri frm = new frmOdemeMusteriHareketleri();
             frm.GId = GId;
             frm.ShowDialog();
+        }
+
+        private void txtAdi_TextChanged(object sender, EventArgs e)
+        {
+            GridDuzenle(Gr.GetGuestBySearch(txtAdi.Text, txtSoyad.Text, txtTc.Text));
+
+        }
+
+        private void txtSoyad_TextChanged(object sender, EventArgs e)
+        {
+            GridDuzenle(Gr.GetGuestBySearch(txtAdi.Text, txtSoyad.Text, txtTc.Text));
+
+        }
+
+        private void txtTc_TextChanged(object sender, EventArgs e)
+        {
+            GridDuzenle(Gr.GetGuestBySearch(txtAdi.Text, txtSoyad.Text, txtTc.Text));
+
+        }
+
+        private void dgvMusteriler_MouseClick(object sender, MouseEventArgs e)
+        {
+            Gid = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
+            txtTcNo.Text = dgvMusteriler.SelectedRows[0].Cells[3].Value.ToString();
+            txtOdaNo.Text = Rr.GetRoomNo(Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[6].Value));
+
+            List<decimal> liste = Gtr.PaymentsByGuest(Gid);
+
+            txtBorc.Text = string.Format("{0:#,##0}", liste[0]);
+            txtKazanc.Text = string.Format("{0:#,##0}", liste[1]);
+            txtKalanBorc.Text = string.Format("{0:#,##0}", liste[2]);
         }
     }
 }

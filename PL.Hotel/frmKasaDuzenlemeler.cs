@@ -22,22 +22,30 @@ namespace PL.Hotel
         PaymentsRepository Pr = new PaymentsRepository();
         int TtId;
         DateTime Tarih;
+        string def;
         
         private void frmKasaDuzenlemeler_Load(object sender, EventArgs e)
         {
             cbIslemTurleri.DataSource = Ttr.GetAllTransType();
             dgvKasaHareketler.DataSource = Pr.GetAllPayments();
+            cbIslemTurleri.SelectedIndex = 0;
         }
 
         private void cbIslemTurleri_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TransactionType Trans = (TransactionType)cbIslemTurleri.SelectedItem;
-            TtId = Trans.Id;
+            //TransactionType Trans = (TransactionType)cbIslemTurleri.SelectedItem;
+            //TtId = Trans.Id;
+            //def = Trans.Defin;
+            dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByTypeName(dtpTarih.Value, cbIslemTurleri.SelectedItem.ToString());
+            dgvKasaHareketler.Columns[0].Visible = false;
+
         }
 
         private void dtpTarih_ValueChanged(object sender, EventArgs e)
         {
-
+            dgvKasaHareketler.DataSource = Pr.GetAllPaymentsModelByTypeName(dtpTarih.Value, cbIslemTurleri.SelectedItem.ToString());
+            dgvKasaHareketler.Columns[0].Visible = false;
         }
+        
     }
 }

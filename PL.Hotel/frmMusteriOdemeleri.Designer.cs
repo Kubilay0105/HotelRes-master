@@ -51,6 +51,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtOdaNo = new System.Windows.Forms.TextBox();
             this.dgvMusteriler = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTc = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtAdi = new System.Windows.Forms.TextBox();
             this.pnlHeader.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,6 +95,12 @@
             // 
             // pnlContent
             // 
+            this.pnlContent.Controls.Add(this.label7);
+            this.pnlContent.Controls.Add(this.txtTc);
+            this.pnlContent.Controls.Add(this.label8);
+            this.pnlContent.Controls.Add(this.txtSoyad);
+            this.pnlContent.Controls.Add(this.label10);
+            this.pnlContent.Controls.Add(this.txtAdi);
             this.pnlContent.Controls.Add(this.groupBox2);
             this.pnlContent.Controls.Add(this.btnOdemeYap);
             this.pnlContent.Controls.Add(this.groupBox1);
@@ -107,7 +119,7 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txtKalanBorc);
-            this.groupBox2.Location = new System.Drawing.Point(25, 319);
+            this.groupBox2.Location = new System.Drawing.Point(37, 332);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(538, 68);
             this.groupBox2.TabIndex = 100;
@@ -283,13 +295,68 @@
             // 
             this.dgvMusteriler.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMusteriler.Location = new System.Drawing.Point(37, 31);
+            this.dgvMusteriler.Location = new System.Drawing.Point(37, 45);
             this.dgvMusteriler.Name = "dgvMusteriler";
             this.dgvMusteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMusteriler.Size = new System.Drawing.Size(680, 295);
+            this.dgvMusteriler.Size = new System.Drawing.Size(680, 281);
             this.dgvMusteriler.TabIndex = 2;
             this.dgvMusteriler.DoubleClick += new System.EventHandler(this.dgvMusteriler_DoubleClick);
+            this.dgvMusteriler.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvMusteriler_MouseClick);
             this.dgvMusteriler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvMusteriler_MouseDoubleClick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(475, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 106;
+            this.label7.Text = "TC :";
+            // 
+            // txtTc
+            // 
+            this.txtTc.Location = new System.Drawing.Point(516, 18);
+            this.txtTc.Name = "txtTc";
+            this.txtTc.Size = new System.Drawing.Size(151, 20);
+            this.txtTc.TabIndex = 105;
+            this.txtTc.TextChanged += new System.EventHandler(this.txtTc_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(246, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.TabIndex = 104;
+            this.label8.Text = "Soyadı:";
+            // 
+            // txtSoyad
+            // 
+            this.txtSoyad.Location = new System.Drawing.Point(297, 18);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(151, 20);
+            this.txtSoyad.TabIndex = 103;
+            this.txtSoyad.TextChanged += new System.EventHandler(this.txtSoyad_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(39, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 102;
+            this.label10.Text = "Adı :";
+            // 
+            // txtAdi
+            // 
+            this.txtAdi.Location = new System.Drawing.Point(80, 18);
+            this.txtAdi.Name = "txtAdi";
+            this.txtAdi.Size = new System.Drawing.Size(151, 20);
+            this.txtAdi.TabIndex = 101;
+            this.txtAdi.TextChanged += new System.EventHandler(this.txtAdi_TextChanged);
             // 
             // frmMusteriOdemeleri
             // 
@@ -304,6 +371,7 @@
             this.Load += new System.EventHandler(this.frmMusteriOdemeleri_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlContent.ResumeLayout(false);
+            this.pnlContent.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -338,5 +406,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtKalanBorc;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtTc;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtSoyad;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtAdi;
     }
 }

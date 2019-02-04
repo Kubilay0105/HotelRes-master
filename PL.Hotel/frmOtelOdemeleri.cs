@@ -87,10 +87,20 @@ namespace PL.Hotel
             }
 
         }
+        private void GridDuzenle(List<Personnel> list)
+        {
+            dgvPersoneller.DataSource = list;
+            dgvPersoneller.Columns[0].Visible = false;
+            dgvPersoneller.Columns[3].Visible = false;
 
+            dgvPersoneller.Columns[7].Visible = false;
+            dgvPersoneller.Columns[8].Visible = false;
+
+            dgvPersoneller.Columns[11].Visible = false;
+        }
         private void frmOtelOdemeleri_Load(object sender, EventArgs e)
         {
-            dgvPersoneller.DataSource = Per.GetPersonnels();
+            GridDuzenle(Per.GetPersonnels());
             cbGiderTurleri.DataSource = Tr.GetTransTypeByDefin("Gider");
             txtPrim.Text = "0";
         }

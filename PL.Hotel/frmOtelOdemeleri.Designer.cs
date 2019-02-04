@@ -225,6 +225,7 @@
             // 
             // dgvPersoneller
             // 
+            this.dgvPersoneller.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPersoneller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPersoneller.Location = new System.Drawing.Point(25, 18);
             this.dgvPersoneller.Name = "dgvPersoneller";
