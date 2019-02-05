@@ -190,12 +190,6 @@
     <Compile Include="Odalar\frmKat3.Designer.cs">
       <DependentUpon>frmKat3.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMusteriOdeme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMusteriOdeme.Designer.cs">
-      <DependentUpon>frmMusteriOdeme.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMusteriOdemeleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,9 +345,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Odalar\frmKat3.resx">
       <DependentUpon>frmKat3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMusteriOdeme.resx">
-      <DependentUpon>frmMusteriOdeme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMusteriOdemeleri.resx">
       <DependentUpon>frmMusteriOdemeleri.cs</DependentUpon>
