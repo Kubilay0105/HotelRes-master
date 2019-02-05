@@ -93,8 +93,8 @@ namespace PL.Hotel
                 Guest gst = Gp.GetGuest();
                 Sale sa = new Sale();
                 sa.RoomId = gst.RoomId;
-                sa.CheckIn = Giris;
-                sa.CheckOut = Cikis;
+                sa.CheckIn = Giris.Date;
+                sa.CheckOut = Cikis.Date;
                 sa.NoOfGuests = Convert.ToInt32(cbMisafirSayisi.SelectedItem.ToString());
                 try
                 {

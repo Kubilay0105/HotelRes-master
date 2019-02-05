@@ -95,7 +95,7 @@ namespace PL.Hotel
             {
                 foreach (DateTime dt in Gunler)
                 {
-                    if (dt.Date >= S.CheckIn.Date && dt.Date <= S.CheckOut.Date)
+                    if (dt.Date > S.CheckIn.Date && dt.Date <= S.CheckOut.Date)
                     {
                         foreach (Room item in rr.GetRoomsByFloor(1))
                         {

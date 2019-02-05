@@ -74,9 +74,9 @@ namespace BLL.Hotel.Repositories
         }
         public List<Sale> GetSales()
         {
-            return ent.Sales.Where(x=>x.Deleted==false).ToList();
+            return ent.Sales.Where(x => x.Deleted == false).ToList();
         }
-        
+
         public Sale GetSaleById(int SaleId)
         {
             return ent.Sales.Where(x=>x.Id==SaleId && x.Status==true ).Select(x=>x).FirstOrDefault();
