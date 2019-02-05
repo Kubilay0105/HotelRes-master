@@ -51,12 +51,6 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Repositories\CheckOutRepo.cs" />
-    <Compile Include="Repositories\frmMusteriOdemeDetaylari.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Repositories\frmMusteriOdemeDetaylari.Designer.cs">
-      <DependentUpon>frmMusteriOdemeDetaylari.cs</DependentUpon>
-    </Compile>
     <Compile Include="Repositories\GuestTransRepository.cs" />
     <Compile Include="Repositories\IGuestTransRepository.cs" />
     <Compile Include="Repositories\IPaymentsRepository.cs" />
@@ -87,11 +81,6 @@
       <Project>{efae34c6-bab7-4bb6-a41c-913eb61a6a2d}</Project>
       <Name>DAL.Hotel</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Repositories\frmMusteriOdemeDetaylari.resx">
-      <DependentUpon>frmMusteriOdemeDetaylari.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
