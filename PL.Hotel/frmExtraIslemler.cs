@@ -137,10 +137,12 @@ namespace PL.Hotel
             ExGId = Convert.ToInt32(dgvExtralar.SelectedRows[0].Cells[8].Value);
             Exdt = Convert.ToDateTime(dgvExtralar.SelectedRows[0].Cells[5].Value);
             txtDegisenAdet.Text = dgvExtralar.SelectedRows[0].Cells[3].Value.ToString();
+            numDegisenAdet.Value = Convert.ToDecimal(txtDegisenAdet.Text);
         }
 
         private void numDegisenAdet_ValueChanged(object sender, EventArgs e)
         {
+
             txtDegisenAdet.Text = numDegisenAdet.Value.ToString();
         }
 

@@ -73,9 +73,13 @@ namespace PL.Hotel
             frm.GId = GId;
             frm.Tc = TcKimlikNo;
             frm.ShowDialog();
-            Guest gst = gr.GetGuestByTC(txtTcNo.Text);
-            dgvExtralar.DataSource = gtr.GetExtrasByGuestId(gst);
-            BorcSorgula();
+            if (txtTcNo.Text.Trim() != "")
+            {
+                Guest gst = gr.GetGuestByTC(txtTcNo.Text);
+                dgvExtralar.DataSource = gtr.GetExtrasByGuestId(gst);
+                BorcSorgula();
+            }
+            else MessageBox.Show("TC Kimlik No giriniz"); 
             //    FormAcikmi(frm);
 
         }
@@ -164,7 +168,7 @@ namespace PL.Hotel
 
         private void btnOnayla2_Click(object sender, EventArgs e)
         {
-            if (Convert.ToDecimal(txtKonaklamaBorc.Text) == 0 && Convert.ToDecimal(txtExtraBorc.Text) == 0)
+            if (Convert.ToDecimal(txtKonaklamaBorc.Text) <= 0 && Convert.ToDecimal(txtExtraBorc.Text) == 0)
             {
                 if (Cr.EarlyCheckOut(GId, RId, GerekliOdeme))
                 {

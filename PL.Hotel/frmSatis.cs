@@ -30,44 +30,30 @@ namespace PL.Hotel
         int Gid;
         private void frmSatis_Load(object sender, EventArgs e)
         {
-            //dgvMusteriler.DataSource = Gp.GetAllGuest();
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
-        {
-            
-            //dgvMusteriler.DataSource = Gp.GetAllGuest();
-            //Temizle();
-        }
+        
         private void Temizle()
         {
-            //foreach(Control item in panel2.Controls)
-            //{
-            //    if(item is TextBox)
-            //    {
-            //        item.Text = "";
-            //    }
-            //}
-            //txtAdi.Clear();
-            //txtSoyadi.Clear();
-            //txtTc.Clear();
-            //txtAdres.te
+           
+            txtAdi.Clear();
+            txtSoyadi.Clear();
+            txtTc.Clear();
+            txtAdres.Clear();
+            txtGirisTarihi.Clear();
+            txtCikisTarihi.Clear();
+            txtToplamTutar.Clear();
+            txtTelefon.Clear();
+            txtEmail.Clear();
+            txtOdaNo.Clear();
+            btnOnayla.Enabled = false;
         }
 
-        private void dgvMusteriler_DoubleClick(object sender, EventArgs e)
-        {
-            //Gid = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
-            frmSatisIslemi frm = new frmSatisIslemi();
-            frm.Gid = Gid;
-            frm.Giris = Giris;
-            frm.Cikis = Cikis;
-            frm.OdaNo = OdaNo;
-            frm.ToplamTutar = ToplamTutar;
-            frm.Show();
-        }
+
 
         private void btnOdaSec_Click(object sender, EventArgs e)
         {
+            btnOnayla.Enabled = true;
             frmOdaSec frm = new frmOdaSec();
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog();
@@ -143,7 +129,7 @@ namespace PL.Hotel
                     if (Giris.Date == DateTime.Now.Date) Gtr.Description = "Konaklama Açılış";
                     else { Gtr.Description = "Rezervasyon"; }
                     if (GTrans.AddGTrans(Gtr))
-                    { MessageBox.Show("Kayıt yapıldı"); }
+                    { MessageBox.Show("Kayıt yapıldı");Temizle() ; }
                     else MessageBox.Show("Misafir harekeleri oluşturulamadı");
 
                 }

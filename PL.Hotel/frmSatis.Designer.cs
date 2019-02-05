@@ -418,6 +418,7 @@
             // 
             // btnOnayla
             // 
+            this.btnOnayla.Enabled = false;
             this.btnOnayla.Location = new System.Drawing.Point(651, 305);
             this.btnOnayla.Name = "btnOnayla";
             this.btnOnayla.Size = new System.Drawing.Size(157, 51);

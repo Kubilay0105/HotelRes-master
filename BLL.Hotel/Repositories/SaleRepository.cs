@@ -53,7 +53,7 @@ namespace BLL.Hotel.Repositories
         public List<Sale> GetSaleforFullRoom(DateTime Tarih)
         {
 
-            return ent.Sales.Where(x=>x.Deleted == false && x.CheckIn < Tarih && x.CheckOut > Tarih).Select(x=>x).ToList();
+            return ent.Sales.Where(x=>x.Deleted == false && x.CheckIn < Tarih && x.CheckOut > Tarih && x.Status==true).Select(x=>x).ToList();
         }
         public int GetSaleIdByGuest(int GuestId)
         {

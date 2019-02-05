@@ -101,23 +101,11 @@
     <Compile Include="frmCheckOut.Designer.cs">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCheckin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCheckin.Designer.cs">
       <DependentUpon>frmCheckin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCheckOutErken.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCheckOutErken.Designer.cs">
-      <DependentUpon>frmCheckOutErken.cs</DependentUpon>
     </Compile>
     <Compile Include="frmExtraa.cs">
       <SubType>Form</SubType>
@@ -325,9 +313,6 @@
     <EmbeddedResource Include="Raporlar\Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCheckOutErken.resx">
-      <DependentUpon>frmCheckOutErken.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmExtraa.resx">
       <DependentUpon>frmExtraa.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,9 +360,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheckOut.resx">
       <DependentUpon>frmCheckOut.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheckin.resx">
       <DependentUpon>frmCheckin.cs</DependentUpon>

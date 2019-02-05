@@ -29,16 +29,13 @@ namespace BLL.Hotel.Repositories
 
         public List<Guest> GetAllGuest()
         {
-            return ent.Guests.Where(x=>x.Status==true).OrderByDescending(x=>x.Id).ToList();
+            return ent.Guests.Where(x => x.Deleted == false).OrderByDescending(x => x.Id).ToList();
         }
         public Guest GetGuest()
         {
-            return ent.Guests.Where(x => x.Status == true).OrderByDescending(x => x.Id).FirstOrDefault();
+            return ent.Guests.Where(x => x.Deleted == false).OrderByDescending(x => x.Id).FirstOrDefault();
         }
-        public List<Guest> GetGuest(int roomId, bool stat)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public List<Guest> GetGuestsInRoom(int RoomId)
         {
